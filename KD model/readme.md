@@ -1,2 +1,6 @@
 
-##The first version of the KD model## 
+## The first version of the KD model ## 
+
+*Details:* 
+
+(complete)
