@@ -13,5 +13,4 @@
   * The Categories Taxonomy.  
 * NLP4StatRef-Mapping_20210402.xlsx: the mappings used for the implementation, together with status indications.
 * NLP4StatRef-ResourceType-skos_20210402.rdf: a draft authority list for the NLP4StatRef KD. 
-  * Because of parsing problems with Dublin core ontologies in Protégé, not yet associated with ontologies or documented. As soon as this parsing problems are resolved, a first major version will be created. 
 * NLP4StatRef-Estat-4.owl: A first version of the ontology.
