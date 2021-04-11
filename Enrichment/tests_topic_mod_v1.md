@@ -1,7 +1,7 @@
 Topic Modelling
 ================
 NLP4StatRef
-10/4/2021
+11/4/2021
 
 ## Topic modelling: tests with the Latent Dirichlet Allocation (LDA) algorithm.
 
@@ -119,7 +119,7 @@ matrix to a 1278 x 331 dataframe for inspection.
 
 Note that in the construction of the document-to-term matrix, we do not
 request any weights, such as tf-idf. This is a requirement of the LDA
-algorith.
+algorithm.
 
 ``` r
 texts <- Corpus(VectorSource(dat$definition))
