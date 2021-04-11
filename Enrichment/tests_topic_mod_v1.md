@@ -274,13 +274,13 @@ print(inspect(dtm))
 
 ------------------------------------------------------------------------
 
-We apply the LDA algorithm with k=20 topics. Function *LDA()* returns in
-object *topics*, among others, a matrix *beta* which contains, for each
-topic and term, the probability that the term is generated from the
-specific topic. For details, see [r package
-topicmodels](https://cran.r-project.org/web/packages/topicmodels/topicmodels.pdf)
+We apply the LDA algorithm with k=20 topics. Function *LDA()* returns an
+object which contains, among others, a matrix *beta* expressing, for
+each topic and term, the **probability that the term is generated from
+the specific topic**. For details, see [r package
+topicmodels](https://cran.r-project.org/web/packages/topicmodels/topicmodels.pdf).
 
-In the following code, we first group object *topics* by topic and then
+In the following code, we first group the results by topic and then
 select the terms with the top *beta* values in each topic.Then we plot
 these values and the corresponding terms for each topic.
 
@@ -330,5 +330,5 @@ follows:
 
 If these results are useful, the analysis will be extended to take into
 account the *gamma* coefficients which express, for each document and
-topic, the estimated proportion of terms from the document that are
-generated from that topic.
+topic, the **estimated proportion of terms from the document that are
+generated from that topic**.
