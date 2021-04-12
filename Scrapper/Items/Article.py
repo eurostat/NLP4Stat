@@ -1,0 +1,22 @@
+import scrapy
+
+class Article(scrapy.Item):
+    url = scrapy.Field()
+    title = scrapy.Field()
+    abstract = scrapy.Field()
+    full_article = scrapy.Field()
+    alerts = scrapy.Field()
+    categories = scrapy.Field()
+    context = scrapy.Field()
+    data_sources = scrapy.Field()
+    excel = scrapy.Field()
+    last_update = scrapy.Field()
+    other_articles = scrapy.Field()
+    tables = scrapy.Field()
+    database = scrapy.Field()
+    dedicated_section = scrapy.Field()
+    publications = scrapy.Field()
+    methodology = scrapy.Field()
+    legislation = scrapy.Field()
+    visualisations = scrapy.Field()
+    external_links = scrapy.Field()
