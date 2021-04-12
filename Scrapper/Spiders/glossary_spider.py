@@ -25,8 +25,8 @@ from sql_request import *
 
 c = pyodbc.connect('DSN=VirtuosoKapcode;' +
                    'DBA=ESTAT;' +
-                   'UID=mickail;' +
-                   'PWD=y617iabB0rwmAg4aTaQ4')
+                   'UID=XXXXX;' +
+                   'PWD=XXXXXXXXXXXXXXX')
 cursor = c.cursor()
 
 
