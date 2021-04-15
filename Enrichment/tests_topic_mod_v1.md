@@ -310,7 +310,7 @@ follows:
 -   Topic 1: Social expenditure and contributions.
 -   Topic 2: Population, regions and geography.
 -   Topic 3: Persons and employment.
--   Topic 4: Intellectual property rights.
+-   Topic 4: Migration and asylum granting.
 -   Topic 5: Economic sectors.
 -   Topic 6: Public services.
 -   Topic 7: International trade.
