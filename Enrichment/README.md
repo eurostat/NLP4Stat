@@ -4,7 +4,7 @@ An **interactive version** of this document is [here](https://www.kaggle.com/spi
 
 **B. /LDA_2/tests_topic_mod_pack_lda.ipynb**: Jupyter notebook of an alternative implementation of the LDA algorithm using the textmineR package (the interpretation of the topics in the end is not yet updated).
 
-**interactive notebook**:
+**Interactive notebook**:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Topic_Modeling/main?filepath=tests_topic_mod_pack_lda.ipynb)
 (the interpretation of the topics in the end is not yet updated).
 
