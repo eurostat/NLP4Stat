@@ -7,6 +7,7 @@ An **interactive version** of this document is [here](https://www.kaggle.com/spi
 **Interactive notebook**:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Topic_Modeling/main?filepath=tests_topic_mod_pack_lda.ipynb)
 (the interpretation of the topics in the end is not yet updated). **Takes too long to build - transfer to Kaggle**
+[here:](https://www.kaggle.com/spiliopoulos/tests-topic-mod-altern-v1-md)
 
 **C. /Spacy_NER/Glossary_NamedEntities_V2.ipynb**: Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles.
 
