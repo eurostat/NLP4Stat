@@ -1,4 +1,4 @@
-## Algorithms in folder Enrichment
+## Algorithms in folder NLP4Stat/Enrichment
 
 1. **topic-modeling-lda-vem-v1.ipynb**: R Jupyter notebook implementing the Latent Dirichlet Allocation (LDA) algorithm for topic modeling (Variational Expectation-Maximization -VEM) version. 
 
