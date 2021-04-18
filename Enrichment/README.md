@@ -1,3 +1,5 @@
+## Algorithms in folder Enrichment
+
 1. **topic-modeling-lda-vem-v1.ipynb**: R Jupyter notebook implementing the Latent Dirichlet Allocation (LDA) algorithm for topic modeling (Variational Expectation-Maximization -VEM) version. 
 
     * An **interactive version** of this document is in Kaggle, **[here](https://www.kaggle.com/spiliopoulos/topic-modeling-lda-vem-v1)**. Pressing **Copy and Edit** (upper right part of the screen) allows to edit the document and experiment with it, **without signing-in**. Unfortunately, the "usual" procedure of producing a Docker image from Binder was failing because the package "topicmodels" could not be loaded. Support for R and R packages in Jupyter notebooks is not very good. 
