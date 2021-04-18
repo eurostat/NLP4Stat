@@ -6,8 +6,7 @@
 
 3. **/Spacy_NER/Glossary_NamedEntities_V2.ipynb**: Python Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles.
 
-* **Interactive notebook**:
-* [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V2.ipynb)
-* Please run once to download the English vocabulary, then comment-out the relevant command at the top of the file.
+    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V2.ipynb) 
+    * Please run once to download the English vocabulary, then comment-out the relevant command at the top of the file.
 
 
