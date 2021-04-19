@@ -13,7 +13,7 @@
 
 4. [**/Gensim/Topic Modelling with Gensim_v3.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Gensim/Topic%20Modelling%20with%20Gensim_v3.ipynb): Python Jupyter notebook with various topic modelling results. **Incomplete**. 
 
-    * **Interactive notebook**: **Pending**.
+    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Gensim/main?filepath=Topic%20Modelling%20with%20Gensim_v3.ipynb)
 
 
 
