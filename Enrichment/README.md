@@ -11,10 +11,9 @@
     * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V2.ipynb) 
     * Please run once only the first chunk to download the English Spacy vocabulary. Then comment-out the relevant command in the first chunk (_!{sys.executable} -m spacy download en_) and run all.
 
-4. [**/Gensim/Topic Modelling with Gensim_v3.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/Glossary_NamedEntities_V2.ipynb): Python Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles.
+4. [**/Gensim/Topic Modelling with Gensim_v3.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Gensim/Topic%20Modelling%20with%20Gensim_v3.ipynb): Python Jupyter notebook with various topic modelling results. **Incomplete**. 
 
-    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V2.ipynb) 
-    * Please run once only the first chunk to download the English Spacy vocabulary. Then comment-out the relevant command in the first chunk (_!{sys.executable} -m spacy download en_) and run all.
+    * **Interactive notebook**: **Pending**.
 
 
 
