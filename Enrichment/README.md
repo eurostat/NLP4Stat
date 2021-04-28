@@ -8,7 +8,7 @@
 
 3. [**/Spacy_NER/Glossary_NamedEntities_V3.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/Glossary_NamedEntities_V3.ipynb): Python Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles.
 
-    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V2.ipynb) 
+    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V3.ipynb) 
     * Please run once only the first chunk to download the English Spacy vocabulary. Then comment-out the relevant command in the first chunk (_!{sys.executable} -m spacy download en_) and run all.
 
 4. [**/Gensim/Topic Modelling with Gensim_v6c.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Gensim/Topic%20Modelling%20with%20Gensim_v6c.ipynb): Python Jupyter notebook with comprehensive topic modelling results. The interactive plots with _pyLDAvis_ are produced only in the interactive version below. 
