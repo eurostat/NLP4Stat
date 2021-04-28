@@ -6,7 +6,7 @@
 
 2. [**/LDA_2/topic-modeling-lda-gibbs-v1.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/LDA_2/topic-modeling-lda-gibbs-v1.ipynb): R Jupyter notebook of an alternative implementation of the LDA algorithm (with package textmineR and Gibbs sampling) and some more results. The topics are quite similar with the ones with algorithm [1]. Also, loaded to Kaggle, see **[here](https://www.kaggle.com/spiliopoulos/topic-modeling-lda-gibbs-v1)**.
 
-3. [**/Spacy_NER/Glossary_NamedEntities_V2.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/Glossary_NamedEntities_V2.ipynb): Python Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles.
+3. [**/Spacy_NER/Glossary_NamedEntities_V3.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/Glossary_NamedEntities_V3.ipynb): Python Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles.
 
     * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V2.ipynb) 
     * Please run once only the first chunk to download the English Spacy vocabulary. Then comment-out the relevant command in the first chunk (_!{sys.executable} -m spacy download en_) and run all.
