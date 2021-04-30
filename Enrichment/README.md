@@ -15,5 +15,9 @@
 
     * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Gensim/main?filepath=Topic%20Modelling%20with%20Gensim_v6c.ipynb)
  
+ 5. [**/Gensim/Topic Modelling with Gensim_v6c_SE.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Gensim/Topic%20Modelling%20with%20Gensim_v6c_SE.ipynb): This is the same algorithm as [4] but run on the scraped content from Statistics Explained articles (with different hyper-parameters). 
+
+    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Gensim/main?filepath=Topic%20Modelling%20with%20Gensim_v6c_SE.ipynb)
+
 
 
