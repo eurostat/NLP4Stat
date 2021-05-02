@@ -10,7 +10,7 @@
 
     * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=Glossary_NamedEntities_V3b.ipynb)
  
-4. [**/Spacy_NER/SE_NamedEntities_V3.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/SE_NamedEntities_V3b.ipynb): This is the same algorithm as [3] but run on the scraped content from Statistics Explained articles. The input file is the one produced by scraping, with an additional column gathering all sections titles and contents.  
+4. [**/Spacy_NER/SE_NamedEntities_V3b.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/SE_NamedEntities_V3b.ipynb): This is the same algorithm as [3] but run on the scraped content from Statistics Explained articles. The input file is the one produced by scraping, with an additional column gathering all sections titles and contents.  
 
     * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Spacy_NER/main?filepath=SE_NamedEntities_V3b.ipynb)
  
