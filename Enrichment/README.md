@@ -25,7 +25,7 @@
  
  6. [**/Gensim/Topic Modelling with Gensim_v6c_SE.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Gensim/Topic%20Modelling%20with%20Gensim_v6c_SE.ipynb): This is the same algorithm as [5] but run on the scraped content from Statistics Explained articles (with different hyper-parameters). The input file is the one produced by scraping, with an additional column gathering all sections titles and contents. Again, do not comment-out the first command in the disabled cell (%%script false --no-raise-error) which contains an indicative grid search run. 
 
-    * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FGensim%2FTopic%20Modelling%20with%20Gensim_v6c_SE.ipynb)
+* **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FGensim%2FTopic%20Modelling%20with%20Gensim_v6c_SE.ipynb)
 
 
 
