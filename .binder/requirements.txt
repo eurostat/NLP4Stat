@@ -2,3 +2,4 @@ spacy
 gensim
 python-Levenshtein
 pyLDAvis
+xlrd
