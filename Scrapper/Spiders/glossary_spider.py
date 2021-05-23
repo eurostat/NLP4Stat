@@ -73,7 +73,7 @@ class glossarySpider(scrapy.Spider):
         # Check if there is another page
         # if so re-launch the parse function
         # with nextPage url as start_urls
-        nextPage = response.xpath("//a[contains(.//text(), 'next 200')]" +
+        nextPage = response.xpath("//a[contains(.//text(), 'next page')]" +
                                   "/@href").get()
         if nextPage is not None:
             nextPage = response.urljoin('https://ec.europa.eu' + nextPage)
