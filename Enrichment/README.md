@@ -29,6 +29,6 @@
 
  7. [**/SVOs/SVOs_extraction_v2.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/SVOs/SVOs_extraction_v2.ipynb): A long and messy (for the time being) code which produces candidate Subject-Verb-Object triplets for the feeding of the KD. These involve a) Named Entities of many useful selected classes and b) the intersection of Categories related to SE articles and SE Glossary articles. The inputs are from both SE articles (titles, URLs, abstracts, context sections, paragraph titles, full contents and related categories) and from SE Glossary entries (titles, URLs, definitions and related categories). Most of the information is used for debugging, but some elements such as URLs can also be used in Use Cases. Note that the code **takes a rather long time to run** (around 30' on a x64-i7-2.80GHz with 12GB RAM).
 
-* **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/SVOs/main?filepath=SVOs_extraction_v2.ipynb)
+* **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/SVOs/main?filepath=SVOs_extraction_v3.ipynb)
 
 
