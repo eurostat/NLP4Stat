@@ -1,10 +1,9 @@
 name: base
 channels:
-  - defaults
+- defaults
 dependencies:
   - spacy
   - pandas
   - openpyxl
   - nltk
-  - pip:
-    - unicode  
+  - unidecode
