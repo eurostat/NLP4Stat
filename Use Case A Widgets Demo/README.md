@@ -1,5 +1,10 @@
-Algorithms in folder NLP4Stat/Enrichment
-topic-modeling-lda-vem-v1.ipynb: R Jupyter notebook implementing the Latent Dirichlet Allocation (LDA) algorithm for topic modeling (Variational Expectation-Maximization -VEM also called Variational Bayes - VB) version. The texts are the contents of the Statistics Explained (SE) Glossary articles, as stored in the Knowledge Database (KD).
-Interactive notebook: Binder
+## Codes in folder NLP4Stat/Use Case A Widgets Demo
 
-An interactive version of this document is in Kaggle, here. Pressing Copy and Edit (upper right part of the screen) allows to edit the document and experiment with it, without signing-in. Unfortunately, the "usual" procedure of producing a Docker image from Binder was failing because the package "topicmodels" could not be loaded. Support for R and R packages in Jupyter notebooks is not very good.
+1. [**D_3_1_Use_Case_A_Version_2.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Widgets%20Demo/D_3_1_Use_Case_A_Version_2.ipynb): A demonstration of the suitability of Jupyter notebooks together with ipywidgets for the implementation of the user interactions in Use Case A. This is a first version **not yet showing the layout enhancements which are possible and will be implemented with [Voilà](https://github.com/voila-dashboards/voila)**. 
+
+Various scenarios are simulated with real data scraped and relations produced by topic modeling and subject-verb-object extraction. This code is part of Deliverable D3.1 “Design document for UC A. Inventory of approaches to explore, extract and connect information.”
+
+Note: Please run all cells once. When the widgets are ready for use, the notebook will automatically hide all code, allowing experimentation. 
+
+ * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/Widgets/main?filepath=D_3_1_Use_Case_A_Version_2.ipynb)
+ 
