@@ -1,0 +1,12 @@
+name: base
+channels:
+- defaults
+dependencies:
+  - spacy
+  - pandas
+  - openpyxl
+  - ipywidgets
+  - seaborn
+  - pip
+  - pip:
+    - scispacy
