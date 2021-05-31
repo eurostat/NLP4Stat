@@ -23,10 +23,10 @@ from Items.LinkInfo import LinkInfo
 from Items.Concept import Concept
 from sql_request import *
 
-c = pyodbc.connect('DSN=VirtuosoKapcode;' +
+c = pyodbc.connect('DSN=Virtuoso All;' +
                    'DBA=ESTAT;' +
-                   'UID=XXXXX;' +
-                   'PWD=XXXXXXXXXXXXXXX')
+                   'UID=dba;' +
+                   'PWD=30gFcpQzj7sPtRu5bkes')
 cursor = c.cursor()
 
 
@@ -73,7 +73,7 @@ class glossarySpider(scrapy.Spider):
         # Check if there is another page
         # if so re-launch the parse function
         # with nextPage url as start_urls
-        nextPage = response.xpath("//a[contains(.//text(), 'next 200')]" +
+        nextPage = response.xpath("//a[contains(.//text(), 'next page')]" +
                                   "/@href").get()
         if nextPage is not None:
             nextPage = response.urljoin('https://ec.europa.eu' + nextPage)
@@ -101,6 +101,7 @@ class glossarySpider(scrapy.Spider):
         cursor.execute(estatLinkSelectId(), concept['url'])
         c.commit()
         row = cursor.fetchone()
+        # if it does not exist
         if row is None:
 
             concept['title'] = titleRaw.replace('Glossary:', '')
@@ -123,10 +124,10 @@ class glossarySpider(scrapy.Spider):
 
         # last update
         updateStrRaw = response.xpath('//div[@id="footer"]' +
-                                      '//li[@id="lastmod"]/text()').get()
+                                      '//li[@id="footer-info-lastmod"]/text()').get()
         if updateStrRaw is not None:
             dateFormat = "%d %B %Y, at %H:%M."
-            updateStr = re.split('modified on ', normalize(updateStrRaw))
+            updateStr = re.split('edited on ', normalize(updateStrRaw))
             update = datetime.strptime(updateStr[-1], dateFormat)
             concept['last_update'] = update
 
@@ -246,7 +247,10 @@ class glossarySpider(scrapy.Spider):
                         relCpt = LinkInfo()
                         relCpt['title'] = normalize(elmt.get_text())
                         urlCpt = elmt.get('href')
-                        relCpt['url'] = 'https://ec.europa.eu' + urlCpt
+                        if urlCpt.startswith('/eurostat'):
+                            relCpt['url'] = 'https://ec.europa.eu' + urlCpt
+                        else:
+                            relCpt['url'] = urlCpt
                         # check if the doc already is in the DB
                         cursor.execute(estatLinkSelectId(), relCpt['url'])
                         c.commit()
@@ -284,7 +288,10 @@ class glossarySpider(scrapy.Spider):
                         statData = LinkInfo()
                         statData['title'] = elmt.get('title')
                         urlStat = elmt.get('href')
-                        statData['url'] = 'https://ec.europa.eu' + urlStat
+                        if urlStat.startswith('/eurostat'):
+                            statData['url'] = 'https://ec.europa.eu' + urlStat
+                        else:
+                            statData['url'] = urlStat
                         # check if the doc already is in the DB
                         cursor.execute(estatLinkSelectId(),
                                        statData['url'])

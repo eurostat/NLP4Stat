@@ -1,6 +1,7 @@
 import scrapy
 
 class Article(scrapy.Item):
+    id = scrapy.Field()
     url = scrapy.Field()
     title = scrapy.Field()
     abstract = scrapy.Field()
