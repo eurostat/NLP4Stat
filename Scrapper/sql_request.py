@@ -21,58 +21,58 @@ def foreignLinkInsert():
 ############################## Glossary queries ############################
 
 # select glossary element
-def conceptSelect():
-    conceptSelect = "SELECT * FROM dat_concept WHERE id = ?"
-    return conceptSelect
+def glossarySelect():
+    glossarySelect = "SELECT * FROM dat_glossary WHERE id = ?"
+    return glossarySelect
 
 # insert glossary element
-def conceptFullInsert():
-    conceptFullInsert = "INSERT INTO dat_concept(id, definition, last_update, homepage, redirection) VALUES (?, ?, ?, 0, 0)"
-    return conceptFullInsert
+def glossaryFullInsert():
+    glossaryFullInsert = "INSERT INTO dat_glossary(id, definition, last_update, homepage, redirection) VALUES (?, ?, ?, 0, 0)"
+    return glossaryFullInsert
 
 # insert glossary element
-def conceptInsert():
-    conceptInsert = "INSERT INTO dat_concept(id, definition, homepage, redirection) VALUES (?, ?, 0, 0)"
-    return conceptInsert
+def glossaryInsert():
+    glossaryInsert = "INSERT INTO dat_glossary(id, definition, homepage, redirection) VALUES (?, ?, 0, 0)"
+    return glossaryInsert
 
 # check if couple exists in dat_further_info
 def furtherInfoCheck():
-   furtherInfoCheck = "SELECT id FROM dat_further_info WHERE concept_id = ? AND link_id =?"
+   furtherInfoCheck = "SELECT id FROM dat_further_info WHERE glossary_id = ? AND link_id =?"
    return furtherInfoCheck
 
 # insert a further_info link
 def furtherInfoInsert():
-    furtherInfoInsert = "INSERT INTO dat_further_info(concept_id, link_id) VALUES (?, ?)"
+    furtherInfoInsert = "INSERT INTO dat_further_info(glossary_id, link_id) VALUES (?, ?)"
     return furtherInfoInsert
 
 # check if couple exists in dat_related_concepts
 def relCptCheck():
-    relCptCheck = "SELECT id FROM dat_related_concepts WHERE concept_id = ? AND link_id =?"
+    relCptCheck = "SELECT id FROM dat_related_concepts WHERE glossary_id = ? AND link_id =?"
     return relCptCheck
 
 # insert a concept link
 def relCptInsert():
-    relCptInsert = "INSERT INTO dat_related_concepts(concept_id, link_id) VALUES (?, ?)"
+    relCptInsert = "INSERT INTO dat_related_concepts(glossary_id, link_id) VALUES (?, ?)"
     return relCptInsert
 
 # check if couple exists in dat_statistical_data
 def statDataCheck():
-    statDataCheck = "SELECT id FROM dat_statistical_data WHERE concept_id = ? AND link_id =?"
+    statDataCheck = "SELECT id FROM dat_statistical_data WHERE glossary_id = ? AND link_id =?"
     return statDataCheck
 
 # insert a statistical data link
 def statDataInsert():
-    statDataInsert = "INSERT INTO dat_statistical_data(concept_id, link_id) VALUES (?, ?)"
+    statDataInsert = "INSERT INTO dat_statistical_data(glossary_id, link_id) VALUES (?, ?)"
     return statDataInsert
 
 # check if couple exists in dat_sources
 def sourceCheck():
-    sourceCheck = "SELECT id FROM dat_sources WHERE concept_id = ? AND link_id =?"
+    sourceCheck = "SELECT id FROM dat_sources WHERE glossary_id = ? AND link_id =?"
     return sourceCheck
 
 # insert a source link
 def sourceInsert():
-    sourceInsert = "INSERT INTO dat_sources(concept_id, link_id) VALUES (?, ?)"
+    sourceInsert = "INSERT INTO dat_sources(glossary_id, link_id) VALUES (?, ?)"
     return sourceInsert
 
 ############################## Article queries ############################

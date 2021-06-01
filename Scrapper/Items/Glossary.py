@@ -1,6 +1,6 @@
 import scrapy
 
-class Concept(scrapy.Item):
+class Glossary(scrapy.Item):
     id = scrapy.Field()
     url = scrapy.Field()
     title = scrapy.Field()

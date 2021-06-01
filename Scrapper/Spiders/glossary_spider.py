@@ -20,7 +20,7 @@ sys.path.insert(0, '/nlp4_eurostat/Scrapper/')
 # project class
 from generic_functions import normalize
 from Items.LinkInfo import LinkInfo
-from Items.Concept import Concept
+from Items.Glossary import Glossary
 from sql_request import *
 
 c = pyodbc.connect('DSN=Virtuoso All;' +
@@ -68,7 +68,7 @@ class glossarySpider(scrapy.Spider):
         for page in response.css('#mw-pages').css('.mw-content-ltr'):
             for link in page.css('a ::attr(href)'):
                 cptLink = 'https://ec.europa.eu' + link.extract()
-                yield scrapy.Request(url=cptLink, callback=self.parse_concept)
+                yield scrapy.Request(url=cptLink, callback=self.parse_glossary)
 
         # Check if there is another page
         # if so re-launch the parse function
@@ -79,7 +79,7 @@ class glossarySpider(scrapy.Spider):
             nextPage = response.urljoin('https://ec.europa.eu' + nextPage)
             yield scrapy.Request(nextPage, callback=self.parse)
 
-    def parse_concept(self, response):
+    def parse_glossary(self, response):
 
         # html page
         pageContent = BeautifulSoup(response.css('#mw-content-text').get(),
@@ -95,32 +95,32 @@ class glossarySpider(scrapy.Spider):
                                     "[text()[contains(.,'Redirected')]]" +
                                     "/a/text()").get()
 
-        concept = Concept()
-        concept['url'] = response.request.url
+        glossary = Glossary()
+        glossary['url'] = response.request.url
         # check if already exists in DB
-        cursor.execute(estatLinkSelectId(), concept['url'])
+        cursor.execute(estatLinkSelectId(), glossary['url'])
         c.commit()
         row = cursor.fetchone()
         # if it does not exist
         if row is None:
 
-            concept['title'] = titleRaw.replace('Glossary:', '')
+            glossary['title'] = titleRaw.replace('Glossary:', '')
             # check if there was a redirection
             if redirected is not None:
-                concept['original_title'] = redirected.replace('Glossary:', '')
+                glossary['original_title'] = redirected.replace('Glossary:', '')
 
-            if concept['title'] is None:
-                concept['title'] = 'ERROR'
+            if glossary['title'] is None:
+                glossary['title'] = 'ERROR'
 
-            cursor.execute(estatLinkInsert(), concept['title'], concept['url'])
+            cursor.execute(estatLinkInsert(), glossary['title'], glossary['url'])
             c.commit()
             # get id
-            cursor.execute(estatLinkSelectId(), concept['url'])
+            cursor.execute(estatLinkSelectId(), glossary['url'])
             c.commit()
             row = cursor.fetchone()
-            concept['id'] = row.id
+            glossary['id'] = row.id
         else:
-            concept['id'] = row.id
+            glossary['id'] = row.id
 
         # last update
         updateStrRaw = response.xpath('//div[@id="footer"]' +
@@ -129,29 +129,31 @@ class glossarySpider(scrapy.Spider):
             dateFormat = "%d %B %Y, at %H:%M."
             updateStr = re.split('edited on ', normalize(updateStrRaw))
             update = datetime.strptime(updateStr[-1], dateFormat)
-            concept['last_update'] = update
+            glossary['last_update'] = update
 
         # check if already in DB
-        cursor.execute(conceptSelect(), concept['id'])
+        cursor.execute(glossarySelect(), glossary['id'])
         c.commit()
         row = cursor.fetchone()
         if row is None:
 
-            concept['definition'] = normalize(definitionRaw.get_text())
+            glossary['definition'] = normalize(definitionRaw.get_text())
 
             if updateStrRaw is not None:
-                cursor.execute(conceptFullInsert(),
-                               concept['id'], concept['definition'],
-                               concept['last_update'])
+                cursor.execute(glossaryFullInsert(),
+                               glossary['id'],
+                               glossary['definition'],
+                               glossary['last_update'])
             else:
-                cursor.execute(conceptInsert(),
-                               concept['id'], concept['definition'])
+                cursor.execute(glossaryInsert(),
+                               glossary['id'],
+                               glossary['definition'])
             c.commit()
 
-            concept['further_info'] = []
-            concept['related_concepts'] = []
-            concept['statistical_data'] = []
-            concept['sources'] = []
+            glossary['further_info'] = []
+            glossary['related_concepts'] = []
+            glossary['statistical_data'] = []
+            glossary['sources'] = []
 
             # to identify which sub-categories are in the page
             titlesList = pageContent.find_all('h2')
@@ -194,18 +196,21 @@ class glossarySpider(scrapy.Spider):
                                 row = cursor.fetchone()
                                 # add a link between the concept and the doc
                                 cursor.execute(furtherInfoInsert(),
-                                               concept['id'], row.id)
+                                               glossary['id'],
+                                               row.id)
                                 c.commit()
                             else:
                                 idLink = row.id
                                 cursor.execute(furtherInfoCheck(),
-                                               concept['id'], idLink)
+                                               glossary['id'],
+                                               idLink)
                                 c.commit()
                                 row = cursor.fetchone()
                                 if row is None:
                                     # add link between the concept and the doc
                                     cursor.execute(furtherInfoInsert(),
-                                                   concept['id'], idLink)
+                                                   glossary['id'],
+                                                   idLink)
 
                         else:
                             cursor.execute(foreignLinkSelectId(),
@@ -226,20 +231,23 @@ class glossarySpider(scrapy.Spider):
                                 row = cursor.fetchone()
                                 # add a link between the concept and the doc
                                 cursor.execute(furtherInfoInsert(),
-                                               concept['id'], row.id)
+                                               glossary['id'],
+                                               row.id)
                                 c.commit()
                             else:
                                 idLink = row.id
                                 cursor.execute(furtherInfoCheck(),
-                                               concept['id'], idLink)
+                                               glossary['id'],
+                                               idLink)
                                 c.commit()
                                 row = cursor.fetchone()
                                 if row is None:
                                     # add link between the concept and the doc
                                     cursor.execute(furtherInfoInsert(),
-                                                   concept['id'], idLink)
+                                                   glossary['id'],
+                                                   idLink)
 
-                        concept['further_info'].append(furtherInfo)
+                        glossary['further_info'].append(furtherInfo)
 
                 elif 'Related concepts' in titleTemp:
                     for elmt in BeautifulSoup(splitContent[a],
@@ -259,7 +267,8 @@ class glossarySpider(scrapy.Spider):
                         if row is None:
                             # add a document
                             cursor.execute(estatLinkInsert(),
-                                           relCpt['title'], relCpt['url'])
+                                           relCpt['title'],
+                                           relCpt['url'])
                             c.commit()
                             # get id
                             cursor.execute(estatLinkSelectId(),
@@ -268,19 +277,23 @@ class glossarySpider(scrapy.Spider):
                             row = cursor.fetchone()
                             # add a link between the concept and the doc
                             cursor.execute(relCptInsert(),
-                                           concept['id'], row.id)
+                                           glossary['id'],
+                                           row.id)
                             c.commit()
                         else:
                             idLink = row.id
                             cursor.execute(relCptCheck(),
-                                           concept['id'], idLink)
+                                           glossary['id'],
+                                           idLink)
                             c.commit()
                             row = cursor.fetchone()
                             if row is None:
                                 # add a link between the concept and the doc
                                 cursor.execute(relCptInsert(),
-                                               concept['id'], idLink)
-                        concept['related_concepts'].append(relCpt)
+                                               glossary['id'],
+                                               idLink)
+
+                        glossary['related_concepts'].append(relCpt)
 
                 elif 'Statistical data' in titleTemp:
                     for elmt in BeautifulSoup(splitContent[a],
@@ -304,7 +317,8 @@ class glossarySpider(scrapy.Spider):
 
                             # add a document
                             cursor.execute(estatLinkInsert(),
-                                           statData['title'], statData['url'])
+                                           statData['title'],
+                                           statData['url'])
                             c.commit()
                             # get id
                             cursor.execute(estatLinkSelectId(),
@@ -313,19 +327,22 @@ class glossarySpider(scrapy.Spider):
                             row = cursor.fetchone()
                             # add a link between the concept and the doc
                             cursor.execute(statDataInsert(),
-                                           concept['id'], row.id)
+                                           glossary['id'],
+                                           row.id)
                             c.commit()
                         else:
                             idLink = row.id
                             cursor.execute(statDataCheck(),
-                                           concept['id'], idLink)
+                                           glossary['id'],
+                                           idLink)
                             c.commit()
                             row = cursor.fetchone()
                             if row is None:
                                 # add link between the concept and the doc
                                 cursor.execute(statDataInsert(),
-                                               concept['id'], idLink)
-                        concept['statistical_data'].append(statData)
+                                               glossary['id'],
+                                               idLink)
+                        glossary['statistical_data'].append(statData)
 
                 elif 'Source' in titleTemp:
                     for elmt in BeautifulSoup(splitContent[a],
@@ -347,7 +364,8 @@ class glossarySpider(scrapy.Spider):
                             if row is None:
                                 # add a document
                                 cursor.execute(estatLinkInsert(),
-                                               source['title'], source['url'])
+                                               source['title'],
+                                               source['url'])
                                 c.commit()
                                 # get id
                                 cursor.execute(estatLinkSelectId(),
@@ -356,18 +374,21 @@ class glossarySpider(scrapy.Spider):
                                 row = cursor.fetchone()
                                 # add a link between the concept and the doc
                                 cursor.execute(sourceInsert(),
-                                               concept['id'], row.id)
+                                               glossary['id'],
+                                               row.id)
                                 c.commit()
                             else:
                                 idLink = row.id
                                 cursor.execute(sourceCheck(),
-                                               concept['id'], idLink)
+                                               glossary['id'],
+                                               idLink)
                                 c.commit()
                                 row = cursor.fetchone()
                                 if row is None:
                                     # add link between the concept and the doc
                                     cursor.execute(sourceInsert(),
-                                                   concept['id'], idLink)
+                                                   glossary['id'],
+                                                   idLink)
 
                         else:
                             cursor.execute(foreignLinkSelectId(),
@@ -378,7 +399,8 @@ class glossarySpider(scrapy.Spider):
                             if row is None:
                                 # add a document
                                 cursor.execute(foreignLinkInsert(),
-                                               source['title'], source['url'])
+                                               source['title'],
+                                               source['url'])
                                 c.commit()
                                 # get id
                                 cursor.execute(foreignLinkSelectId(),
@@ -387,25 +409,29 @@ class glossarySpider(scrapy.Spider):
                                 row = cursor.fetchone()
                                 # add a link between the concept and the doc
                                 cursor.execute(sourceInsert(),
-                                               concept['id'], row.id)
+                                               glossary['id'],
+                                               row.id)
                                 c.commit()
                             else:
                                 idLink = row.id
                                 cursor.execute(sourceCheck(),
-                                               concept['id'], idLink)
+                                               glossary['id'],
+                                               idLink)
                                 c.commit()
                                 row = cursor.fetchone()
                                 if row is None:
                                     # add link between the concept and the doc
                                     cursor.execute(sourceInsert(),
-                                                   concept['id'], idLink)
-                        concept['sources'].append(source)
+                                                   glossary['id'],
+                                                   idLink)
+
+                        glossary['sources'].append(source)
 
             categories = response.xpath('//div[@id="mw-normal-catlinks"]' +
                                         '/ul/li/a/text()').getall()
 
-            concept['categories'] = categories
-        # elif row.last_update == concept['last_update']:
+            glossary['categories'] = categories
+        # elif row.last_update == glossary['last_update']:
             # To complete in order to update the DB
 
-        yield concept
+        yield glossary
