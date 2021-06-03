@@ -23,7 +23,8 @@ and on the Virtuoso frontend/GUI click on Conductor login using the username `db
 
 ![Virtuoso conductor](/Illustrations/virtuoso_conductor_homepage.PNG)
 
-Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit you user account as such :
+Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit the user account for the 'dba' user as such :
+![Virtuoso User account edit](/Illustrations/virtuoso_conductor_user_account_edit.PNG)
 ![Virtuoso User account page](/Illustrations/virtuoso_conductor_user_accounts.PNG)
 
 ### 4. Content database
@@ -40,7 +41,7 @@ If you are updating an existing database the needed scripts can be find in the S
 
 #### 4.2 Static data
 
-Some tables have to be fille in order for the project to work, such as:
+Some tables have to be filled in order for the project to work, such as:
 - Named entities
 - Modality
 
@@ -56,4 +57,4 @@ If it is an update, the scripts needed can be find in the Script SQL folder
 In order to launch the various part of the project from a Windows environment, please follow the procedure : http://vos.openlinksw.com/owiki/wiki/VOS/VOSUsageWindows#Optional%20--%20Register%20the%20VOS%20ODBC%20Driver
 
 
-The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the Scrapper folder.
+The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the [Scrapper](Scrapper) folder.
