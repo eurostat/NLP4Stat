@@ -1,5 +1,6 @@
 # NLP4Stat
 ## Project organisation
+- Docker images
 - Enrichement
 - Illustrations
 - KD model
@@ -11,7 +12,7 @@
 ## Project instantiation
 
 ### 1. Docker image
-Create the docker image using the `docker-compose up [docker-compose.yml](Docker%20Images/docker-compose.yml)` 
+Create the docker image using the `docker-compose up docker-compose.yml`. The [docker-compose.yml](Docker%20Images/docker-compose.yml) is in the `Docker Images` folder. 
 
 ### 2. Conmect to the Virtuoso docker image
 
