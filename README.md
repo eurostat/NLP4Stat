@@ -25,7 +25,7 @@ and on the Virtuoso frontend/GUI click on Conductor login using the username `db
 
 Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit the user account for the 'dba' user as such :
 
-![Virtuoso User account edit](/Illustrations/virtuoso_conductor_user_account_edit.PNG)
+![Virtuoso User account edit](/Illustrations/virtuoso_conductor_user_account_edit.png)
 
 ![Virtuoso User account page](/Illustrations/virtuoso_conductor_user_accounts.PNG)
 
