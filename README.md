@@ -11,12 +11,12 @@
 ## Project instantiation
 
 ### 1. Docker image
-Create the docker image using the `docker-compose up [docker-compose.yml](Docker Images/docker-compose.yml)` 
+Create the docker image using the `docker-compose up [docker-compose.yml](Docker%20Images/docker-compose.yml)` 
 
 ### 2. Conmect to the Virtuoso docker image
 
 In a browser go to http://localhost:8890
-and on the Virtuoso frontend/GUI click on Conductor login using the username `dba` and the password defined in the [docker-compose.yml](Docker Images/docker-compose.yml) file.
+and on the Virtuoso frontend/GUI click on Conductor login using the username `dba` and the password defined in the [docker-compose.yml](Docker%20Images/docker-compose.yml) file.
 
 ### 3. Virtuoso user parameters
 
