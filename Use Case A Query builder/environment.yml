@@ -1,0 +1,9 @@
+name: base
+channels:
+  - defaults
+dependencies:
+  - gensim
+  - ipywidgets
+  - pandas
+  - numpy
+  - openpyxl
