@@ -55,6 +55,11 @@ If it is an update, the scripts needed can be find in the Script SQL folder
 
 #### 5.1 Loading ontologies
 
+Before populating the KDB, the ontology file must be added to the database. Go to Virtuoso Conductor/Linked Data/Quad Store Upload and load the NLP4Stat ontology by uploading the .owl file in https://github.com/eurostat/NLP4Stat/tree/main/KD%20model/. In the "Named Graph IRI*" field, write https://ec.europa.eu/eurostat/resource/ontology/. This IRI will be used in the process of populating the KDB.
+
+#### 5.2 Knowledge database population 
+WIP
+
 ### 6. Virtuoso Bundle
 In order to launch the various part of the project from a Windows environment, please follow the procedure : http://vos.openlinksw.com/owiki/wiki/VOS/VOSUsageWindows#Optional%20--%20Register%20the%20VOS%20ODBC%20Driver
 
