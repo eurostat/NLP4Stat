@@ -27,7 +27,7 @@
 
 ![Virtuoso setup6](Virtuoso_setup6.JPG). 
 
-* Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials.
+* Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials, all within the connection string.
 
 ![Virtuoso setup8](Virtuoso_setup8.JPG). 
 
