@@ -4,7 +4,7 @@
 - Enrichement
 - Illustrations
 - KD model
-- Scrapper : Pyhton project where the various spiders are implemented
+- Scrapper : Python project where the various spiders are implemented
 - Script SQL : Script to build the content database
 - Use Case A Widgets Demo : for demonstration of ipywidgets only
 - Use Case A Query builder: Script towards a query builder, still based only on scraped content (Glossary articles) 
