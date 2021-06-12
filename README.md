@@ -1,7 +1,7 @@
 # NLP4Stat
 ## Project organisation
 - Docker images
-- Enrichement
+- [Enrichement](https://github.com/eurostat/NLP4Stat/tree/main/Enrichment)
 - Illustrations
 - KD model
 - Scrapper : Python project where the various spiders are implemented
