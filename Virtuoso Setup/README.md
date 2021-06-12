@@ -18,8 +18,13 @@
 
 ![Virtuoso setup4](Virtuoso_setup4.JPG). 
 
+* In the next screen, fill-in your user name and password:
+
 ![Virtuoso setup5](Virtuoso_setup5.JPG). 
 
+* A connection should be established. Change the default database to ESTAT and press Finish.
+
+![Virtuoso setup6](Virtuoso_setup6.JPG). 
 
 
 
