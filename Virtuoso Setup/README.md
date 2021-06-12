@@ -1,7 +1,7 @@
 
 * Download the Virtuoso Open Source (VOS) for Windows distribution. Preferably version 7.2 for 64-bit machines which is available [here](https://sourceforge.net/projects/virtuoso/files/latest/download). 
 
-![Virtuoso setup1b](Virtuoso_setup1b.JPG). 
+![Virtuoso setup1](Virtuoso_setup1.JPG). 
 
 *  Run the installer as administrator and accept the defaults. The default installation is shown below:
 
