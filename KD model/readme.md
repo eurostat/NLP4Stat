@@ -1,6 +1,7 @@
 
 ## The first version of the KD model ## 
 
+**Needs update**:
 
 * NLP4StatRef-Task2-Model_20210402(1).xmind: the complete current model in an Xmind workbook - can be read with Xmind software, see https://www.xmind.net/ but see also NLP4StatRef-Task2-Model_20210402.pdf. Contents: 
   * The Statistics Explained website: relationships of interest. 
@@ -12,5 +13,5 @@
   * The three main content types.
   * The Categories Taxonomy.  
 * NLP4StatRef-Mapping_20210402.xlsx: the mappings used for the implementation, together with status indications.
-* NLP4StatRef-ResourceType-skos_20210402.rdf: a draft authority list for the NLP4StatRef KD. 
-* NLP4StatRef-Estat-4.owl: A first version of the ontology.
+* NLP4StatRef-ResourceType-skos_20210402.rdf: a draft authority list for the NLP4StatRef KD.  
+* NLP4StatRef-Ontology_20210606.owl: A first version of the ontology. Can be read with [protégé](https://protege.stanford.edu/).
