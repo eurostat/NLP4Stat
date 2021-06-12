@@ -14,9 +14,11 @@
 
 ![Virtuoso setup3](Virtuoso_setup3.JPG). 
  
-* Fill the first configuration screen as follows:
+* Fill the first configuration screen as follows. Do NOT put http:// or https:// in front of the server address.
 
 ![Virtuoso setup4](Virtuoso_setup4.JPG). 
+
+![Virtuoso setup5](Virtuoso_setup5.JPG). 
 
 
 
