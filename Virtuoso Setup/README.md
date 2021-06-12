@@ -1,8 +1,7 @@
 
-* Download a Virtuoso Open Source (VOS) for Windows distribution from [this link](http://vos.openlinksw.com/owiki/wiki/VOS/VOSBuild#Building%20for%20Windows):
-![Virtuoso setup](Virtuoso_setup.JPG). 
+* Download the Virtuoso Open Source (VOS) for Windows distribution. Preferably version 7.2 for 64-bit machines which is available [here](https://sourceforge.net/projects/virtuoso/files/latest/download). 
 
-* Preferably version 7.2 for 64-bit machines which is available [here](https://sourceforge.net/projects/virtuoso/files/latest/download). The link in the table above seems to be broken. Run the installer as administrator and accept the defaults. The default installation is shown below:
+*  Run the installer as administrator and accept the defaults. The default installation is shown below:
 
 ![Virtuoso setup2](Virtuoso_setup2.JPG). 
 
@@ -26,7 +25,7 @@
 
 ![Virtuoso setup6](Virtuoso_setup6.JPG). 
 
-* Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace user name and password with your credentials.
+* Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials.
 
 ![Virtuoso setup8](Virtuoso_setup8.JPG). 
 
