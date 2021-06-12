@@ -61,7 +61,6 @@ Before populating the KDB, the ontology file must be added to the database. Go t
 WIP
 
 ### 6. Virtuoso Bundle
-In order to launch the various part of the project from a Windows environment, please follow the procedure : http://vos.openlinksw.com/owiki/wiki/VOS/VOSUsageWindows#Optional%20--%20Register%20the%20VOS%20ODBC%20Driver
-
+In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Virtuoso Setup](https://github.com/eurostat/NLP4Stat/blob/main/Virtuoso%20Setup/README.md)
 
 The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the [Scrapper](Scrapper) folder.
