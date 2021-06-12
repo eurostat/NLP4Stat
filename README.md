@@ -6,7 +6,7 @@
 - KD model
 - Scrapper : Python project where the various spiders are implemented
 - Script SQL : Script to build the content database
-- Use Case A Widgets Demo : for demonstration of ipywidgets only
+- [Use Case A Widgets Demo](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only
 - [Use Case A Query builder](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Query%20builder): Script towards a query builder, still based only on scraped content (Glossary articles) 
 
 
