@@ -1,6 +1,7 @@
 
 * Download the Virtuoso Open Source (VOS) for Windows distribution. Preferably version 7.2 for 64-bit machines which is available [here](https://sourceforge.net/projects/virtuoso/files/latest/download). 
 
+<a href="url"><img src="https://github.com/eurostat/NLP4Stat/Virtuoso%20Setup/Virtuoso_setup1.JPG" align="left" height="48" width="48" ></a>
 ![Virtuoso setup1](Virtuoso_setup1.JPG). 
 
 *  Run the installer as administrator and accept the defaults. The default installation is shown below:
