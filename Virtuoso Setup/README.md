@@ -18,7 +18,7 @@
 
 ![Virtuoso setup4](Virtuoso_setup4.JPG). 
 
-* In the next screen, fill-in your user name and password:
+* In the next screen, fill-in your user name and password and press Next:
 
 ![Virtuoso setup5](Virtuoso_setup5.JPG). 
 
