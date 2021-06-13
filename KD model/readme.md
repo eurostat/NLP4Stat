@@ -2,7 +2,7 @@
 ## The current version of the KD model ## 
 
 Ontology
-* NLP4StatRef-Ontology_20210613.owl: The ongoing version of the ontology. Can be read with [protégé](https://protege.stanford.edu/) or a notepad [NotePad++](https://notepad-plus-plus.org/).
+* [NLP4StatRef-Ontology_20210613.owl](https://github.com/eurostat/NLP4Stat/blob/main/KD%20model/NLP4StatRef-Ontology_20210613.owl): The ongoing version of the ontology. Can be read with [protégé](https://protege.stanford.edu/) or a notepad [NotePad++](https://notepad-plus-plus.org/).
   * This version is not commented at this stage.
   * Ontologies Dublin core and Skos were not imported, this task is done in the Knowledge database.
 
