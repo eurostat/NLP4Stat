@@ -26,6 +26,5 @@
 * NLP4StatRef-ResourceType-skos_20210402.rdf: This draft authority list for the NLP4StatRef KD is obsolete. A new version will be available by the end of the week 14/6/2019 -.
 
 ### XMind Workbook
-* NLP4StatRef-Task2-Model_20210402(1).xmind: the complete current model in an Xmind workbook - can be read with Xmind software, see https://www.xmind.net/ 
-  * This workbook has been deleted because its version is obsolete. Updated diagrams are extracted and made available in PDF. 
+* Deleted because it is obsolete. Updated diagrams are extracted and made available in PDF. 
 
