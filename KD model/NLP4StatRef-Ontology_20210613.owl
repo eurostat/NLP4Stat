@@ -10,7 +10,8 @@
      xmlns:resource="https://ec.europa.eu/eurostat/resource/">
     <owl:Ontology rdf:about="https://nlp4statref/knowledge/ontology/">
         <rdfs:comment xml:lang="en">This is the work in progress ontology for the NLP4StatRef KnowledgeDatabase. As Protégé encounters parsing difficulties for Dublin core ontologies, this ontology is neither associated with these ontologies, nor documented. As soon as the parsing problem is resolved, a first major version will be created.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">2021-05-20 Version 0.5
+        <owl:versionInfo xml:lang="en">2021-06-13 Version 0.6
+2021-05-20 Version 0.5
 2021-04-02 Version 0.4
 2021-03-29 Version 0.3
 2021-03-28 Version 0.2
@@ -143,18 +144,10 @@
     
 
 
-    <!-- https://nlp4statref/knowledge/ontology/EuropaLegalInformation -->
+    <!-- https://nlp4statref/knowledge/ontology/EuropeanUnionLaw -->
 
-    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/EuropaLegalInformation">
+    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/EuropeanUnionLaw">
         <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/LegalInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- https://nlp4statref/knowledge/ontology/EurostatConcepts -->
-
-    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/EurostatConcepts">
-        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Terminology"/>
     </owl:Class>
     
 
@@ -163,6 +156,14 @@
 
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/Glossary">
         <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Vocabulary"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp4statref/knowledge/ontology/LegalContext -->
+
+    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/LegalContext">
+        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/LegalInformation"/>
     </owl:Class>
     
 
@@ -337,14 +338,6 @@ Reference Metadata in Euro SDMX Metadata Structure (ESMS)</rdfs:comment>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/NamedEntities"/>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/StatisticData"/>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Vocabulary"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/EurostatConcepts"/>
-            <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Glossary"/>
-            <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Terminology"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
