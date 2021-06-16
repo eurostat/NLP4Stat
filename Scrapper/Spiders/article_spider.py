@@ -24,7 +24,10 @@ from Items.Article import Article
 from Items.Paragraph import Paragraph
 from sql_request import *
 
-c = pyodbc.connect('DSN=VirtuosoKapcode;DBA=ESTAT;UID=lea;PWD=arG59mJ00HT6nNVBLGWE')
+c = pyodbc.connect('DSN=Virtuoso All;' +
+                   'DBA=ESTAT;' +
+                   'UID=dba;' +
+                   'PWD=30gFcpQzj7sPtRu5bkes')
 cursor = c.cursor()
 
 class articlesSpider(scrapy.Spider):
@@ -33,26 +36,7 @@ class articlesSpider(scrapy.Spider):
     custom_settings = {
         # limit the logs
         'LOG_LEVEL': logging.WARNING,
-        # exports
-        'FEEDS': {
-            'articles.json': {
-                'format': 'json',
-                'encoding': 'utf8',
-                'fields': None,
-                'indent': 4,
-                'item_export_kwargs': {
-                    'export_empty_fields': False
-                }
-            },
-            'articles.csv': {
-                'format': 'csv',
-                'encoding': 'utf8',
-                'item_export_kwargs': {
-                    'include_headers_line': True,
-                    'delimiter': '#'
-                }
-            }
-        }
+        
     }
 
     start_urls = ['https://ec.europa.eu/eurostat/statistics-explained' +
@@ -89,7 +73,7 @@ class articlesSpider(scrapy.Spider):
         # if it does not exist
         if row is None:
             titleRaw = normalize(response.css('#firstHeading::text').get())
-            article['title'] = titleRaw
+            article['title'] = titleRaw.encode('utf-8')
 
             if article['title'] is None:
                 article['title'] = 'ERROR'
@@ -161,12 +145,12 @@ class articlesSpider(scrapy.Spider):
 
                         # assign the results to the right element
                         if title == 'Context':
-                            article['context'] = content
+                            article['context'] = content.encode('utf-8')
                         elif title == 'Data Sources' or title == 'Data sources':
-                            article['data_sources'] = content
+                            article['data_sources'] = content.encode('utf-8')
                         else:
-                            articleParagraph['title'] = title
-                            articleParagraph['content'] = content
+                            articleParagraph['title'] = title.encode('utf-8')
+                            articleParagraph['content'] = content.encode('utf-8')
 
                             cursor.execute(paragraphInsert(),
                                            article['id'],
@@ -190,7 +174,7 @@ class articlesSpider(scrapy.Spider):
                                     figTemp = LinkInfo()
 
                                     figTitle = BeautifulSoup(caption[0], 'html.parser').get_text()
-                                    figTemp['title'] = normalize(figTitle)
+                                    figTemp['title'] = normalize(figTitle.encode('utf-8'))
 
                                     urls = BeautifulSoup(caption[-1], 'html.parser').find_all('a')
                                     figTemp['url'] = []
@@ -270,7 +254,7 @@ class articlesSpider(scrapy.Spider):
                     ctxt = ''
                     for part in contextRaw:
                         ctxt = ctxt + normalize(part) + ' '
-                    article['context'] = ctxt
+                    article['context'] = ctxt.encode('utf-8')
 
                 # data sources
                 if 'data_sources' not in article:
@@ -281,7 +265,7 @@ class articlesSpider(scrapy.Spider):
                 for part in dataSourcesRaw:
                     dataSources = dataSources + normalize(part) + ' '
                 
-                article['data_sources'] = dataSources
+                article['data_sources'] = dataSources.encode('utf-8')
 
                 cursor.execute(articleFillExisting(),
                                article['context'],
@@ -323,7 +307,7 @@ class articlesSpider(scrapy.Spider):
                 print('la')
                 print('----------------------------------------------------------------------')
             
-            article['abstract'] = normalize(abstract)
+            article['abstract'] = normalize(abstract).encode('utf-8')
             cursor.execute(abstractInsert(),
                            article['id'],
                            'Abstract',
@@ -340,11 +324,11 @@ class articlesSpider(scrapy.Spider):
                 for alertRaw in alertsRaw:
                     alertTab = BeautifulSoup(alertRaw, 'html.parser').find_all('p')
                     alertTemp = Paragraph()
-                    alertTemp['title'] = normalize(alertTab[0].get_text())
+                    alertTemp['title'] = normalize(alertTab[0].get_text()).encode('utf-8')
                     alertTxt = ''
                     for p in alertTab[1:]:
                         alertTxt = alertTxt + normalize(p.get_text()) + ' '
-                    alertTemp['content'] = alertTxt
+                    alertTemp['content'] = alertTxt.encode('utf-8')
                     cursor.execute(alertInsert(),
                                    article['id'],
                                    alertTemp['title'],
@@ -367,7 +351,7 @@ class articlesSpider(scrapy.Spider):
                 elmntBs = BeautifulSoup(elmnt, 'html.parser')
                 tabLinks = elmntBs.find_all('a')
                 sectionTitle = elmntBs.find('div').get('id')
-                division = 0
+                division = 1
                 if sectionTitle == 'seealso':
                     division = 2
                 elif sectionTitle == 'maintables':

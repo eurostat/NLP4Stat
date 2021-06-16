@@ -1,21 +1,21 @@
 # select eurostat doc id
 def estatLinkSelectId():
-    estatLinkSelectId = "SELECT id FROM dat_link_info WHERE url = ? AND eurostat = 1"
+    estatLinkSelectId = "SELECT id FROM dat_link_info WHERE url = ? AND resource_information_id = 1"
     return estatLinkSelectId
 
 # select foreign doc id
 def foreignLinkSelectId():
-    foreignLinkSelectId = "SELECT id FROM dat_link_info WHERE url = ? AND eurostat = 0"
+    foreignLinkSelectId = "SELECT id FROM dat_link_info WHERE url = ? AND resource_information_id = 0"
     return foreignLinkSelectId
 
 # insert eurostat doc
 def estatLinkInsert():
-    estatLinkInsert = "INSERT INTO dat_link_info(title, url, eurostat) VALUES (?, ?, 1)"
+    estatLinkInsert = "INSERT INTO dat_link_info(title, url, resource_information_id) VALUES (?, ?, 1)"
     return estatLinkInsert
 
 # insert doc from outside eurostat
 def foreignLinkInsert():
-    foreignLinkInsert = "INSERT INTO dat_link_info(title, url, eurostat) VALUES (?, ?, 0)"
+    foreignLinkInsert = "INSERT INTO dat_link_info(title, url, resource_information_id) VALUES (?, ?, 0)"
     return foreignLinkInsert
 
 ############################## Glossary queries ############################
@@ -31,9 +31,19 @@ def glossaryFullInsert():
     return glossaryFullInsert
 
 # insert glossary element
+def glossaryRedirectFullInsert():
+    glossaryRedirectFullInsert = "INSERT INTO dat_glossary(id, definition, last_update, homepage, redirection, original_title) VALUES (?, ?, ?, 0, 1, ?)"
+    return glossaryRedirectFullInsert
+
+# insert glossary element
 def glossaryInsert():
     glossaryInsert = "INSERT INTO dat_glossary(id, definition, homepage, redirection) VALUES (?, ?, 0, 0)"
     return glossaryInsert
+
+# insert glossary element with redirection
+def glossaryRedirectInsert():
+    glossaryRedirectInsert = "INSERT INTO dat_glossary(id, definition, homepage, redirection, original_title) VALUES (?, ?, 0, 1, ?)"
+    return glossaryRedirectInsert
 
 # check if couple exists in dat_further_info
 def furtherInfoCheck():

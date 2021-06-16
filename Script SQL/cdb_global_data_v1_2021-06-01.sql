@@ -1,9 +1,9 @@
 /* mod_resource_information */
-INSERT INTO "ESTAT"."V1"."mod_resource_information" (id, label) VALUES ('Other');
+INSERT INTO "ESTAT"."V1"."mod_resource_information" (label) VALUES ('Other');
 INSERT INTO "ESTAT"."V1"."mod_resource_information" (label) VALUES ('Eurostat');
 
 /* mod_resource_type */
-INSERT INTO "ESTAT"."V1"."mod_resource_type" (id, label) VALUES ('Other');
+INSERT INTO "ESTAT"."V1"."mod_resource_type" (label) VALUES ('Other');
 
 /* mod_article_division */
 INSERT INTO "ESTAT"."V1"."mod_article_division" (id, label) VALUES (1, 'Excel');

@@ -29,6 +29,8 @@ c = pyodbc.connect('DSN=Virtuoso All;' +
                    'PWD=30gFcpQzj7sPtRu5bkes')
 cursor = c.cursor()
 
+#to keep aside the various element that are duplicates
+redirect_urls =[]
 
 class glossarySpider(scrapy.Spider):
 
@@ -37,47 +39,43 @@ class glossarySpider(scrapy.Spider):
     custom_settings = {
         # limit the logs
         'LOG_LEVEL': logging.WARNING,
-        # exports
-        'FEEDS': {
-            'glossary.json': {
-                'format': 'json',
-                'encoding': 'utf8',
-                'fields': None,
-                'indent': 4,
-                'item_export_kwargs': {
-                    'export_empty_fields': False
-                }
-            },
-            'glossary.csv': {
-                'format': 'csv',
-                'encoding': 'utf8',
-                'item_export_kwargs': {
-                    'include_headers_line': True,
-                    'delimiter': '#'
-                }
-            }
-        }
+        
     }
 
     start_urls = ['https://ec.europa.eu/eurostat/statistics-explained' +
                   '/index.php?title=Category:Glossary']
 
+   
+
     def parse(self, response):
         # Gather the links on the page
         # starting with the start_urls link
-        for page in response.css('#mw-pages').css('.mw-content-ltr'):
-            for link in page.css('a ::attr(href)'):
-                cptLink = 'https://ec.europa.eu' + link.extract()
-                yield scrapy.Request(url=cptLink, callback=self.parse_glossary)
+        for link in response.xpath("//div[@id='mw-pages']//div[@class='mw-category']//a[not(@class)]/@href"):
+            if link.get().startswith('/eurostat'):
+                cptLink = 'https://ec.europa.eu' + link.get()
+            else:
+                cptLink = link.get()
+            yield scrapy.Request(url=cptLink, callback=self.parse_glossary)
+
+        for link in response.xpath("//div[@id='mw-pages']//div[@class='mw-category']//a[@class='mw-redirect']/@href"):
+            if link.get().startswith('/eurostat'):
+                cptRedirectLink = 'https://ec.europa.eu' + link.get()
+            else:
+                cptRedirectLink = link.get()
+            redirect_urls.append(cptRedirectLink)      
 
         # Check if there is another page
         # if so re-launch the parse function
         # with nextPage url as start_urls
-        nextPage = response.xpath("//a[contains(.//text(), 'next page')]" +
+        nextPage = response.xpath("//div[@id='mw-pages']//a[contains(.//text(), 'next page')]" +
                                   "/@href").get()
+        
         if nextPage is not None:
-            nextPage = response.urljoin('https://ec.europa.eu' + nextPage)
-            yield scrapy.Request(nextPage, callback=self.parse)
+            if nextPage.startswith('/eurostat'):
+                nextPageUrl = 'https://ec.europa.eu' + nextPage
+            else:
+                nextPageUrl = nextPage
+            yield scrapy.Request(url = nextPageUrl, callback=self.parse)
 
     def parse_glossary(self, response):
 
@@ -90,13 +88,15 @@ class glossarySpider(scrapy.Spider):
         splitContent = re.split('<h2>|</h2>', pageContent.prettify())
 
         titleRaw = normalize(response.css('#firstHeading::text').get())
+        redirected = response.css('.mw-redirectedfrom').css('a ::attr(title)').get()
+
+        if splitContent[0] == titleRaw :
+            splitContent.pop(0)
+
         definitionRaw = BeautifulSoup(splitContent[0], 'html.parser')
-        redirected = response.xpath("//div[@id = 'contentSub']" +
-                                    "[text()[contains(.,'Redirected')]]" +
-                                    "/a/text()").get()
 
         glossary = Glossary()
-        glossary['url'] = response.request.url
+        glossary['url'] = response.request.url.encode('utf-8')
         # check if already exists in DB
         cursor.execute(estatLinkSelectId(), glossary['url'])
         c.commit()
@@ -104,13 +104,16 @@ class glossarySpider(scrapy.Spider):
         # if it does not exist
         if row is None:
 
-            glossary['title'] = titleRaw.replace('Glossary:', '')
-            # check if there was a redirection
-            if redirected is not None:
-                glossary['original_title'] = redirected.replace('Glossary:', '')
-
+            glossary['title'] = titleRaw.replace('Glossary:', '').encode('utf-8')
+            
             if glossary['title'] is None:
                 glossary['title'] = 'ERROR'
+
+            # check if there was a redirection
+            if redirected is not None:
+                print(redirected)
+                glossary['original_title'] = redirected.replace('Glossary:', '').encode('utf-8')
+
 
             cursor.execute(estatLinkInsert(), glossary['title'], glossary['url'])
             c.commit()
@@ -137,17 +140,33 @@ class glossarySpider(scrapy.Spider):
         row = cursor.fetchone()
         if row is None:
 
-            glossary['definition'] = normalize(definitionRaw.get_text())
+            glossary['definition'] = normalize(definitionRaw.get_text()).encode('utf-8')
 
             if updateStrRaw is not None:
-                cursor.execute(glossaryFullInsert(),
-                               glossary['id'],
-                               glossary['definition'],
-                               glossary['last_update'])
+                if redirected is not None:
+                    cursor.execute(glossaryRedirectFullInsert(),
+                                   glossary['id'],
+                                   glossary['definition'],
+                                   glossary['last_update'],
+                                   redirected.replace('Glossary:', '').encode('utf-8'))
+                else:
+                    cursor.execute(glossaryFullInsert(),
+                                   glossary['id'],
+                                   glossary['definition'],
+                                   glossary['last_update'])
+                
             else:
-                cursor.execute(glossaryInsert(),
-                               glossary['id'],
-                               glossary['definition'])
+                 if redirected is not None:
+                     cursor.execute(glossaryRedirectInsert(),
+                                    glossary['id'],
+                                    glossary['definition'],
+                                    glossary['original_title'])
+                 else:
+                     cursor.execute(glossaryInsert(),
+                                    glossary['id'],
+                                    glossary['definition'])
+
+                
             c.commit()
 
             glossary['further_info'] = []
@@ -170,12 +189,17 @@ class glossarySpider(scrapy.Spider):
                     for elmt in BeautifulSoup(splitContent[a],
                                               'html.parser').find_all('a'):
                         furtherInfo = LinkInfo()
-                        furtherInfo['title'] = normalize(elmt.get_text())
+                        furtherInfo['title'] = normalize(elmt.get_text()).encode('utf-8')
                         url = elmt.get('href')
-                        if url.startswith('/eurostat'):
-                            furtherInfo['url'] = 'https://ec.europa.eu' + url
+                        if "oldid" not in url:
+                            urlClean = url
                         else:
-                            furtherInfo['url'] = url
+                            urlClean = re.split('&oldid', url)[0]
+
+                        if urlClean.startswith('/eurostat'):
+                            furtherInfo['url'] = 'https://ec.europa.eu' + urlClean
+                        else:
+                            furtherInfo['url'] = urlClean
                         # select, check if in Link Info
                         if 'eurostat' in furtherInfo['url']:
                             cursor.execute(estatLinkSelectId(),
@@ -253,12 +277,17 @@ class glossarySpider(scrapy.Spider):
                     for elmt in BeautifulSoup(splitContent[a],
                                               'html.parser').find_all('a'):
                         relCpt = LinkInfo()
-                        relCpt['title'] = normalize(elmt.get_text())
+                        relCpt['title'] = normalize(elmt.get_text()).encode('utf-8')
                         urlCpt = elmt.get('href')
-                        if urlCpt.startswith('/eurostat'):
-                            relCpt['url'] = 'https://ec.europa.eu' + urlCpt
+                        if "oldid" not in urlCpt:
+                            urlCptClean = urlCpt
                         else:
-                            relCpt['url'] = urlCpt
+                            urlCptClean = re.split('&oldid', urlCpt)[0]
+
+                        if urlCptClean.startswith('/eurostat'):
+                            relCpt['url'] = 'https://ec.europa.eu' + urlCptClean
+                        else:
+                            relCpt['url'] = urlCptClean
                         # check if the doc already is in the DB
                         cursor.execute(estatLinkSelectId(), relCpt['url'])
                         c.commit()
@@ -301,10 +330,15 @@ class glossarySpider(scrapy.Spider):
                         statData = LinkInfo()
                         statData['title'] = elmt.get('title')
                         urlStat = elmt.get('href')
-                        if urlStat.startswith('/eurostat'):
-                            statData['url'] = 'https://ec.europa.eu' + urlStat
+                        if "oldid" not in urlStat:
+                            urlStatClean = urlStat
                         else:
-                            statData['url'] = urlStat
+                            urlStatClean = re.split('&oldid', urlStat)[0]
+
+                        if urlStatClean.startswith('/eurostat'):
+                            statData['url'] = 'https://ec.europa.eu' + urlStatClean
+                        else:
+                            statData['url'] = urlStatClean
                         # check if the doc already is in the DB
                         cursor.execute(estatLinkSelectId(),
                                        statData['url'])
@@ -317,7 +351,7 @@ class glossarySpider(scrapy.Spider):
 
                             # add a document
                             cursor.execute(estatLinkInsert(),
-                                           statData['title'],
+                                           statData['title'].encode('utf-8'),
                                            statData['url'])
                             c.commit()
                             # get id
@@ -348,12 +382,16 @@ class glossarySpider(scrapy.Spider):
                     for elmt in BeautifulSoup(splitContent[a],
                                               'html.parser').find_all('a'):
                         source = LinkInfo()
-                        source['title'] = normalize(elmt.get_text())
+                        source['title'] = normalize(elmt.get_text()).encode('utf-8')
                         url = elmt.get('href')
-                        if url.startswith('/eurostat'):
-                            source['url'] = 'https://ec.europa.eu' + url
+                        if "oldid" not in url:
+                            urlClean = url
                         else:
-                            source['url'] = url
+                            urlClean = re.split('&oldid', url)[0]
+                        if urlClean.startswith('/eurostat'):
+                            source['url'] = 'https://ec.europa.eu' + urlClean
+                        else:
+                            source['url'] = urlClean
                         # select, check if in Link Info
                         if 'eurostat' in source['url']:
                             cursor.execute(estatLinkSelectId(),
@@ -435,3 +473,6 @@ class glossarySpider(scrapy.Spider):
             # To complete in order to update the DB
 
         yield glossary
+
+    def parse_redirections(self, response):
+        #create element

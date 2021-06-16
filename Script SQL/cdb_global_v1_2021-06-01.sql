@@ -1,12 +1,12 @@
 CREATE TABLE "ESTAT"."V1"."mod_resource_information" (
-  "id" integer NOT NULL IDENTITY (START WITH 1),
+  "id" integer NOT NULL IDENTITY (START WITH 0),
   "label" varchar NOT NULL,
   "url" varchar,
   PRIMARY KEY ("id")
 )
 
 CREATE TABLE "ESTAT"."V1"."mod_resource_type" (
-  "id" integer NOT NULL IDENTITY (START WITH 1),
+  "id" integer NOT NULL IDENTITY (START WITH 0),
   "label" varchar NOT NULL,
   PRIMARY KEY ("id")
 )
@@ -28,6 +28,7 @@ CREATE TABLE "ESTAT"."V1"."dat_glossary" (
   "id" bigint NOT NULL,
   "definition" long varchar NOT NULL,
   "redirection" smallint NOT NULL DEFAULT 0,
+  "original_title" varchar,
   "homepage" smallint NOT NULL DEFAULT 0,
   "last_update" datetime DEFAULT NULL,
   PRIMARY KEY ("id"),
