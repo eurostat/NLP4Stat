@@ -80,399 +80,402 @@ class glossarySpider(scrapy.Spider):
     def parse_glossary(self, response):
 
         # html page
-        pageContent = BeautifulSoup(response.css('#mw-content-text').get(),
-                                    'html.parser')
+        pageContent = response.css('#mw-content-text').get()
+        
+        if pageContent is not None:
+            pageContent = BeautifulSoup(pageContent,
+                                        'html.parser')
 
-        # split around the part titles (ex: Related concepts , etc.)
-        # list of strings (html)
-        splitContent = re.split('<h2>|</h2>', pageContent.prettify())
+            # split around the part titles (ex: Related concepts , etc.)
+            # list of strings (html)
+            splitContent = re.split('<h2>|</h2>', pageContent.prettify())
 
-        titleRaw = normalize(response.css('#firstHeading::text').get())
-        redirected = response.css('.mw-redirectedfrom').css('a ::attr(title)').get()
+            titleRaw = normalize(response.css('#firstHeading::text').get())
+            redirected = response.css('.mw-redirectedfrom').css('a ::attr(title)').get()
 
-        if splitContent[0] == titleRaw :
-            splitContent.pop(0)
+            if splitContent[0] == titleRaw :
+                splitContent.pop(0)
 
-        definitionRaw = BeautifulSoup(splitContent[0], 'html.parser')
+            definitionRaw = BeautifulSoup(splitContent[0], 'html.parser')
 
-        glossary = Glossary()
-        glossary['url'] = response.request.url.encode('utf-8')
-        # check if already exists in DB
-        cursor.execute(estatLinkSelectId(), glossary['url'])
-        c.commit()
-        row = cursor.fetchone()
-        # if it does not exist
-        if row is None:
-
-            glossary['title'] = titleRaw.replace('Glossary:', '').encode('utf-8')
-            
-            if glossary['title'] is None:
-                glossary['title'] = 'ERROR'
-
-            # check if there was a redirection
-            if redirected is not None:
-                print(redirected)
-                glossary['original_title'] = redirected.replace('Glossary:', '').encode('utf-8')
-
-
-            cursor.execute(estatLinkInsert(), glossary['title'], glossary['url'])
-            c.commit()
-            # get id
+            glossary = Glossary()
+            glossary['url'] = response.request.url.encode('utf-8')
+            # check if already exists in DB
             cursor.execute(estatLinkSelectId(), glossary['url'])
             c.commit()
             row = cursor.fetchone()
-            glossary['id'] = row.id
-        else:
-            glossary['id'] = row.id
+            # if it does not exist
+            if row is None:
 
-        # last update
-        updateStrRaw = response.xpath('//div[@id="footer"]' +
-                                      '//li[@id="footer-info-lastmod"]/text()').get()
-        if updateStrRaw is not None:
-            dateFormat = "%d %B %Y, at %H:%M."
-            updateStr = re.split('edited on ', normalize(updateStrRaw))
-            update = datetime.strptime(updateStr[-1], dateFormat)
-            glossary['last_update'] = update
+                glossary['title'] = titleRaw.replace('Glossary:', '').encode('utf-8')
+            
+                if glossary['title'] is None:
+                    glossary['title'] = 'ERROR'
 
-        # check if already in DB
-        cursor.execute(glossarySelect(), glossary['id'])
-        c.commit()
-        row = cursor.fetchone()
-        if row is None:
-
-            glossary['definition'] = normalize(definitionRaw.get_text()).encode('utf-8')
-
-            if updateStrRaw is not None:
+                # check if there was a redirection
                 if redirected is not None:
-                    cursor.execute(glossaryRedirectFullInsert(),
-                                   glossary['id'],
-                                   glossary['definition'],
-                                   glossary['last_update'],
-                                   redirected.replace('Glossary:', '').encode('utf-8'))
-                else:
-                    cursor.execute(glossaryFullInsert(),
-                                   glossary['id'],
-                                   glossary['definition'],
-                                   glossary['last_update'])
-                
+                    print(redirected)
+                    glossary['original_title'] = redirected.replace('Glossary:', '').encode('utf-8')
+
+
+                cursor.execute(estatLinkInsert(), glossary['title'], glossary['url'])
+                c.commit()
+                # get id
+                cursor.execute(estatLinkSelectId(), glossary['url'])
+                c.commit()
+                row = cursor.fetchone()
+                glossary['id'] = row.id
             else:
-                 if redirected is not None:
-                     cursor.execute(glossaryRedirectInsert(),
-                                    glossary['id'],
-                                    glossary['definition'],
-                                    glossary['original_title'])
-                 else:
-                     cursor.execute(glossaryInsert(),
-                                    glossary['id'],
-                                    glossary['definition'])
+                glossary['id'] = row.id
+
+            # last update
+            updateStrRaw = response.xpath('//div[@id="footer"]' +
+                                          '//li[@id="footer-info-lastmod"]/text()').get()
+            if updateStrRaw is not None:
+                dateFormat = "%d %B %Y, at %H:%M."
+                updateStr = re.split('edited on ', normalize(updateStrRaw))
+                update = datetime.strptime(updateStr[-1], dateFormat)
+                glossary['last_update'] = update
+
+            # check if already in DB
+            cursor.execute(glossarySelect(), glossary['id'])
+            c.commit()
+            row = cursor.fetchone()
+            if row is None:
+
+                glossary['definition'] = normalize(definitionRaw.get_text()).encode('utf-8')
+
+                if updateStrRaw is not None:
+                    if redirected is not None:
+                        cursor.execute(glossaryRedirectFullInsert(),
+                                       glossary['id'],
+                                       glossary['definition'],
+                                       glossary['last_update'],
+                                       redirected.replace('Glossary:', '').encode('utf-8'))
+                    else:
+                        cursor.execute(glossaryFullInsert(),
+                                       glossary['id'],
+                                       glossary['definition'],
+                                       glossary['last_update'])
+                
+                else:
+                     if redirected is not None:
+                         cursor.execute(glossaryRedirectInsert(),
+                                        glossary['id'],
+                                        glossary['definition'],
+                                        glossary['original_title'])
+                     else:
+                         cursor.execute(glossaryInsert(),
+                                        glossary['id'],
+                                        glossary['definition'])
 
                 
-            c.commit()
+                c.commit()
 
-            glossary['further_info'] = []
-            glossary['related_concepts'] = []
-            glossary['statistical_data'] = []
-            glossary['sources'] = []
+                glossary['further_info'] = []
+                glossary['related_concepts'] = []
+                glossary['statistical_data'] = []
+                glossary['sources'] = []
 
-            # to identify which sub-categories are in the page
-            titlesList = pageContent.find_all('h2')
+                # to identify which sub-categories are in the page
+                titlesList = pageContent.find_all('h2')
 
-            # go through each sub-category to assign the right data
-            # to the right category
-            # if a new/undetected sub-category has to be added,
-            # add an elif paragraph
-            for i in range(len(titlesList)):
-                # index to gather the right info from splitContent
-                a = 2*i + 2
-                titleTemp = normalize(titlesList[i].get_text())
-                if 'Further information' in titleTemp:
-                    for elmt in BeautifulSoup(splitContent[a],
-                                              'html.parser').find_all('a'):
-                        furtherInfo = LinkInfo()
-                        furtherInfo['title'] = normalize(elmt.get_text()).encode('utf-8')
-                        url = elmt.get('href')
-                        if "oldid" not in url:
-                            urlClean = url
-                        else:
-                            urlClean = re.split('&oldid', url)[0]
+                # go through each sub-category to assign the right data
+                # to the right category
+                # if a new/undetected sub-category has to be added,
+                # add an elif paragraph
+                for i in range(len(titlesList)):
+                    # index to gather the right info from splitContent
+                    a = 2*i + 2
+                    titleTemp = normalize(titlesList[i].get_text())
+                    if 'Further information' in titleTemp:
+                        for elmt in BeautifulSoup(splitContent[a],
+                                                  'html.parser').find_all('a'):
+                            furtherInfo = LinkInfo()
+                            furtherInfo['title'] = normalize(elmt.get_text()).encode('utf-8')
+                            url = elmt.get('href')
+                            if "oldid" not in url:
+                                urlClean = url
+                            else:
+                                urlClean = re.split('&oldid', url)[0]
 
-                        if urlClean.startswith('/eurostat'):
-                            furtherInfo['url'] = 'https://ec.europa.eu' + urlClean
-                        else:
-                            furtherInfo['url'] = urlClean
-                        # select, check if in Link Info
-                        if 'eurostat' in furtherInfo['url']:
-                            cursor.execute(estatLinkSelectId(),
-                                           furtherInfo['url'])
+                            if urlClean.startswith('/eurostat'):
+                                furtherInfo['url'] = 'https://ec.europa.eu' + urlClean
+                            else:
+                                furtherInfo['url'] = urlClean
+                            # select, check if in Link Info
+                            if 'eurostat' in furtherInfo['url']:
+                                cursor.execute(estatLinkSelectId(),
+                                               furtherInfo['url'])
+                                c.commit()
+                                row = cursor.fetchone()
+
+                                if row is None:
+                                    # add a document
+                                    cursor.execute(estatLinkInsert(),
+                                                   furtherInfo['title'],
+                                                   furtherInfo['url'])
+                                    c.commit()
+                                    # get id
+                                    cursor.execute(estatLinkSelectId(),
+                                                   furtherInfo['url'])
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    # add a link between the concept and the doc
+                                    cursor.execute(furtherInfoInsert(),
+                                                   glossary['id'],
+                                                   row.id)
+                                    c.commit()
+                                else:
+                                    idLink = row.id
+                                    cursor.execute(furtherInfoCheck(),
+                                                   glossary['id'],
+                                                   idLink)
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    if row is None:
+                                        # add link between the concept and the doc
+                                        cursor.execute(furtherInfoInsert(),
+                                                       glossary['id'],
+                                                       idLink)
+
+                            else:
+                                cursor.execute(foreignLinkSelectId(),
+                                               furtherInfo['url'])
+                                c.commit()
+                                row = cursor.fetchone()
+
+                                if row is None:
+                                    # add a document
+                                    cursor.execute(foreignLinkInsert(),
+                                                   furtherInfo['title'],
+                                                   furtherInfo['url'])
+                                    c.commit()
+                                    # get id
+                                    cursor.execute(foreignLinkSelectId(),
+                                                   furtherInfo['url'])
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    # add a link between the concept and the doc
+                                    cursor.execute(furtherInfoInsert(),
+                                                   glossary['id'],
+                                                   row.id)
+                                    c.commit()
+                                else:
+                                    idLink = row.id
+                                    cursor.execute(furtherInfoCheck(),
+                                                   glossary['id'],
+                                                   idLink)
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    if row is None:
+                                        # add link between the concept and the doc
+                                        cursor.execute(furtherInfoInsert(),
+                                                       glossary['id'],
+                                                       idLink)
+
+                            glossary['further_info'].append(furtherInfo)
+
+                    elif 'Related concepts' in titleTemp:
+                        for elmt in BeautifulSoup(splitContent[a],
+                                                  'html.parser').find_all('a'):
+                            relCpt = LinkInfo()
+                            relCpt['title'] = normalize(elmt.get_text()).encode('utf-8')
+                            urlCpt = elmt.get('href')
+                            if "oldid" not in urlCpt:
+                                urlCptClean = urlCpt
+                            else:
+                                urlCptClean = re.split('&oldid', urlCpt)[0]
+
+                            if urlCptClean.startswith('/eurostat'):
+                                relCpt['url'] = 'https://ec.europa.eu' + urlCptClean
+                            else:
+                                relCpt['url'] = urlCptClean
+                            # check if the doc already is in the DB
+                            cursor.execute(estatLinkSelectId(), relCpt['url'])
                             c.commit()
                             row = cursor.fetchone()
 
                             if row is None:
                                 # add a document
                                 cursor.execute(estatLinkInsert(),
-                                               furtherInfo['title'],
-                                               furtherInfo['url'])
+                                               relCpt['title'],
+                                               relCpt['url'])
                                 c.commit()
                                 # get id
                                 cursor.execute(estatLinkSelectId(),
-                                               furtherInfo['url'])
+                                               relCpt['url'])
                                 c.commit()
                                 row = cursor.fetchone()
-                                # add a link between the concept and the doc
-                                cursor.execute(furtherInfoInsert(),
-                                               glossary['id'],
-                                               row.id)
-                                c.commit()
-                            else:
-                                idLink = row.id
-                                cursor.execute(furtherInfoCheck(),
-                                               glossary['id'],
-                                               idLink)
-                                c.commit()
-                                row = cursor.fetchone()
-                                if row is None:
-                                    # add link between the concept and the doc
-                                    cursor.execute(furtherInfoInsert(),
-                                                   glossary['id'],
-                                                   idLink)
-
-                        else:
-                            cursor.execute(foreignLinkSelectId(),
-                                           furtherInfo['url'])
-                            c.commit()
-                            row = cursor.fetchone()
-
-                            if row is None:
-                                # add a document
-                                cursor.execute(foreignLinkInsert(),
-                                               furtherInfo['title'],
-                                               furtherInfo['url'])
-                                c.commit()
-                                # get id
-                                cursor.execute(foreignLinkSelectId(),
-                                               furtherInfo['url'])
-                                c.commit()
-                                row = cursor.fetchone()
-                                # add a link between the concept and the doc
-                                cursor.execute(furtherInfoInsert(),
-                                               glossary['id'],
-                                               row.id)
-                                c.commit()
-                            else:
-                                idLink = row.id
-                                cursor.execute(furtherInfoCheck(),
-                                               glossary['id'],
-                                               idLink)
-                                c.commit()
-                                row = cursor.fetchone()
-                                if row is None:
-                                    # add link between the concept and the doc
-                                    cursor.execute(furtherInfoInsert(),
-                                                   glossary['id'],
-                                                   idLink)
-
-                        glossary['further_info'].append(furtherInfo)
-
-                elif 'Related concepts' in titleTemp:
-                    for elmt in BeautifulSoup(splitContent[a],
-                                              'html.parser').find_all('a'):
-                        relCpt = LinkInfo()
-                        relCpt['title'] = normalize(elmt.get_text()).encode('utf-8')
-                        urlCpt = elmt.get('href')
-                        if "oldid" not in urlCpt:
-                            urlCptClean = urlCpt
-                        else:
-                            urlCptClean = re.split('&oldid', urlCpt)[0]
-
-                        if urlCptClean.startswith('/eurostat'):
-                            relCpt['url'] = 'https://ec.europa.eu' + urlCptClean
-                        else:
-                            relCpt['url'] = urlCptClean
-                        # check if the doc already is in the DB
-                        cursor.execute(estatLinkSelectId(), relCpt['url'])
-                        c.commit()
-                        row = cursor.fetchone()
-
-                        if row is None:
-                            # add a document
-                            cursor.execute(estatLinkInsert(),
-                                           relCpt['title'],
-                                           relCpt['url'])
-                            c.commit()
-                            # get id
-                            cursor.execute(estatLinkSelectId(),
-                                           relCpt['url'])
-                            c.commit()
-                            row = cursor.fetchone()
-                            # add a link between the concept and the doc
-                            cursor.execute(relCptInsert(),
-                                           glossary['id'],
-                                           row.id)
-                            c.commit()
-                        else:
-                            idLink = row.id
-                            cursor.execute(relCptCheck(),
-                                           glossary['id'],
-                                           idLink)
-                            c.commit()
-                            row = cursor.fetchone()
-                            if row is None:
                                 # add a link between the concept and the doc
                                 cursor.execute(relCptInsert(),
                                                glossary['id'],
-                                               idLink)
-
-                        glossary['related_concepts'].append(relCpt)
-
-                elif 'Statistical data' in titleTemp:
-                    for elmt in BeautifulSoup(splitContent[a],
-                                              'html.parser').find_all('a'):
-                        statData = LinkInfo()
-                        statData['title'] = elmt.get('title')
-                        urlStat = elmt.get('href')
-                        if "oldid" not in urlStat:
-                            urlStatClean = urlStat
-                        else:
-                            urlStatClean = re.split('&oldid', urlStat)[0]
-
-                        if urlStatClean.startswith('/eurostat'):
-                            statData['url'] = 'https://ec.europa.eu' + urlStatClean
-                        else:
-                            statData['url'] = urlStatClean
-                        # check if the doc already is in the DB
-                        cursor.execute(estatLinkSelectId(),
-                                       statData['url'])
-                        c.commit()
-                        row = cursor.fetchone()
-
-                        if row is None:
-                            if statData['title'] is None:
-                                statData['title'] = statData['url']
-
-                            # add a document
-                            cursor.execute(estatLinkInsert(),
-                                           statData['title'].encode('utf-8'),
-                                           statData['url'])
-                            c.commit()
-                            # get id
-                            cursor.execute(estatLinkSelectId(),
-                                           statData['url'])
-                            c.commit()
-                            row = cursor.fetchone()
-                            # add a link between the concept and the doc
-                            cursor.execute(statDataInsert(),
-                                           glossary['id'],
-                                           row.id)
-                            c.commit()
-                        else:
-                            idLink = row.id
-                            cursor.execute(statDataCheck(),
-                                           glossary['id'],
-                                           idLink)
-                            c.commit()
-                            row = cursor.fetchone()
-                            if row is None:
-                                # add link between the concept and the doc
-                                cursor.execute(statDataInsert(),
+                                               row.id)
+                                c.commit()
+                            else:
+                                idLink = row.id
+                                cursor.execute(relCptCheck(),
                                                glossary['id'],
                                                idLink)
-                        glossary['statistical_data'].append(statData)
+                                c.commit()
+                                row = cursor.fetchone()
+                                if row is None:
+                                    # add a link between the concept and the doc
+                                    cursor.execute(relCptInsert(),
+                                                   glossary['id'],
+                                                   idLink)
 
-                elif 'Source' in titleTemp:
-                    for elmt in BeautifulSoup(splitContent[a],
-                                              'html.parser').find_all('a'):
-                        source = LinkInfo()
-                        source['title'] = normalize(elmt.get_text()).encode('utf-8')
-                        url = elmt.get('href')
-                        if "oldid" not in url:
-                            urlClean = url
-                        else:
-                            urlClean = re.split('&oldid', url)[0]
-                        if urlClean.startswith('/eurostat'):
-                            source['url'] = 'https://ec.europa.eu' + urlClean
-                        else:
-                            source['url'] = urlClean
-                        # select, check if in Link Info
-                        if 'eurostat' in source['url']:
+                            glossary['related_concepts'].append(relCpt)
+
+                    elif 'Statistical data' in titleTemp:
+                        for elmt in BeautifulSoup(splitContent[a],
+                                                  'html.parser').find_all('a'):
+                            statData = LinkInfo()
+                            statData['title'] = elmt.get('title')
+                            urlStat = elmt.get('href')
+                            if "oldid" not in urlStat:
+                                urlStatClean = urlStat
+                            else:
+                                urlStatClean = re.split('&oldid', urlStat)[0]
+
+                            if urlStatClean.startswith('/eurostat'):
+                                statData['url'] = 'https://ec.europa.eu' + urlStatClean
+                            else:
+                                statData['url'] = urlStatClean
+                            # check if the doc already is in the DB
                             cursor.execute(estatLinkSelectId(),
-                                           source['url'])
+                                           statData['url'])
                             c.commit()
                             row = cursor.fetchone()
 
                             if row is None:
+                                if statData['title'] is None:
+                                    statData['title'] = statData['url']
+
                                 # add a document
                                 cursor.execute(estatLinkInsert(),
-                                               source['title'],
-                                               source['url'])
+                                               statData['title'].encode('utf-8'),
+                                               statData['url'])
                                 c.commit()
                                 # get id
+                                cursor.execute(estatLinkSelectId(),
+                                               statData['url'])
+                                c.commit()
+                                row = cursor.fetchone()
+                                # add a link between the concept and the doc
+                                cursor.execute(statDataInsert(),
+                                               glossary['id'],
+                                               row.id)
+                                c.commit()
+                            else:
+                                idLink = row.id
+                                cursor.execute(statDataCheck(),
+                                               glossary['id'],
+                                               idLink)
+                                c.commit()
+                                row = cursor.fetchone()
+                                if row is None:
+                                    # add link between the concept and the doc
+                                    cursor.execute(statDataInsert(),
+                                                   glossary['id'],
+                                                   idLink)
+                            glossary['statistical_data'].append(statData)
+
+                    elif 'Source' in titleTemp:
+                        for elmt in BeautifulSoup(splitContent[a],
+                                                  'html.parser').find_all('a'):
+                            source = LinkInfo()
+                            source['title'] = normalize(elmt.get_text()).encode('utf-8')
+                            url = elmt.get('href')
+                            if "oldid" not in url:
+                                urlClean = url
+                            else:
+                                urlClean = re.split('&oldid', url)[0]
+                            if urlClean.startswith('/eurostat'):
+                                source['url'] = 'https://ec.europa.eu' + urlClean
+                            else:
+                                source['url'] = urlClean
+                            # select, check if in Link Info
+                            if 'eurostat' in source['url']:
                                 cursor.execute(estatLinkSelectId(),
                                                source['url'])
                                 c.commit()
                                 row = cursor.fetchone()
-                                # add a link between the concept and the doc
-                                cursor.execute(sourceInsert(),
-                                               glossary['id'],
-                                               row.id)
-                                c.commit()
-                            else:
-                                idLink = row.id
-                                cursor.execute(sourceCheck(),
-                                               glossary['id'],
-                                               idLink)
-                                c.commit()
-                                row = cursor.fetchone()
+
                                 if row is None:
-                                    # add link between the concept and the doc
+                                    # add a document
+                                    cursor.execute(estatLinkInsert(),
+                                                   source['title'],
+                                                   source['url'])
+                                    c.commit()
+                                    # get id
+                                    cursor.execute(estatLinkSelectId(),
+                                                   source['url'])
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    # add a link between the concept and the doc
                                     cursor.execute(sourceInsert(),
                                                    glossary['id'],
+                                                   row.id)
+                                    c.commit()
+                                else:
+                                    idLink = row.id
+                                    cursor.execute(sourceCheck(),
+                                                   glossary['id'],
                                                    idLink)
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    if row is None:
+                                        # add link between the concept and the doc
+                                        cursor.execute(sourceInsert(),
+                                                       glossary['id'],
+                                                       idLink)
 
-                        else:
-                            cursor.execute(foreignLinkSelectId(),
-                                           source['url'])
-                            c.commit()
-                            row = cursor.fetchone()
-
-                            if row is None:
-                                # add a document
-                                cursor.execute(foreignLinkInsert(),
-                                               source['title'],
-                                               source['url'])
-                                c.commit()
-                                # get id
+                            else:
                                 cursor.execute(foreignLinkSelectId(),
                                                source['url'])
                                 c.commit()
                                 row = cursor.fetchone()
-                                # add a link between the concept and the doc
-                                cursor.execute(sourceInsert(),
-                                               glossary['id'],
-                                               row.id)
-                                c.commit()
-                            else:
-                                idLink = row.id
-                                cursor.execute(sourceCheck(),
-                                               glossary['id'],
-                                               idLink)
-                                c.commit()
-                                row = cursor.fetchone()
+
                                 if row is None:
-                                    # add link between the concept and the doc
+                                    # add a document
+                                    cursor.execute(foreignLinkInsert(),
+                                                   source['title'],
+                                                   source['url'])
+                                    c.commit()
+                                    # get id
+                                    cursor.execute(foreignLinkSelectId(),
+                                                   source['url'])
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    # add a link between the concept and the doc
                                     cursor.execute(sourceInsert(),
                                                    glossary['id'],
+                                                   row.id)
+                                    c.commit()
+                                else:
+                                    idLink = row.id
+                                    cursor.execute(sourceCheck(),
+                                                   glossary['id'],
                                                    idLink)
+                                    c.commit()
+                                    row = cursor.fetchone()
+                                    if row is None:
+                                        # add link between the concept and the doc
+                                        cursor.execute(sourceInsert(),
+                                                       glossary['id'],
+                                                       idLink)
 
-                        glossary['sources'].append(source)
+                            glossary['sources'].append(source)
 
-            categories = response.xpath('//div[@id="mw-normal-catlinks"]' +
-                                        '/ul/li/a/text()').getall()
+                categories = response.xpath('//div[@id="mw-normal-catlinks"]' +
+                                            '/ul/li/a/text()').getall()
 
-            glossary['categories'] = categories
-        # elif row.last_update == glossary['last_update']:
-            # To complete in order to update the DB
+                glossary['categories'] = categories
+            # elif row.last_update == glossary['last_update']:
+                # To complete in order to update the DB
 
-        yield glossary
+            yield glossary
 
-    def parse_redirections(self, response):
+    #def parse_redirections(self, response):
         #create element

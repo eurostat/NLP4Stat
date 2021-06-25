@@ -12,6 +12,7 @@ import logging
 import sys
 import pyodbc
 import hashlib
+import time
 import pandas as pd
 from datetime import datetime
 
@@ -36,7 +37,7 @@ class articlesSpider(scrapy.Spider):
     custom_settings = {
         # limit the logs
         'LOG_LEVEL': logging.WARNING,
-        
+        'DOWNLOAD_DELAY': 1
     }
 
     start_urls = ['https://ec.europa.eu/eurostat/statistics-explained' +
@@ -49,6 +50,7 @@ class articlesSpider(scrapy.Spider):
         for page in response.css('#mw-pages').css('.mw-content-ltr'):
             for link in page.css('a ::attr(href)'):
                 artLink = 'https://ec.europa.eu' + link.extract()
+                time.sleep(2)
                 yield scrapy.Request(url=artLink, callback=self.parse_article)
 
         # Check if there is another page
@@ -72,10 +74,12 @@ class articlesSpider(scrapy.Spider):
         row = cursor.fetchone()
         # if it does not exist
         if row is None:
-            titleRaw = normalize(response.css('#firstHeading::text').get())
-            article['title'] = titleRaw.encode('utf-8')
+            titleRaw = response.css('#firstHeading::text').get()
+            if titleRaw is not None:
+                titleRaw = normalize(titleRaw)
+                article['title'] = titleRaw.encode('utf-8')
 
-            if article['title'] is None:
+            else:
                 article['title'] = 'ERROR'
 
             cursor.execute(estatLinkInsert(),
@@ -174,7 +178,7 @@ class articlesSpider(scrapy.Spider):
                                     figTemp = LinkInfo()
 
                                     figTitle = BeautifulSoup(caption[0], 'html.parser').get_text()
-                                    figTemp['title'] = normalize(figTitle.encode('utf-8'))
+                                    figTemp['title'] = normalize(figTitle).encode('utf-8')
 
                                     urls = BeautifulSoup(caption[-1], 'html.parser').find_all('a')
                                     figTemp['url'] = []
@@ -376,78 +380,79 @@ class articlesSpider(scrapy.Spider):
                     linkTemp['title'] = normalize(a.get_text())
                     linkTemp['url'] = a.get('href')
                     linkslist.append(linkTemp)
-                    if 'eurostat' in linkTemp['url']:
-                        # check if already exist in LinkInfo
-                        cursor.execute(estatLinkSelectId(),
-                                       linkTemp['url'])
-                        c.commit()
-                        row = cursor.fetchone()
-                        if row is None:
-                            cursor.execute(estatLinkInsert(),
-                                           linkTemp['title'],
-                                           linkTemp['url'])
-                            c.commit()
-                            # get id
+                    if linkTemp['url'] is not None:
+                        if 'eurostat' in linkTemp['url']:
+                            # check if already exist in LinkInfo
                             cursor.execute(estatLinkSelectId(),
                                            linkTemp['url'])
                             c.commit()
                             row = cursor.fetchone()
-                            # add a link between the shared link and the article
-                            cursor.execute(sharedLinkInsert(),
-                                           article['id'],
-                                           row.id,
-                                           division)
-                            c.commit()
-                        else:
-                            idLink = row.id
-                            cursor.execute(sharedLinkCheck(),
-                                           article['id'],
-                                           idLink,
-                                           division)
-                            c.commit()
-                            row = cursor.fetchone()
                             if row is None:
-                                # add a link between the shared link and the article
-                                cursor.execute(sharedLinkInsert(),
-                                               article['id'],
-                                               idLink,
-                                               division)
-                            else:
-                                # check if already exist in LinkInfo
-                                cursor.execute(foreignLinkSelectId(),
+                                cursor.execute(estatLinkInsert(),
+                                               linkTemp['title'],
+                                               linkTemp['url'])
+                                c.commit()
+                                # get id
+                                cursor.execute(estatLinkSelectId(),
                                                linkTemp['url'])
                                 c.commit()
                                 row = cursor.fetchone()
+                                # add a link between the shared link and the article
+                                cursor.execute(sharedLinkInsert(),
+                                               article['id'],
+                                               row.id,
+                                               division)
+                                c.commit()
+                            else:
+                                idLink = row.id
+                                cursor.execute(sharedLinkCheck(),
+                                               article['id'],
+                                               idLink,
+                                               division)
+                                c.commit()
+                                row = cursor.fetchone()
                                 if row is None:
-                                    cursor.execute(foreignLinkInsert(),
-                                                   linkTemp['title'],
-                                                   linkTemp['url'])
-                                    c.commit()
-                                    # get id
+                                    # add a link between the shared link and the article
+                                    cursor.execute(sharedLinkInsert(),
+                                                   article['id'],
+                                                   idLink,
+                                                   division)
+                                else:
+                                    # check if already exist in LinkInfo
                                     cursor.execute(foreignLinkSelectId(),
                                                    linkTemp['url'])
                                     c.commit()
                                     row = cursor.fetchone()
-                                    # add a link between the shared link and the article
-                                    cursor.execute(sharedLinkInsert(),
-                                                   article['id'],
-                                                   row.id,
-                                                   division)
-                                    c.commit()
-                                else:
-                                    idLink = row.id
-                                    cursor.execute(sharedLinkCheck(),
-                                                   article['id'],
-                                                   idLink,
-                                                   division)
-                                    c.commit()
-                                    row = cursor.fetchone()
                                     if row is None:
+                                        cursor.execute(foreignLinkInsert(),
+                                                       linkTemp['title'],
+                                                       linkTemp['url'])
+                                        c.commit()
+                                        # get id
+                                        cursor.execute(foreignLinkSelectId(),
+                                                       linkTemp['url'])
+                                        c.commit()
+                                        row = cursor.fetchone()
                                         # add a link between the shared link and the article
                                         cursor.execute(sharedLinkInsert(),
                                                        article['id'],
+                                                       row.id,
+                                                       division)
+                                        c.commit()
+                                    else:
+                                        idLink = row.id
+                                        cursor.execute(sharedLinkCheck(),
+                                                       article['id'],
                                                        idLink,
                                                        division)
+                                        c.commit()
+                                        row = cursor.fetchone()
+                                        if row is None:
+                                            # add a link between the shared link and the article
+                                            cursor.execute(sharedLinkInsert(),
+                                                           article['id'],
+                                                           idLink,
+                                                           division)
 
 
 
