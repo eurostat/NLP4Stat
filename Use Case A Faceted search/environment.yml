@@ -1,0 +1,12 @@
+name: base
+channels:
+  - conda
+dependencies:
+  - gensim
+  - ipywidgets
+  - pandas
+  - numpy
+  - openpyxl
+  - nltk
+  - pyodbc
+  - ipydatetime
