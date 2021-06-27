@@ -1,12 +1,11 @@
 name: base
 channels:
   - conda
+  - defaults
 dependencies:
   - gensim
   - ipywidgets
   - pandas
   - numpy
   - openpyxl
-  - nltk
   - pyodbc
-  - ipydatetime
