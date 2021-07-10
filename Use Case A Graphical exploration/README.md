@@ -2,4 +2,4 @@
 * The source code is still being improved and is not yet uploaded here. 
 * The current functionalities can be seen in the online version [here](https://quantos-stat.shinyapps.io/Graphical_exploration/)
 
-![R Shiny screenshot](https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/R_Shiny.png)
+![R Shiny screenshot](https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/R_Shiny.png){width=50%}
