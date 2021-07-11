@@ -1,6 +1,6 @@
 ### Use Case A - Graphical exploration. 
 
-* The **first code** is an R Shiny application (in progress) allowing the navigation in themes, sub-themes and categories and the display of corresponding articles. There are also some filters for the display of articles. The input file is produced from the code Use Case A Faceted search (see [here](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search))
+* The **first code** is an R Shiny application (in progress) allowing the navigation in themes, sub-themes and categories and the display of corresponding articles. There are also some filters for the display of articles, for the year of last update and for keywords in titles and abstracts. The input file is produced from the code Use Case A Faceted search (see [here](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search))
 * The source code is still being improved and is not yet uploaded here. 
 * The current functionalities can be seen in the **online version** [here](https://quantos-stat.shinyapps.io/Graphical_exploration_v2/). Because of frequent changes, please press **Reload** in your browser.
 
