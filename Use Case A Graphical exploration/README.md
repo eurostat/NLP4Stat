@@ -7,8 +7,8 @@
 <img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/R_Shiny.png" width="600">
 
 * The **second** code is an MS Power BI report (in progress) allowing again the navigation in themes, sub-themes and categories and the display of corresponding articles. There is also an interactive wordcloud graphical element. The input file is also  produced from the code Use Case A Faceted search (see [here](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search))
-* The source code is still being improved and is not yet uploaded here. 
-* The current functionalities can be seen in the **online** version [here](https://app.powerbi.com/view?r=eyJrIjoiYTA2MDc0ZDMtNjM3YS00ODcxLTg5NTEtM2I0MDRlOTYyNDM4IiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9)
+* The source code is still being improved and is not yet documented. The current .pbix file is in folder [Power BI](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/Power_BI), together with the input file mentioned above (dat6_7_8_13_41.xlsx) and four exports of tables from the database not yet used.
+* The current functionalities can be seen in the **online** version [here](https://app.powerbi.com/view?r=eyJrIjoiYTA2MDc0ZDMtNjM3YS00ODcxLTg5NTEtM2I0MDRlOTYyNDM4IiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
 <img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/screenshot.JPG" width="600">
 
