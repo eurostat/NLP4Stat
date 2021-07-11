@@ -4,7 +4,7 @@
 * The source code (app.R) is in folder [Shiny files](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files) and is still being improved and therefore undocumented. The same folder contains the input file mentioned earlier (dat6_7_5_19_8.xlsx). 
 * The current functionalities can be seen in the **online version** [here](https://quantos-stat.shinyapps.io/Graphical_exploration_v2/). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/R_Shiny.png" width="600">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/r_shiny.JPG" width="600">
 
 * The **second** code is an MS Power BI report (in progress) allowing again the navigation in themes, sub-themes and categories and the display of corresponding articles. There is also an interactive wordcloud graphical element. The input file is also  produced from the code Use Case A Faceted search (see [here](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search))
 * The source code is still being improved and is not yet documented. The current .pbix file is in folder [Power BI](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/Power_BI), together with the input file mentioned above (dat6_7_8_13_41.xlsx) and four exports of tables from the database not yet used.
