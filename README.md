@@ -7,10 +7,12 @@
 - Scrapper : Python project where the various spiders are implemented
 - Script SQL : Script to build the content database
 - Use Case A:
-    - [Use Case A Widgets Demo](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only
-    - [Use Case A Query builder](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Query%20builder): Script towards a query builder, still based only on scraped content (Glossary articles) 
+    - [Use Case A Widgets Demo](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only, as part of deliverable D3.1. This is **superceded** by the next codes which are part of deliverable D3.2. 
+    - [Use Case A Query builder](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Query%20builder): Script towards a query builder, still based only on scraped content (the latest version from both Glossary articles and Statistics Explained articles). 
     - [Use Case A Faceted search](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search): Faceted search. Work in progress, with inputs from the database (SE articles) except from one file (scraped categories per article - these are in the process of being transferred to the knowledge database). Among others, the code assigns the majority of the SE articles to themes and sub-themes.
-    - [Use Case A Graphical exploration](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration): An R Shiny application (in progress) allowing the navigation in themes, sub-themes and categories and the display of corresponding articles. There are also some filters for the display of articles. The source code is still being improved and is not yet uploaded.
+    - [Use Case A Graphical exploration](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration): 
+        - An R Shiny application (in progress) allowing the navigation in themes, sub-themes and categories and the display of corresponding articles. There are also some filters for the display of articles. 
+        - An MS Power BI report (in progress) allowing again the navigation in themes, sub-themes and categories and the display of corresponding articles. There is also an interactive wordcloud graphical element. 
 
 
 
