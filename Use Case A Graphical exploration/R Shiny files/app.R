@@ -42,7 +42,9 @@ ui <- dashboardPage(skin='blue',
 
 
 server <- function(input, output, session) {
-  dat6 <- as.data.table(read.xlsx('dat6_7_5_19_8.xlsx'))
+  inp_file <- grep('xlsx',list.files(),value=TRUE)[1]
+  cat(inp_file)
+  dat6 <- as.data.table(read.xlsx(grep('xlsx',list.files(),value=TRUE)))
 
   output$DateFrom <- renderUI({
     numericInput('year_from_Input','From year:',value = min(dat6$year),
@@ -50,13 +52,13 @@ server <- function(input, output, session) {
   })
 
   #all_categs <- unique(unlist(sapply(dat6$categories,function(x) strsplit(x,';'))))
-  matches = function(df,search_what,column_to_search) {
+  matches <- function(df,search_what,column_to_search) {
     ## column_to_search has the terms separated by semicolon
     
     ## result as a boolean vector
     result <- sapply(df[,column_to_search],function(x) 
       search_what %in% unlist(strsplit(x,';')))
-    idx = which(result) ## indices where TRUE                    
+    idx <- which(result) ## indices where TRUE                    
     return(idx)                 
   }
   
@@ -87,41 +89,41 @@ server <- function(input, output, session) {
     'Science, technology and digital society'=
       c('Digital economy and society','Science and technology'))
   
-  ids=c("All themes")
-  labels=c("All themes")
-  parents=c("")
-  values=c(nrow(dat6))
+  ids <- c("All themes")
+  labels <- c("All themes")
+  parents <- c("")
+  values <- c(nrow(dat6))
   #ids=c()
   #labels=c()
   #parents=c()
   #values=c()
   for(i in 1:length(themes)) {
-    theme = names(themes[i])
-    ids=c(ids,paste0("T:",theme))
-    labels=c(labels,theme)
-    parents=c(parents,"All themes")
-    idx_theme = which(sapply(dat6$themes,function(x) 
+    theme <-names(themes[i])
+    ids <- c(ids,paste0("T:",theme))
+    labels <- c(labels,theme)
+    parents <- c(parents,"All themes")
+    idx_theme <- which(sapply(dat6$themes,function(x) 
                       length(grep(theme,x))>0))
     #idx_theme <- matches(df=dat6,search_what=theme,column_to_search='themes')
-    values = c(values, length(idx_theme))
+    values <- c(values, length(idx_theme))
     
-    sub_themes = themes[names(themes[i])][[1]]
+    sub_themes <- themes[names(themes[i])][[1]]
     if(is.null(sub_themes) | tail(values,1)==0)
       next
     else {
       for(j in 1:length(sub_themes)) {
-        sub_theme = sub_themes[j]
-        ids=c(ids,paste0("S:",sub_theme))
-        labels=c(labels,sub_theme)
-        parents=c(parents,paste0("T:",theme))
-        idx_sub_theme = which(sapply(dat6$sub_themes,function(x) 
+        sub_theme <- sub_themes[j]
+        ids <- c(ids,paste0("S:",sub_theme))
+        labels <- c(labels,sub_theme)
+        parents <- c(parents,paste0("T:",theme))
+        idx_sub_theme <- which(sapply(dat6$sub_themes,function(x) 
                               length(grep(sub_theme,x))>0))
         #idx_sub_theme <- matches(df=dat6,search_what=sub_theme,
                                  #column_to_search='sub_themes')
         
         
-        idx_theme_sub_theme = intersect(idx_theme,idx_sub_theme)
-        values = c(values,length(idx_theme_sub_theme))
+        idx_theme_sub_theme <- intersect(idx_theme,idx_sub_theme)
+        values <- c(values,length(idx_theme_sub_theme))
         categs <- unique(unlist(sapply(
           dat6$categories[idx_theme_sub_theme],
                           function(x) strsplit(x,';'))))
@@ -129,18 +131,18 @@ server <- function(input, output, session) {
           next 
         else {          
           for(k in 1:length(categs)) {
-            categ = categs[k]
-            ids = c(ids,paste0("C",k,":",categ))
-            labels = c(labels,categ)
-            parents = c(parents,paste0("S:",sub_theme))
-            idx_categ = which(sapply(dat6$categories,function(x) 
+            categ <- categs[k]
+            ids <- c(ids,paste0("C",k,":",categ))
+            labels <- c(labels,categ)
+            parents <- c(parents,paste0("S:",sub_theme))
+            idx_categ <- which(sapply(dat6$categories,function(x) 
                               length(grep(categ,x))>0))
             #idx_categ <- matches(df=dat6,search_what=categ,
             #                     column_to_search='categories')
-            idx_theme_sub_theme_categ = 
+            idx_theme_sub_theme_categ <- 
               intersect(idx_theme_sub_theme,idx_categ)
             
-            values = c(values,length(idx_theme_sub_theme_categ))
+            values <- c(values,length(idx_theme_sub_theme_categ))
           }
         }
       }
@@ -182,12 +184,12 @@ server <- function(input, output, session) {
   
 
   output$last_click <- renderInfoBox({
-    s = ''; theme=''; sub_theme='';categ=''; val=0
+    s <- ''; theme <- ''; sub_theme <- '';categ <- ''; val=0
     if(!is.null(output_info())) {
-      theme=output_info()[1]
-      sub_theme=output_info()[2]
-      categ=output_info()[3]
-      val = output_info()[4]
+      theme <- output_info()[1]
+      sub_theme <- output_info()[2]
+      categ <- output_info()[3]
+      val <- output_info()[4]
     }
 
     infoBox(
@@ -208,13 +210,13 @@ server <- function(input, output, session) {
       return(c(theme,sub_theme,categ,val))
     }
 
-    d_ind = event_data("plotly_click")$customdata[1]
+    d_ind <- event_data("plotly_click")$customdata[1]
     if(length(d_ind) == 0) return(NULL)
-    id=d$ids[d_ind]
-    kind = strsplit(id,':')[[1]][1]
-    node = strsplit(id,':')[[1]][2]
-    val = d$values[d_ind]
-    theme = ''; sub_theme='' ; categ=''
+    id <- d$ids[d_ind]
+    kind <- strsplit(id,':')[[1]][1]
+    node <- strsplit(id,':')[[1]][2]
+    val <- d$values[d_ind]
+    theme <- ''; sub_theme <- '' ; categ <- ''
     #cat('\n\nkind:',kind,'\n')
     if(kind=='All themes') {
       theme <- "All"
@@ -222,28 +224,28 @@ server <- function(input, output, session) {
       categ <- "All"
       val <- nrow(dat6) 
     } else if(kind=='T') {
-      theme = node
-      sub_theme = ''
-      categ=''  
+      theme <- node
+      sub_theme <- ''
+      categ <- ''  
     } else {
-      parent_id=d$parents[d_ind]
-      kind_parent = strsplit(parent_id,':')[[1]][1]
+      parent_id <- d$parents[d_ind]
+      kind_parent <- strsplit(parent_id,':')[[1]][1]
       #cat('kind_parent:',kind_parent,'\n')
-      node_parent = strsplit(parent_id,':')[[1]][2] 
+      node_parent <- strsplit(parent_id,':')[[1]][2] 
       if(kind_parent == 'T') { 
-        theme = node_parent
-        sub_theme = node
-        categ=''  
+        theme <- node_parent
+        sub_theme <- node
+        categ <- ''  
       } else {
       if(kind_parent == 'S') {
-        parent_d_id = which(d$ids==parent_id)
-        grand_id = d$parents[parent_d_id]
-        kind_grand = strsplit(grand_id,':')[[1]][1]
+        parent_d_id <- which(d$ids==parent_id)
+        grand_id <- d$parents[parent_d_id]
+        kind_grand <- strsplit(grand_id,':')[[1]][1]
         #cat('kind_grand:',kind_grand,'\n')
-        node_grand = strsplit(grand_id,':')[[1]][2]  
-        theme = node_grand
-        sub_theme = node_parent
-        categ=node
+        node_grand <- strsplit(grand_id,':')[[1]][2]  
+        theme <- node_grand
+        sub_theme <- node_parent
+        categ <- node
         
       } else {
         
@@ -267,43 +269,43 @@ server <- function(input, output, session) {
     if(length(item_clicked()) > 0) {
       d_ind <- event_data("plotly_click")$customdata[1]
 
-     id = d$ids[d_ind]
+     id <- d$ids[d_ind]
      if(length(id)==0) return(NULL)
 
-     kind = strsplit(id,':')[[1]][1]
-     node = strsplit(id,':')[[1]][2]
+     kind <- strsplit(id,':')[[1]][1]
+     node <- strsplit(id,':')[[1]][2]
      if(kind=='All themes') {
        idx <- 1:nrow(dat6)
      } else if(kind=='T') {
-       idx = which(sapply(dat6$themes,function(x) 
+       idx <- which(sapply(dat6$themes,function(x) 
                   length(grep(node,x))>0)) 
      } else if(kind=='S') {
-       parent=d$parents[d_ind]
-       kind_parent = strsplit(parent,':')[[1]][1]
-       node_parent = strsplit(parent,':')[[1]][2]
-       idx_theme = which(sapply(dat6$themes,function(x) 
+       parent <- d$parents[d_ind]
+       kind_parent <- strsplit(parent,':')[[1]][1]
+       node_parent <- strsplit(parent,':')[[1]][2]
+       idx_theme <- which(sapply(dat6$themes,function(x) 
                          length(grep(node_parent,x))>0))
-       idx_sub_theme = which(sapply(dat6$sub_themes,function(x) 
+       idx_sub_theme <- which(sapply(dat6$sub_themes,function(x) 
                              length(grep(node,x))>0))
-       idx = intersect(idx_theme,idx_sub_theme) 
+       idx <- intersect(idx_theme,idx_sub_theme) 
      } else if(substr(kind,1,1)=='C') {
 
-       parent=d$parents[d_ind]
-       kind_parent = strsplit(parent,':')[[1]][1]
-       node_parent = strsplit(parent,':')[[1]][2]
-       parent_d_id = which(d$ids==parent)
-       grand_id = d$parents[parent_d_id]
-       kind_grand = strsplit(grand_id,':')[[1]][1]
-       node_grand = strsplit(grand_id,':')[[1]][2]
-       idx_theme = which(sapply(dat6$themes,function(x) 
+       parent <- d$parents[d_ind]
+       kind_parent <- strsplit(parent,':')[[1]][1]
+       node_parent <- strsplit(parent,':')[[1]][2]
+       parent_d_id <- which(d$ids==parent)
+       grand_id <- d$parents[parent_d_id]
+       kind_grand <- strsplit(grand_id,':')[[1]][1]
+       node_grand <- strsplit(grand_id,':')[[1]][2]
+       idx_theme <- which(sapply(dat6$themes,function(x) 
                          length(grep(node_grand,x))>0))
-       idx_sub_theme = which(sapply(dat6$sub_themes,function(x) 
+       idx_sub_theme <- which(sapply(dat6$sub_themes,function(x) 
                          length(grep(node_parent,x))>0))
-       idx_categ = which(sapply(dat6$categories,function(x) 
+       idx_categ <- which(sapply(dat6$categories,function(x) 
                          length(grep(node,x))>0))
               
-       idx = intersect(idx_theme,idx_sub_theme)
-       idx = intersect(idx,idx_categ)
+       idx <- intersect(idx_theme,idx_sub_theme)
+       idx <- intersect(idx,idx_categ)
  
 
     } else {
@@ -313,26 +315,26 @@ server <- function(input, output, session) {
     }
      
     idx_from_date <- which(dat6$year >= input$year_from_Input)
-    idx = intersect(idx,idx_from_date)
+    idx <- intersect(idx,idx_from_date)
 
     if(input$keyword != '') {
-      idx_words = which(stri_detect_regex(dat6$title, 
+      idx_words <- which(stri_detect_regex(dat6$title, 
                         paste0(input$keyword), case_insensitive = TRUE))
     
-      idx = intersect(idx,idx_words)
+      idx <- intersect(idx,idx_words)
     }
     if(input$abstract != '') {
-      idx_abstract = which(stri_detect_regex(dat6$abstract, 
+      idx_abstract <- which(stri_detect_regex(dat6$abstract, 
                           paste0(input$abstract), case_insensitive = TRUE))
       
-      idx = intersect(idx,idx_abstract)
+      idx <- intersect(idx,idx_abstract)
     }
     
     
     if(length(idx)==0) return(NULL)
     
 
-    tmp = dat6[idx,c('title','url','year','abstract')]
+    tmp <- dat6[idx,c('title','url','year','abstract')]
     #tmp$url <- paste0("<a href=",tmp$url,"</a>")
     #tmp$url <- paste0("<a href=",tmp$url,"</a>")
     #tmp = cbind(No=1:nrow(tmp),tmp)
