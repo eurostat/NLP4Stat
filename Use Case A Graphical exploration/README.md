@@ -13,7 +13,8 @@ c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
     * The Python code for the connection with the database and the production of the input file (Use Case A prepare data.ipynb), together with a recently produced file (dat6_7_12_19_30.xlsx), 
     *  Four direct exports of tables from the database which are imported but not yet used (tm*.xlsx files). 
     *  Another input file, for the datasets page (Crumbs_7_13_18_24.xlsx), with results  from the parsing of the download facility contents.
-    *  The Python code for the production of the file above (Crumbs.ipynb).   
+    *  The Python code for the production of the file above (Crumbs.ipynb). 
+    *  A recent contents file (table_of_contents.xml), downloaded July 14,2021.  
 * To run the Python code producing the input file from the database, please replace user_name and password  with your credentials in command:  
 c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 * The current functionalities can be seen in the **online** version [here](https://app.powerbi.com/view?r=eyJrIjoiYTA2MDc0ZDMtNjM3YS00ODcxLTg5NTEtM2I0MDRlOTYyNDM4IiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9&pageName=ReportSection0134a3f3c4be88106abb). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
