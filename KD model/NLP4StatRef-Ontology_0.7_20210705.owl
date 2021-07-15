@@ -10,13 +10,9 @@
      xmlns:resource="https://ec.europa.eu/eurostat/resource/">
     <owl:Ontology rdf:about="https://nlp4statref/knowledge/ontology/">
         <rdfs:comment xml:lang="en">This is the work in progress ontology for the NLP4StatRef KnowledgeDatabase. As Protégé encounters parsing difficulties for Dublin core ontologies, this ontology is neither associated with these ontologies, nor documented. As soon as the parsing problem is resolved, a first major version will be created.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">2021-06-13 Version 0.6
-2021-05-20 Version 0.5
-2021-04-02 Version 0.4
-2021-03-29 Version 0.3
-2021-03-28 Version 0.2
-2021-03-17 Version 0.1
-2021-03-15 Draft</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">2021-07-05 Version 0.7
+2021-06-13 Version 0.6
+</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -121,9 +117,9 @@
     
 
 
-    <!-- https://nlp4statref/knowledge/ontology/Authority -->
+    <!-- https://nlp4statref/knowledge/ontology/AuthorityList -->
 
-    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/Authority"/>
+    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/AuthorityList"/>
     
 
 
@@ -132,6 +128,14 @@
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/BackgroundArticle">
         <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Article"/>
         <owl:disjointWith rdf:resource="https://nlp4statref/knowledge/ontology/StatisticalArticle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp4statref/knowledge/ontology/Dictionary -->
+
+    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/Dictionary">
+        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Vocabulary"/>
     </owl:Class>
     
 
@@ -148,6 +152,7 @@
 
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/EuropeanUnionLaw">
         <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/LegalInformation"/>
+        <owl:disjointWith rdf:resource="https://nlp4statref/knowledge/ontology/LegalContext"/>
     </owl:Class>
     
 
@@ -156,6 +161,14 @@
 
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/Glossary">
         <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Vocabulary"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp4statref/knowledge/ontology/Infography -->
+
+    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/Infography">
+        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/EditorialContent"/>
     </owl:Class>
     
 
@@ -217,7 +230,7 @@
     <!-- https://nlp4statref/knowledge/ontology/ResourceInformation -->
 
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/ResourceInformation">
-        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Authority"/>
+        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/AuthorityList"/>
         <owl:disjointWith rdf:resource="https://nlp4statref/knowledge/ontology/ResourceType"/>
         <rdfs:comment xml:lang="en">Authority list : https://nlp4statref/knowledge/resource/authority/resource-information</rdfs:comment>
     </owl:Class>
@@ -227,7 +240,7 @@
     <!-- https://nlp4statref/knowledge/ontology/ResourceType -->
 
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/ResourceType">
-        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Authority"/>
+        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/AuthorityList"/>
     </owl:Class>
     
 
@@ -326,6 +339,8 @@ Reference Metadata in Euro SDMX Metadata Structure (ESMS)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Article"/>
+            <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Infography"/>
+            <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Miscellaneous"/>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/News"/>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/Publication"/>
         </owl:members>
@@ -346,6 +361,7 @@ Reference Metadata in Euro SDMX Metadata Structure (ESMS)</rdfs:comment>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/StatisticDatabase"/>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/StatisticReferenceMetadata"/>
             <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/StatisticTable"/>
+            <rdf:Description rdf:about="https://nlp4statref/knowledge/ontology/StatisticsExplainedData"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

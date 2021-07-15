@@ -31,8 +31,8 @@ c = pyodbc.connect('DSN=Virtuoso All;' +
                    'PWD=30gFcpQzj7sPtRu5bkes')
 cursor = c.cursor()
 
-class articlesSpider(scrapy.Spider):
-    name = 'articles'
+class backgroundArticlesSpider(scrapy.Spider):
+    name = 'backgroundArticles'
 
     custom_settings = {
         # limit the logs
@@ -40,8 +40,8 @@ class articlesSpider(scrapy.Spider):
         'DOWNLOAD_DELAY': 1
     }
 
-    start_urls = ['https://ec.europa.eu/eurostat/statistics-explained' +
-                  '/index.php?title=Category:Statistical_article']
+    start_urls = ['https://ec.europa.eu/eurostat/statistics-explained/'+
+                  'index.php?title=Category:Background_article']
 
     # go through all the articles
     def parse(self, response):
@@ -57,7 +57,7 @@ class articlesSpider(scrapy.Spider):
         # if so re-launch the parse function
         # with next_page url as start_urls
         nextPage = response.xpath("//a[contains(.//text(), 'next page')]" +
-                                   "/@href").get()
+                                  "/@href").get()
         if nextPage is not None:
             nextPage = response.urljoin('https://ec.europa.eu' + nextPage)
             yield scrapy.Request(nextPage, callback=self.parse)
@@ -85,7 +85,7 @@ class articlesSpider(scrapy.Spider):
             cursor.execute(estatLinkTypeKnownInsert(),
                            article['title'],
                            article['url'],
-                           16)
+                           17)
             c.commit()
             # get id
             cursor.execute(estatLinkSelectId(),
@@ -96,7 +96,7 @@ class articlesSpider(scrapy.Spider):
         else:
             article['id'] = row.id
             cursor.execute(LinkTypeUpdate(),
-                           16,
+                           17,
                            row.id)
 
         # last update
@@ -115,11 +115,11 @@ class articlesSpider(scrapy.Spider):
         if row is None:
 
             if updateStrRaw is not None:
-                cursor.execute(articleFullInsert(),
+                cursor.execute(backgroundArticleFullInsert(),
                                article['id'],
                                article['last_update'])
             else:
-                cursor.execute(articleInsert(),
+                cursor.execute(backgroundArticleInsert(),
                                article['id'])
             c.commit()
 
@@ -301,8 +301,6 @@ class articlesSpider(scrapy.Spider):
                         linkTemp = LinkInfo()
                         linkTemp['title'] = a.get('title')
                         linkTemp['url'] = a.get('href')
-                        if linkTemp['title'] is None:
-                            linkTemp['title'] = linkTemp['url']
                         article['excel'].append(linkTemp)
 
                         if linkTemp['url'] is not None:
@@ -384,8 +382,6 @@ class articlesSpider(scrapy.Spider):
                                                         article['id'],
                                                         idLink,
                                                         1)
-
-
             article['full_article'] = fullArticle
             
             # abstract
@@ -502,7 +498,7 @@ class articlesSpider(scrapy.Spider):
                             c.commit()
                             # get id
                             cursor.execute(foreignLinkSelectId(),
-                                            figTemp['url'])
+                                           figTemp['url'])
                             c.commit()
                             row = cursor.fetchone()
                             # add a link between the figure and the paragraph
@@ -556,7 +552,7 @@ class articlesSpider(scrapy.Spider):
                 elmntBs = BeautifulSoup(elmnt, 'html.parser')
                 tabLinks = elmntBs.find_all('a')
                 sectionTitle = elmntBs.find('div').get('id')
-                division = 0
+                division = 1
                 if sectionTitle == 'seealso':
                     division = 2
                 elif sectionTitle == 'maintables':
@@ -580,90 +576,89 @@ class articlesSpider(scrapy.Spider):
                     linkTemp = LinkInfo()
                     linkTemp['title'] = normalize(a.get_text())
                     urlLinkTemp = a.get('href')
-                    if urlLinkTemp is not None:
-                        if "oldid" not in urlLinkTemp:
-                            urlLinkClean = urlLinkTemp
-                        else:
-                            urlLinkClean = re.split('&oldid', urlLinkTemp)[0]
+                    if "oldid" not in urlLinkTemp:
+                        urlLinkClean = urlLinkTemp
+                    else:
+                        urlLinkClean = re.split('&oldid', urlLinkTemp)[0]
 
-                        if urlLinkClean.startswith('/eurostat'):
-                            linkTemp['url'] = 'https://ec.europa.eu' + urlLinkClean
-                        else:
-                            linkTemp['url'] = urlLinkClean
-                        linkslist.append(linkTemp)
-                        if linkTemp['url'] is not None:
-                            if 'eurostat' in linkTemp['url']:
-                                # check if already exist in LinkInfo
+                    if urlLinkClean.startswith('/eurostat'):
+                        linkTemp['url'] = 'https://ec.europa.eu' + urlLinkClean
+                    else:
+                        linkTemp['url'] = urlLinkClean
+                    linkslist.append(linkTemp)
+                    if linkTemp['url'] is not None:
+                        if 'eurostat' in linkTemp['url']:
+                            # check if already exist in LinkInfo
+                            cursor.execute(estatLinkSelectId(),
+                                           linkTemp['url'])
+                            c.commit()
+                            row = cursor.fetchone()
+                            if row is None:
+                                cursor.execute(estatLinkInsert(),
+                                               linkTemp['title'],
+                                               linkTemp['url'])
+                                c.commit()
+                                # get id
                                 cursor.execute(estatLinkSelectId(),
                                                linkTemp['url'])
                                 c.commit()
                                 row = cursor.fetchone()
-                                if row is None:
-                                    cursor.execute(estatLinkInsert(),
-                                                   linkTemp['title'],
-                                                   linkTemp['url'])
-                                    c.commit()
-                                    # get id
-                                    cursor.execute(estatLinkSelectId(),
-                                                   linkTemp['url'])
-                                    c.commit()
-                                    row = cursor.fetchone()
-                                    # add a link between the shared link and the article
-                                    cursor.execute(sharedLinkInsert(),
-                                                   article['id'],
-                                                   row.id,
-                                                   division)
-                                    c.commit()
-                                else:
-                                    idLink = row.id
-                                    cursor.execute(sharedLinkCheck(),
-                                                   article['id'],
-                                                   idLink,
-                                                   division)
-                                    c.commit()
-                                    row = cursor.fetchone()
-                                    if row is None:
-                                        # add a link between the shared link and the article
-                                        cursor.execute(sharedLinkInsert(),
-                                                       article['id'],
-                                                       idLink,
-                                                       division)
+                                # add a link between the shared link and the article
+                                cursor.execute(sharedLinkInsert(),
+                                               article['id'],
+                                               row.id,
+                                               division)
+                                c.commit()
                             else:
-                                # check if already exist in LinkInfo
-                                cursor.execute(foreignLinkSelectId(),
-                                                linkTemp['url'])
+                                idLink = row.id
+                                cursor.execute(sharedLinkCheck(),
+                                               article['id'],
+                                               idLink,
+                                               division)
                                 c.commit()
                                 row = cursor.fetchone()
                                 if row is None:
-                                    cursor.execute(foreignLinkInsert(),
-                                                    linkTemp['title'],
-                                                    linkTemp['url'])
-                                    c.commit()
-                                    # get id
-                                    cursor.execute(foreignLinkSelectId(),
-                                                    linkTemp['url'])
-                                    c.commit()
-                                    row = cursor.fetchone()
                                     # add a link between the shared link and the article
                                     cursor.execute(sharedLinkInsert(),
-                                                    article['id'],
-                                                    row.id,
-                                                    division)
-                                    c.commit()
+                                                   article['id'],
+                                                   idLink,
+                                                   division)
                                 else:
-                                    idLink = row.id
-                                    cursor.execute(sharedLinkCheck(),
-                                                    article['id'],
-                                                    idLink,
-                                                    division)
+                                    # check if already exist in LinkInfo
+                                    cursor.execute(foreignLinkSelectId(),
+                                                   linkTemp['url'])
                                     c.commit()
                                     row = cursor.fetchone()
                                     if row is None:
+                                        cursor.execute(foreignLinkInsert(),
+                                                       linkTemp['title'],
+                                                       linkTemp['url'])
+                                        c.commit()
+                                        # get id
+                                        cursor.execute(foreignLinkSelectId(),
+                                                       linkTemp['url'])
+                                        c.commit()
+                                        row = cursor.fetchone()
                                         # add a link between the shared link and the article
                                         cursor.execute(sharedLinkInsert(),
-                                                        article['id'],
-                                                        idLink,
-                                                        division)
+                                                       article['id'],
+                                                       row.id,
+                                                       division)
+                                        c.commit()
+                                    else:
+                                        idLink = row.id
+                                        cursor.execute(sharedLinkCheck(),
+                                                       article['id'],
+                                                       idLink,
+                                                       division)
+                                        c.commit()
+                                        row = cursor.fetchone()
+                                        if row is None:
+                                            # add a link between the shared link and the article
+                                            cursor.execute(sharedLinkInsert(),
+                                                           article['id'],
+                                                           idLink,
+                                                           division)
 
 
 

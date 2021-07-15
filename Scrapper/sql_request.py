@@ -3,6 +3,11 @@ def estatLinkSelectId():
     estatLinkSelectId = "SELECT id FROM dat_link_info WHERE url = ? AND resource_information_id = 1"
     return estatLinkSelectId
 
+# select eurostat doc id
+def estatLinkTitleSelectId():
+    estatLinkTitleSelectId = "SELECT id FROM dat_link_info WHERE title = ? AND resource_information_id = 1"
+    return estatLinkTitleSelectId
+
 # select foreign doc id
 def foreignLinkSelectId():
     foreignLinkSelectId = "SELECT id FROM dat_link_info WHERE url = ? AND resource_information_id = 0"
@@ -10,13 +15,41 @@ def foreignLinkSelectId():
 
 # insert eurostat doc
 def estatLinkInsert():
-    estatLinkInsert = "INSERT INTO dat_link_info(title, url, resource_information_id) VALUES (?, ?, 1)"
+    estatLinkInsert = "INSERT INTO dat_link_info(title, url, resource_information_id) VALUES (?, ?,  1)"
     return estatLinkInsert
+
+# insert eurostat doc
+def estatLinkTypeKnownInsert():
+    estatLinkTypeKnownInsert = "INSERT INTO dat_link_info(title, url, resource_type_id, resource_information_id) VALUES (?, ?, ?, 1)"
+    return estatLinkTypeKnownInsert
+
 
 # insert doc from outside eurostat
 def foreignLinkInsert():
     foreignLinkInsert = "INSERT INTO dat_link_info(title, url, resource_information_id) VALUES (?, ?, 0)"
     return foreignLinkInsert
+
+# get all urls with no resource_type
+def LinkNoTypeSelect():
+    LinkNoTypeSelect = "SELECT id, url FROM dat_link_info WHERE resource_type_id = 0 OR resource_type_id IS NULL"
+    return LinkNoTypeSelect
+
+# set resource_type
+def LinkTypeUpdate():
+    LinkTypeUpdate = "UPDATE dat_link_info SET  resource_type_id = ? WHERE id = ?"
+    return LinkTypeUpdate
+
+
+# get all urls with no resource_information
+def LinkNoResourceInfoSelect():
+    LinkNoResourceInfoSelect = "SELECT id, url FROM dat_link_info WHERE resource_information_id = 0 OR resource_information_id IS NULL"
+    return LinkNoResourceInfoSelect
+
+# set resource_information
+def LinkResourceInfoUpdate():
+    LinkResourceInfoUpdate = "UPDATE dat_link_info SET  resource_information_id = ? WHERE id = ?"
+    return LinkResourceInfoUpdate
+
 
 ############################## Glossary queries ############################
 
@@ -85,6 +118,16 @@ def sourceInsert():
     sourceInsert = "INSERT INTO dat_sources(glossary_id, link_id) VALUES (?, ?)"
     return sourceInsert
 
+# check if couple exists in dat_sources
+def redirectionCheck():
+    redirectionCheck = "SELECT id FROM dat_redirections WHERE glossary_id = ? AND link_id =?"
+    return redirectionCheck
+
+# insert a source link
+def redirectionInsert():
+    redirectionInsert = "INSERT INTO dat_redirections(glossary_id, link_id) VALUES (?, ?)"
+    return redirectionInsert
+
 ############################## Article queries ############################
 
 # select article element
@@ -101,6 +144,16 @@ def articleFullInsert():
 def articleInsert():
     articleInsert = "INSERT INTO dat_article(id, homepage, background_article, context, data_sources) VALUES (?, 0, 0, '', '')"
     return articleInsert
+
+# insert background article element
+def backgroundArticleFullInsert():
+    backgroundArticleFullInsert = "INSERT INTO dat_article(id, last_update, homepage, background_article) VALUES (?, ?, 0, 1)"
+    return backgroundArticleFullInsert
+
+# insert article element
+def backgroundArticleInsert():
+    backgroundArticleInsert = "INSERT INTO dat_article(id, homepage, background_article, context, data_sources) VALUES (?, 0, 1, '', '')"
+    return backgroundArticleInsert
 
 # add context and data_sources to an existing article
 def articleFillExisting():

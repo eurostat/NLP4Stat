@@ -29,9 +29,6 @@ c = pyodbc.connect('DSN=Virtuoso All;' +
                    'PWD=30gFcpQzj7sPtRu5bkes')
 cursor = c.cursor()
 
-#to keep aside the various element that are duplicates
-redirect_urls =[]
-
 class glossarySpider(scrapy.Spider):
 
     name = "glossary"
@@ -57,18 +54,12 @@ class glossarySpider(scrapy.Spider):
                 cptLink = link.get()
             yield scrapy.Request(url=cptLink, callback=self.parse_glossary)
 
-        for link in response.xpath("//div[@id='mw-pages']//div[@class='mw-category']//a[@class='mw-redirect']/@href"):
-            if link.get().startswith('/eurostat'):
-                cptRedirectLink = 'https://ec.europa.eu' + link.get()
-            else:
-                cptRedirectLink = link.get()
-            redirect_urls.append(cptRedirectLink)      
-
         # Check if there is another page
         # if so re-launch the parse function
         # with nextPage url as start_urls
         nextPage = response.xpath("//div[@id='mw-pages']//a[contains(.//text(), 'next page')]" +
                                   "/@href").get()
+
         
         if nextPage is not None:
             if nextPage.startswith('/eurostat'):
@@ -76,6 +67,7 @@ class glossarySpider(scrapy.Spider):
             else:
                 nextPageUrl = nextPage
             yield scrapy.Request(url = nextPageUrl, callback=self.parse)
+
 
     def parse_glossary(self, response):
 
@@ -91,7 +83,6 @@ class glossarySpider(scrapy.Spider):
             splitContent = re.split('<h2>|</h2>', pageContent.prettify())
 
             titleRaw = normalize(response.css('#firstHeading::text').get())
-            redirected = response.css('.mw-redirectedfrom').css('a ::attr(title)').get()
 
             if splitContent[0] == titleRaw :
                 splitContent.pop(0)
@@ -111,12 +102,6 @@ class glossarySpider(scrapy.Spider):
             
                 if glossary['title'] is None:
                     glossary['title'] = 'ERROR'
-
-                # check if there was a redirection
-                if redirected is not None:
-                    print(redirected)
-                    glossary['original_title'] = redirected.replace('Glossary:', '').encode('utf-8')
-
 
                 cursor.execute(estatLinkInsert(), glossary['title'], glossary['url'])
                 c.commit()
@@ -146,26 +131,13 @@ class glossarySpider(scrapy.Spider):
                 glossary['definition'] = normalize(definitionRaw.get_text()).encode('utf-8')
 
                 if updateStrRaw is not None:
-                    if redirected is not None:
-                        cursor.execute(glossaryRedirectFullInsert(),
-                                       glossary['id'],
-                                       glossary['definition'],
-                                       glossary['last_update'],
-                                       redirected.replace('Glossary:', '').encode('utf-8'))
-                    else:
-                        cursor.execute(glossaryFullInsert(),
+                    cursor.execute(glossaryFullInsert(),
                                        glossary['id'],
                                        glossary['definition'],
                                        glossary['last_update'])
                 
                 else:
-                     if redirected is not None:
-                         cursor.execute(glossaryRedirectInsert(),
-                                        glossary['id'],
-                                        glossary['definition'],
-                                        glossary['original_title'])
-                     else:
-                         cursor.execute(glossaryInsert(),
+                    cursor.execute(glossaryInsert(),
                                         glossary['id'],
                                         glossary['definition'])
 
@@ -477,5 +449,4 @@ class glossarySpider(scrapy.Spider):
 
             yield glossary
 
-    #def parse_redirections(self, response):
-        #create element
+    

@@ -1,12 +1,13 @@
 CREATE TABLE "ESTAT"."V1"."mod_resource_information" (
   "id" integer NOT NULL IDENTITY (START WITH 0),
   "label" varchar NOT NULL,
-  "url" varchar,
+  "uri" varchar,
   PRIMARY KEY ("id")
 )
 
 CREATE TABLE "ESTAT"."V1"."mod_resource_type" (
   "id" integer NOT NULL IDENTITY (START WITH 0),
+  "uri" varchar,
   "label" varchar NOT NULL,
   PRIMARY KEY ("id")
 )
