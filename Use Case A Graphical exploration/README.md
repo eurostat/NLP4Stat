@@ -11,7 +11,7 @@ c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 * The **second** code is an MS Power BI report (in progress) allowing again the navigation in themes, sub-themes and categories and the display of corresponding articles. There is also an interactive wordcloud graphical element and a network element connecting themes with sub-themes. Another page displays the database structure in a treemap, together with the dataset names and download links for the selected section.
 * The source code is still being improved and is not yet documented. **The documentation will be produced in the coming days**. The current .pbix file is in folder [Power BI](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/Power_BI). The same folder contains:
     * The Python code for the connection with the database and the production of the input file (Use Case A prepare data_v2.ipynb), together with a recently produced file (SE_df_7_15_13_21.xlsx). This code accepts an external file with the categories of the SE articles (articles_6_25_19_30.xlsx) which is also included in this folder. For the production of this file, please see the scraping code in the [Scrapper](https://github.com/eurostat/NLP4Stat/tree/main/Scrapper) folder.   
-    *  Four direct exports of tables from the database which are imported but not yet used (tm*.xlsx files). 
+    *  An export from the topic modelling with the SE articles and the associated distributions in topics (texts_to_topics_new_df.xlsx) and a look-up table for the topics, directly exported from the database (tm_topics.xlsx). 
     *  Another input file, for the datasets page (Crumbs_7_14_23_17.xlsx), with results  from the parsing of the download facility contents.
     *  The Python code for the production of the file above (Crumbs.ipynb). 
     *  A recent contents file (table_of_contents.xml), downloaded July 14, 2021.  
@@ -22,4 +22,5 @@ c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 <img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/screenshot.JPG" width="600">
 <img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/screenshot2.JPG" width="600">
 <img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/screenshot3.JPG" width="600">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/screenshot4.JPG" width="600">
 
