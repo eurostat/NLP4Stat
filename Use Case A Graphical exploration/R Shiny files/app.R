@@ -42,9 +42,10 @@ ui <- dashboardPage(skin='blue',
 
 
 server <- function(input, output, session) {
-  inp_file <- grep('xlsx',list.files(),value=TRUE)[1]
+  inp_file <- grep('^SE_df.*xlsx$',list.files(),value=TRUE)
+  inp_file <- inp_file[which.max(file.mtime(inp_file))]
   cat(inp_file)
-  dat6 <- as.data.table(read.xlsx(grep('xlsx',list.files(),value=TRUE)))
+  dat6 <- as.data.table(read.xlsx(inp_file))
 
   output$DateFrom <- renderUI({
     numericInput('year_from_Input','From year:',value = min(dat6$year),
