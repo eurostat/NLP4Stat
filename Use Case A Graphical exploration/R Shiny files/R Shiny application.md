@@ -4,14 +4,14 @@ The is a simple interactive R Shiny application which displays a dynamic sunburs
 
 The user selects the theme "Population and social conditions" and the plot drills-down to this theme. He/she then can proceed by selecting sub-theme "Living conditions". At each step, clicking at the center of the plot allows back-steping to the previous (more general) selection. The current selection is also shown in an infobox at the top of the screen.
 
-![](media_r_shiny/image1.png){width="5.871794619422572in" height="2.95125656167979in"}
+<img src="image1.png" width="800">
 
 Figure 1 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot (1).
 
 
 
-![](media_r_shiny/image2.png){width="5.877777777777778in" height="2.6983213035870515in"}
+<img src="image2.png" width="800">
 
 Figure 2 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot (2).
@@ -20,10 +20,10 @@ sunburst plot (2).
 
 The next figure shows the display of 20 articles under the theme "Population and social conditions", sub-theme "Living conditions", category "Poverty and social exclusion".
 
-![](media_r_shiny/image3.png){width="6.0in" height="2.001388888888889in"}
+<img src="image3.png" width="800">
 
 Figure 3 -- Graphical exploration in R Shiny: navigation with the interactive\
-sunburst plot: display of articles under
+sunburst plot: display of articles under a specific theme, sub-theme and category.
 
 
 
@@ -59,7 +59,7 @@ For the running of the R Shiny code, it **suffices to place the app.R file toget
 
 The following diagram in Figure 4 shows the feeding of the application and the interactions. The production of the input file through *Use Case A prepare data_v2.ipynb* also shows the offline file which is used to import the categories. This is produced by the scraping codes.
 
-![](media_r_shiny/image4.png){width="4.498731408573928in" height="6.960785214348206in"}
+<img src="image4.png" width="800">
 
 Figure 4 -- Graphical exploration in R Shiny: feeding data and interactions.
 
