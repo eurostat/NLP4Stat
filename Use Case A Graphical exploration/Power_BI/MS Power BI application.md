@@ -3,7 +3,7 @@
 The MS Power BI application works with the free desktop version and is portable. It suffices to define a path for the required files from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ![](media_power_bi/image1.png){width="2.8521358267716534in" height="0.954673009623797in"}
+  ![](image1.png){width="2.8521358267716534in" height="0.954673009623797in"}
 ---------------------------------------------------------------------------------- ----------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
