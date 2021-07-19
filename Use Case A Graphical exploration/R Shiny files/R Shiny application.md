@@ -29,7 +29,7 @@ sunburst plot: display of articles under a specific theme, sub-theme and categor
 
 The application also includes some filters, for the selection of a particular year as the year of last update, for the filtering by keyword in the article titles and for the filtering by keyword in the article abstracts.
 
-The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2.ipynb*, which is actually the one used in the Faceted search[^1], except for a very small change. This small change is shown below in the colored lines.
+The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2.ipynb*, which is actually the one used in the Faceted search[^1], except for a very small change. This small change is shown below in the lines in bold.
 
 ...
 
