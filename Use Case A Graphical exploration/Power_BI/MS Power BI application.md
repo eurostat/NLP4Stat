@@ -38,6 +38,8 @@ The application consists of four screens. The **first screen** ("Themes, sub-the
 
 To see the categories together with the individual articles for the current selections, one can click the "expand all down one level" icon in the list of categories and articles.
 
+A weakness of the wordcloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be ented manually. The alternative, of producing a wordcloud with R via tm ggplot2 does not allow interaction through selection of words. We are currently looking for a better solution. 
+
 <img src="image4.PNG" width="800">
 
 Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (1).
