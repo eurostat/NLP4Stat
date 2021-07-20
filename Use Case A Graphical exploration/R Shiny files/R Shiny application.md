@@ -55,7 +55,7 @@ The input to the application is the data with the SE articles information, produ
 
 The GitHub link at [https://github.com/eurostat/NLP4Stat/tree/‌main/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files) contains a recent output of this code (at the time of the writing of the current document, named *SE_df_7\_15_13_21.xlsx*).
 
-For the running of the R Shiny code, it **suffices to place the app.R file together with the Excel file in any folder and run the app**. The app will automatically select **the most recent Excel file matching the regex pattern \'\^SE_df.\*xlsx\$**
+For the running of the R Shiny code from withing RStudio, it **suffices to have the necessary libraries installed (see end of this document), place the app.R file together with the Excel file in any folder and run the app**. The app will automatically select **the most recent Excel file matching the regex pattern \'\^SE_df.\*xlsx\$**
 
 The following diagram in Figure 4 shows the feeding of the application and the interactions. The production of the input file through *Use Case A prepare data_v2.ipynb* also shows the offline file which is used to import the categories. This is produced by the scraping codes.
 
@@ -63,6 +63,20 @@ The following diagram in Figure 4 shows the feeding of the application and the i
 
 Figure 4 -- Graphical exploration in R Shiny: feeding data and interactions.
 
+The following is part of the sessionInfo() output, showing the environment used for the development, including the R version and the versions of the libraries loaded:
+ * R version 4.0.2 (2020-06-22)
+ * Platform: x86_64-w64-mingw32/x64 (64-bit)
+ * Running under: Windows 10 x64 (build 19042)
+ * other attached packages:
+     * stringi_1.5.3 
+     * data.table_1.13.0
+     * openxlsx_4.1.5       
+     * plotly_4.9.2.1
+     * ggplot2_3.3.3
+     * DT_0.14              
+     * shinycssloaders_1.0.0
+     * shinydashboard_0.7.1
+     * shiny_1.5.0    
 
 
 [^1]: see <https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search>
