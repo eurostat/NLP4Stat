@@ -27,6 +27,7 @@ Figure 2 -- Feeding of the MS Power BI application.
 
 
 -   The last files are direct exports of *tables tm_topics* and *tm_articles_to_topics* from the Virtuoso database. They result to the internal tables with the same names which are connected by *topic_id*. *tm_articles_to_topics* is also connected to the "Repeated rows" table by *article_id*.
+-   Other tables and values shown in Figure 3 (“Themes”, “Colors”, “LatestFile”, “LatestCrumbsFile”) are auxiliary.
 
 <img src="image3.PNG" width="800">
 
