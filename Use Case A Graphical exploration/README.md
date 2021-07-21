@@ -24,7 +24,7 @@ c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 * The current functionalities can be seen in the **online** version [here](https://app.powerbi.com/view?r=eyJrIjoiMzczMTNlZTUtYTI2OC00Yzc3LThiNTUtYmE5NjNmMTM4ZmUwIiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9&pageName=ReportSection0134a3f3c4be88106abb). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
 <img src="screenshot.JPG" width="600">
-<img src="screenshot2.JPG" width="600">
+<img src="screenshot2b.JPG" width="600">
 <img src="screenshot3.JPG" width="600">
 <img src="screenshot4.JPG" width="600">
 
