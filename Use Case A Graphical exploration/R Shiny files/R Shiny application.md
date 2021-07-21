@@ -20,14 +20,19 @@ sunburst plot (2).
 
 The next figure shows the display of 20 articles under the theme "Population and social conditions", sub-theme "Living conditions", category "Poverty and social exclusion".
 
-<img src="image3.png" width="800">
+<img src="image3b.png" width="800">
 
 Figure 3 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot: display of articles under a specific theme, sub-theme and category.
 
+Each column in the results (title, url, year, abstract) has a filter allowing further drill-down, with highlighting of the matched terms. An example is shown in Figure 4 with “SDG” in the URLs of the previous results.
+
+<img src="image3c.png" width="800">
+
+Figure 4 – Graphical exploration in R Shiny: Drill-down with highlighting in the results.
 
 
-The application also includes some filters, for the selection of a particular year as the year of last update, for the filtering by keyword in the article titles and for the filtering by keyword in the article abstracts.
+The application also includes some filters in the side bar, for the selection of a particular year as the year of last update, for the filtering by keyword in the article titles and for the filtering by keyword in the article abstracts.
 
 The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2.ipynb*, which is actually the one used in the Faceted search[^1], except for a very small change. This small change is shown below in the lines in bold.
 
@@ -57,11 +62,11 @@ The GitHub link at [https://github.com/eurostat/NLP4Stat/tree/‌main/Use%20Case
 
 For the running of the R Shiny code from withing RStudio, it **suffices to have the necessary libraries installed (see end of this document), place the app.R file together with the Excel file in any folder and run the app**. The app will automatically select **the most recent Excel file matching the regex pattern \'\^SE_df.\*xlsx\$**
 
-The following diagram in Figure 4 shows the feeding of the application and the interactions. The production of the input file through *Use Case A prepare data_v2.ipynb* also shows the offline file which is used to import the categories. This is produced by the scraping codes.
+The following diagram in Figure 5 shows the feeding of the application and the interactions. The production of the input file through *Use Case A prepare data_v2.ipynb* also shows the offline file which is used to import the categories. This is produced by the scraping codes.
 
 <img src="image4.png" width="800">
 
-Figure 4 -- Graphical exploration in R Shiny: feeding data and interactions.
+Figure 5 -- Graphical exploration in R Shiny: feeding data and interactions.
 
 The following is part of the sessionInfo() output, showing the environment used for the development, including the R version and the versions of the libraries loaded:
  * R version 4.0.2 (2020-06-22)
