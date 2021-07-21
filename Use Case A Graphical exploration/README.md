@@ -9,6 +9,8 @@ c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 
 <img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/r_shiny.JPG" width="600">
 
+<img src="screenshot5.JPG" width="600">
+
 * The **second** code is an MS Power BI report allowing again the navigation in themes, sub-themes and categories and the display of corresponding articles. There is also an interactive wordcloud graphical element and a network element connecting themes with sub-themes. Another page displays the database structure in a treemap, together with the dataset names and download links for the selected section. A fourth page links the topic modeling results with themes, sub-themes, categories and articles.
 * A **short documentation** is given [here](https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/Power_BI/MS%20Power%20BI%20application.md). The following data requirements are explained in the documentation but also mentioned here:
 * The current .pbix file is in folder [Power BI](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/Power_BI). The same folder contains:
