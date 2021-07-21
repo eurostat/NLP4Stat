@@ -64,7 +64,7 @@ For the running of the R Shiny code from withing RStudio, it **suffices to have 
 
 The following diagram in Figure 5 shows the feeding of the application and the interactions. The production of the input file through *Use Case A prepare data_v2.ipynb* also shows the offline file which is used to import the categories. This is produced by the scraping codes.
 
-<img src="image4.png" width="800">
+<img src="image4b.png" width="800">
 
 Figure 5 -- Graphical exploration in R Shiny: feeding data and interactions.
 
