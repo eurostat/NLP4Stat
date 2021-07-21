@@ -39,7 +39,7 @@ The application consists of four screens. The **first screen** ("Themes, sub-the
 
 To see the categories together with the individual articles for the current selections, one can click the "expand all down one level" icon in the list of categories and articles.
 
-A weakness of the wordcloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be ented manually. The alternative, of producing a wordcloud with R via tm ggplot2 does not allow interaction through selection of words. We are currently looking for a better solution. 
+A weakness of the wordcloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be ented manually. The alternative, of producing a wordcloud with R via libraries _tm_ and _ggplot2_ does not allow interaction through selection of words. We are currently looking for a better solution. 
 
 <img src="image4.PNG" width="800">
 
@@ -47,7 +47,7 @@ Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories
 
 
 
-The **second screen** ("Themes, sub-themes and categories (2)") (see Figure 5) also links themes, sub-themes, categories and articles, with the same data as the first screen. The filters in the middle of the screen allow the selection of any number of themes and sub-themes and the network graph in the top right side is adjusted to reflect these selections. Conversely, one can click on a node in the network graph to select a theme or sub-theme.
+The **second screen** ("Themes, sub-themes and categories (2)") (see Figure 5) also links themes, sub-themes, categories and articles, with the same data as the first screen. The filters in the middle of the screen allow the selection of any number of themes and sub-themes and the network graph in the top right side is adjusted to reflect these selections. Conversely, one can click on a node in the network graph to select a theme or sub-theme. Clicking the *same node* again clears the selection.
 
 This screen also shows the distribution of the filtered articles per category in the top left side, again allowing the inverse interaction, i.e. the selection of one or more (pressing Ctrl) categories. The relevant articles are displayed at the bottom left part of the screen and there is also a pie chart showing the distribution into years of last update (again, allowing inverse interaction, i.e. further filtering by selected years).
 
