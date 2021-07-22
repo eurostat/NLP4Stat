@@ -68,22 +68,18 @@ A generic mapping is done for external resources and generic objects : NLP4StatR
 - Statistics Explained Glossary: see 3.- Vocabulary
 
 - Statistics Explained Articles
-  - NLP4StatRef-SE-Article-Model_20210715.pdf
-  - NLP4StatRef-SE-Article-Mapping_20210715.xlsx
-  - Upcoming update:
-    - Review and update post KD instanciation
-  -	Next updates:
-    - Relationship with Categories Taxonomy
-	- Dcat integration
+  - NLP4StatRef-SE-Article-Model.pdf
+  - NLP4StatRef-SE-Article-Mapping.xlsx
+  - Last update : 22.07.2021
+  - Next updates:    
+    - Dcat integration
 
 - Statistics Explained Background Articles
-  - NLP4StatRef-SE-Background-Model_20210715.pdf
-  - NLP4StatRef-SE-Background-Mapping_20210715.xlsx
-  - Upcoming update:
-    - Review and update post KD instanciation
-  -	Next updates:
-    - Relationship with Categories Taxonomy
-	- Dcat integration
+  - NLP4StatRef-SE-Background-Model.pdf
+  - NLP4StatRef-SE-Background-Mapping.xlsx
+  - Last update : 22.07.2021
+  - Next updates:   
+    - Dcat integration
 	
 ### 3.- Vocabulary
 
