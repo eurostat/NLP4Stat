@@ -41,7 +41,7 @@ You will find in the Script SQL folder various file that help buil the content d
 
 #### 4.1 Structure
 
-If it is your first instantiation, please use the ![global script](/Script%20SQL/cdb_global_v1_2021-06-01.sql)
+If it is your first instantiation, please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_v1_2021-06-01.sql)
 
 If you are updating an existing database the needed scripts can be find in the Script SQL folder
 
@@ -52,7 +52,7 @@ Some tables have to be filled in order for the project to work, such as:
 - Named entities
 - Modality
 
-Like before, if it is your first instantiation of the database,  please use the ![global script](/Script%20SQL/cdb_global_data_v1_2021-06-01.sql) .
+Like before, if it is your first instantiation of the database,  please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_data_v1_2021-06-01.sql) .
 
 If it is an update, the scripts needed can be find in the Script SQL folder
 
