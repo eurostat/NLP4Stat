@@ -53,7 +53,7 @@ This screen also shows the distribution of the filtered articles per category in
 
 
 
-<img src="image5b.PNG" width="800">
+<img src="image5c.PNG" width="800">
 
 
 
