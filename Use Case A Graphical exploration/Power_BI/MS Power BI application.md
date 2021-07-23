@@ -27,9 +27,9 @@ Figure 2 -- Feeding of the MS Power BI application.
 
 
 -   The last files are direct exports of *tables tm_topics* and *tm_articles_to_topics* from the Virtuoso database. They result to the internal tables with the same names which are connected by *topic_id*. *tm_articles_to_topics* is also connected to the "Repeated rows" table by *article_id*.
--   Other tables and values shown in Figure 3 (“Themes”, “Sub-themes”, “Colors”, “LatestFile”, “LatestCrumbsFile”) are auxiliary.
+-   Other tables and values shown in Figure 3 (“Themes”, “Official_colors”, “LatestFile”, “LatestCrumbsFile”) are auxiliary.
 
-<img src="image3b.PNG" width="800">
+<img src="tables.JPG" width="800">
 
 Figure 3 -- Tables and relationships in the MS Power BI application.
 
@@ -41,7 +41,7 @@ To see the categories together with the individual articles for the current sele
 
 A weakness of the wordcloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be ented manually. The alternative, of producing a wordcloud with R via libraries _tm_ and _ggplot2_ does not allow interaction through selection of words. We are currently looking for a better solution. 
 
-<img src="image4.PNG" width="800">
+<img src="screen1.JPG" width="800">
 
 Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (1).
 
@@ -53,7 +53,7 @@ This screen also shows the distribution of the filtered articles per category in
 
 
 
-<img src="image5c.PNG" width="800">
+<img src="screen2.JPG" width="800">
 
 
 
