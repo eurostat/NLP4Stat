@@ -13,31 +13,31 @@ rm(list=ls())
 
 ui <- dashboardPage(skin='blue',
                     
-                    dashboardHeader(title = "NLP4StatRef"),
+    dashboardHeader(title = "NLP4StatRef"),
                     
-                    dashboardSidebar(
-                      h3('Display articles options'),
-                      withSpinner(
-                        uiOutput("DateFrom")), ## output$DateFrom renders the 'year_from_Input' 
-                      sidebarMenu(
-                        textInput("keyword", "Filter by keyword in title", ""),
-                        textInput("abstract", "Filter by keyword in abstract", "")
-                      )),
-                    dashboardBody(
-                      fluidRow(
-                        infoBoxOutput("last_click", width=20),                                
-                        box(width=NULL, solidHeader = TRUE, 
-                            withSpinner(plotlyOutput("chart",width='100%',height='600px')))
-                      ), 
-                      fluidRow(
-                        box(width=NULL, solidHeader = TRUE, 
-                            
-                            tags$head(tags$style("#articles  {white-space: nowrap;  }")),
-                            div(
-                              DT::dataTableOutput("articles"),style = "height:500px; overflow-y: scroll;overflow-x: scroll; font-size:75%; font-family: 'Lucida Console', 'Courier New', monospace;")
-                        ) 
-                      )
-                    )
+    dashboardSidebar(
+        h3('Display articles options'),
+        withSpinner(
+        uiOutput("DateFrom")), ## output$DateFrom renders the 
+        ## 'year_from_Input' 
+        sidebarMenu(
+            textInput("keyword", "Filter by keyword in title", ""),
+            textInput("abstract", "Filter by keyword in abstract", "")
+        )),
+    dashboardBody(
+        fluidRow(
+            infoBoxOutput("last_click", width=20),                                     box(width=NULL, solidHeader = TRUE, 
+            withSpinner(
+            plotlyOutput("chart",width='100%',height='600px')))
+            ), 
+        fluidRow(
+           box(width=NULL, solidHeader = TRUE, 
+          tags$head(tags$style("#articles  {white-space: nowrap;  }")),
+          div(
+          DT::dataTableOutput("articles"),style = "height:500px; overflow-y: scroll;overflow-x: scroll; font-size:75%; font-family: 'Lucida Console', 'Courier New', monospace;")
+          ) 
+          )
+    )
 )
 
 
@@ -46,7 +46,13 @@ server <- function(input, output, session) {
   inp_file <- grep('^SE_df.*xlsx$',list.files(),value=TRUE)
   inp_file <- inp_file[which.max(file.mtime(inp_file))]
   cat(inp_file)
-  dat6 <- as.data.table(read.xlsx(inp_file))
+  dat6 <- as.data.table(read.xlsx(inp_file,
+                                  cols=c(4,5,6,11,12,13,14,15)))
+  
+  #cols=c("title","abstract","url",
+  #       "categories","new_date","year",themes",
+  #       "sub_themes")
+  
   themes_list <- sapply(dat6$themes,function(x) strsplit(x,';'))
   sub_themes_list <- sapply(dat6$sub_themes,function(x) strsplit(x,';'))
   categs_list <- sapply(dat6$categories,function(x) strsplit(x,';'))
@@ -54,10 +60,9 @@ server <- function(input, output, session) {
   
   output$DateFrom <- renderUI({
     numericInput('year_from_Input','From year:',value = min(dat6$year),
-                 min=min(dat6$year),max=as.integer(format(Sys.Date(), "%Y")),step=1)
+    min=min(dat6$year),max=as.integer(format(Sys.Date(), "%Y")),step=1)
   })
   
-  #all_categs <- unique(unlist(sapply(dat6$categories,function(x) strsplit(x,';'))))
   matches <- function(df,search_what,column_to_search) {
     ## column_to_search has the terms separated by semicolon
     ## result as a boolean vector
@@ -69,19 +74,24 @@ server <- function(input, output, session) {
   
   themes = list(
     'General and regional statistics/EU policies'=
-      c('Non-EU countries','Regions and cities','Sustainable development goals',
+      c('Non-EU countries','Regions and cities',
+        'Sustainable development goals',
         'Policy indicators'),
     'Economy and finance'= 
-      c('Balance of payments','Comparative price levels (PPPs)','Consumer prices',
+      c('Balance of payments','Comparative price levels (PPPs)',
+        'Consumer prices',
         'Exchange rates and interest rates','Government finance',
         'National accounts (incl. GDP)'),
     'Population and social conditions'=
-      c('Asylum and migration','Crime','Culture','Education and training','Health',
-        'Labour market','Living conditions','Population','Social protection',
+      c('Asylum and migration','Crime','Culture','Education and training',
+        'Health',
+        'Labour market','Living conditions','Population',
+        'Social protection',
         'Sport','Youth'),
     'Industry and services'=
       c('Short-term business statistics','Structural business statistics',
-        'Business registers','Globalisation in businesses','Production statistics',
+        'Business registers','Globalisation in businesses',
+        'Production statistics',
         'Tourism'),
     'Agriculture, forestry and fisheries'=
       c('Agriculture','Fisheries','Forestry'),
@@ -202,7 +212,7 @@ server <- function(input, output, session) {
     infoBox(
       title = '',
       value = tags$p(style = "font-size: 12px;",
-                     HTML(paste0('Theme: ',theme,br(),'Sub-theme: ',sub_theme,                           br(),'Category: ',categ,br(),'Total articles: ',val))),
+        HTML(paste0('Theme: ',theme,br(),'Sub-theme: ',sub_theme,                  br(),'Category: ',categ,br(),'Total articles: ',val))),
       subtitle = '', icon = icon("list"),
       color = "maroon", fill = TRUE)
   })    
@@ -293,8 +303,10 @@ server <- function(input, output, session) {
         node_parent <- strsplit(parent,':')[[1]][2]
         ## idx_theme <- which(sapply(dat6$themes,function(x) 
         ##  length(grep(node_parent,x))>0))
-        idx_theme <- which(sapply(themes_list, function(x) any(node_parent %in% x)))
-        idx_sub_theme <- which(sapply(sub_themes_list, function(x) any(node %in% x)))
+        idx_theme <- which(sapply(themes_list, function(x) 
+          any(node_parent %in% x)))
+        idx_sub_theme <- which(sapply(sub_themes_list, function(x) 
+          any(node %in% x)))
         #idx_sub_theme <- which(sapply(dat6$sub_themes,function(x) 
         #                       length(grep(node,x))>0))
         idx <- intersect(idx_theme,idx_sub_theme) 
@@ -311,13 +323,16 @@ server <- function(input, output, session) {
         #                   length(grep(node_grand,x))>0))
         #idx_sub_theme <- which(sapply(dat6$sub_themes,function(x) 
         #                   length(grep(node_parent,x))>0))
-        idx_theme <- which(sapply(themes_list, function(x) any(node_grand %in% x)))
-        idx_sub_theme <- which(sapply(sub_themes_list, function(x) any(node_parent %in% x)))
+        idx_theme <- which(sapply(themes_list, function(x) 
+          any(node_grand %in% x)))
+        idx_sub_theme <- which(sapply(sub_themes_list, function(x) 
+          any(node_parent %in% x)))
         
         
         #idx_categ <- which(sapply(dat6$categories,function(x) 
         #                   length(grep(node,x))>0))
-        idx_categ <- which(sapply(categs_list, function(x) any(node %in% x)))        
+        idx_categ <- which(sapply(categs_list, function(x) 
+          any(node %in% x)))        
         idx <- intersect(idx_theme,idx_sub_theme)
         idx <- intersect(idx,idx_categ)
         
@@ -333,13 +348,13 @@ server <- function(input, output, session) {
     
     if(input$keyword != '') {
       idx_words <- which(stri_detect_regex(dat6$title, 
-                                           paste0(input$keyword), case_insensitive = TRUE))
+                   paste0(input$keyword), case_insensitive = TRUE))
       
       idx <- intersect(idx,idx_words)
     }
     if(input$abstract != '') {
       idx_abstract <- which(stri_detect_regex(dat6$abstract, 
-                                              paste0(input$abstract), case_insensitive = TRUE))
+                      paste0(input$abstract), case_insensitive = TRUE))
       
       idx <- intersect(idx,idx_abstract)
     }
@@ -348,22 +363,18 @@ server <- function(input, output, session) {
     if(length(idx)==0) return(NULL)
     
     tmp <- dat6[idx,c('title','url','year','abstract')]
-    tmp$url <- paste0("<a href='",tmp$url,"' target='_blank'>",tmp$url,"</a>")    
-    #tmp$url <- paste0("<a href=",tmp$url,"</a>")
-    #tmp$url <- paste0("<a href=",tmp$url,"</a>")
-    #tmp = cbind(No=1:nrow(tmp),tmp)
-    #cat('rows in tmp:',nrow(tmp))
+    tmp$url <- 
+      paste0("<a href='",tmp$url,"' target='_blank'>",tmp$url,"</a>")    
     return(tmp)
     
   })
   
   
   output$articles <- DT::renderDataTable({
-    #output$articles <- DT::dataTableOutput({
     req(output_data())
-    #if(nrow(output_data())==0) return(NULL)
     return(output_data())
-  }, selection = 'none', caption='Statistics Explained articles',escape = FALSE,
+  }, selection = 'none', caption='Statistics Explained articles',
+  escape = FALSE,
   options = list(searchHighlight = TRUE), filter = 'top') 
   
   
