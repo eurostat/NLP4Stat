@@ -1,3 +1,10 @@
+rm(list=ls())
+
+list.of.packages <- c('shiny','shinydashboard','shinycssloaders','DT','plotly','openxlsx','data.table','stringi')
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+
+if(length(new.packages)) install.packages(new.packages)
+
 library(shiny)
 library(shinydashboard)
 library(shinycssloaders)
@@ -7,9 +14,6 @@ library(plotly)
 library(openxlsx)
 library(data.table)
 library(stringi)
-
-rm(list=ls())
-
 
 ui <- dashboardPage(skin='blue',
                     
