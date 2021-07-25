@@ -68,7 +68,7 @@ The following diagram in Figure 5 shows the feeding of the application and the i
 
 Figure 5 -- Graphical exploration in R Shiny: feeding data and interactions.
 
-The following is part of the sessionInfo() output, showing the environment used for the development, including the R version and the versions of the libraries loaded:
+The following is part of the sessionInfo() output, showing the environment used for the development, including the R version and the versions of the libraries loaded. Note that library _ggplot2_ is loaded as a required library of _plotly_.
  * R version 4.0.2 (2020-06-22)
  * Platform: x86_64-w64-mingw32/x64 (64-bit)
  * Running under: Windows 10 x64 (build 19042)
@@ -83,5 +83,6 @@ The following is part of the sessionInfo() output, showing the environment used 
      * shinydashboard_0.7.1
      * shiny_1.5.0    
 
+Note that the code will attempt to install automatically any missing libraries.
 
 [^1]: see <https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search>
