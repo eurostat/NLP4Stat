@@ -7,7 +7,7 @@
 c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 * The current functionalities can be seen in the **online version** [here](https://quantos-stat.shinyapps.io/Graphical_exploration_v2/). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
-<img src="r_shiny.JPG" width="600">
+<img src="R_Shiny_2.png" width="600">
 
 <img src="screenshot6.JPG" width="600">
 
