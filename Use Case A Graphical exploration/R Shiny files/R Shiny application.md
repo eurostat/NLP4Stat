@@ -4,14 +4,14 @@ The is a simple interactive R Shiny application which displays a dynamic sunburs
 
 The user selects the theme "Population and social conditions" and the plot drills-down to this theme. He/she then can proceed by selecting sub-theme "Living conditions". At each step, clicking at the center of the plot allows back-steping to the previous (more general) selection. The current selection is also shown in an infobox at the top of the screen.
 
-<img src="image1.png" width="800">
+<img src="image1b.png" width="800">
 
 Figure 1 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot (1).
 
 
 
-<img src="image2.png" width="800">
+<img src="image2b.png" width="800">
 
 Figure 2 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot (2).
