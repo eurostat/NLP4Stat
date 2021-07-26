@@ -29,11 +29,12 @@ ui <- dashboardPage(skin='blue',
             textInput("abstract", "Filter by keyword in abstract", "")
         )),
     dashboardBody(
-        fluidRow(
+        fluidRow(column(6,
             infoBoxOutput("last_click", width=20),                                     box(width=NULL, solidHeader = TRUE, 
             withSpinner(
-            plotlyOutput("chart",width='100%',height='600px')))
-            ), 
+            div(plotlyOutput("chart",width='100%',height='600px'),
+            align="left")))
+            )), 
         fluidRow(
            box(width=NULL, solidHeader = TRUE, 
           tags$head(tags$style("#articles  {white-space: nowrap;  }")),
@@ -56,6 +57,8 @@ server <- function(input, output, session) {
   #cols=c("title","abstract","url",
   #       "categories","new_date","year",themes",
   #       "sub_themes")
+  
+  off_colors <- c('#466eb4','#af4b91','#e6a532','#00a0e1','#7daf4b','#b93c46','#961e2d','#41afaa','#d7642d')
   
   themes_list <- sapply(dat6$themes,function(x) strsplit(x,';'))
   sub_themes_list <- sapply(dat6$sub_themes,function(x) strsplit(x,';'))
@@ -111,12 +114,14 @@ server <- function(input, output, session) {
   ids <- c("All themes")
   labels <- c("All themes")
   parents <- c("")
+  colrs <- c("")
   values <- c(nrow(dat6))
   for(i in 1:length(themes)) {
     theme <-names(themes[i])
     ids <- c(ids,paste0("T:",theme))
     labels <- c(labels,theme)
     parents <- c(parents,"All themes")
+    colrs <- c(colrs,off_colors[i])
     #idx_theme <- which(sapply(dat6$themes,function(x) 
     #                  length(grep(theme,x))>0))
     idx_theme <- which(sapply(themes_list, function(x) any(theme %in% x)))
@@ -132,6 +137,7 @@ server <- function(input, output, session) {
         ids <- c(ids,paste0("S:",sub_theme))
         labels <- c(labels,sub_theme)
         parents <- c(parents,paste0("T:",theme))
+        colrs <- c(colrs,off_colors[i])
         #idx_sub_theme <- which(sapply(dat6$sub_themes,function(x) 
         #                      length(grep(sub_theme,x))>0))
         idx_sub_theme <- which(sapply(sub_themes_list, 
@@ -155,6 +161,7 @@ server <- function(input, output, session) {
             ids <- c(ids,paste0("C",k,":",categ))
             labels <- c(labels,categ)
             parents <- c(parents,paste0("S:",sub_theme))
+            colrs <- c(colrs,off_colors[i])
             #idx_categ <- which(sapply(dat6$categories,function(x) 
             #                  length(grep(categ,x))>0))
             idx_categ <- which(sapply(categs_list, function(x) any(categ %in% x)))            
@@ -176,6 +183,7 @@ server <- function(input, output, session) {
     labels = labels,
     parents = parents,
     values = values,
+    colrs=colrs,
     extras = seq(1,length(labels),1),
     stringsAsFactors = FALSE)
   
@@ -190,7 +198,8 @@ server <- function(input, output, session) {
       type = 'sunburst',
       insidetextorientation = 'radial',
       source="A",
-      customdata = ~extras
+      customdata = ~extras,
+      marker = list(colors = ~colrs)
     )  
     
     p %>% event_register('plotly_click')
