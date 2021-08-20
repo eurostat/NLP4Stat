@@ -41,9 +41,9 @@ You will find in the Script SQL folder various file that help buil the content d
 
 #### 4.1 Structure
 
-If it is your first instantiation, please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_v1_2021-06-01.sql)
+If it is your first instantiation, please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_v1.sql)
 
-If you are updating an existing database the needed scripts can be find in the Script SQL folder
+If you are updating an existing database the needed scripts can be find in the ![Script SQL folder](Content%20Database/CDB%20content/Script%20SQL) 
 
 
 #### 4.2 Static data
@@ -52,9 +52,32 @@ Some tables have to be filled in order for the project to work, such as:
 - Named entities
 - Modality
 
-Like before, if it is your first instantiation of the database,  please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_data_v1_2021-06-01.sql) .
+##### 4.2.1 Statistics Explained Data
 
-If it is an update, the scripts needed can be find in the Script SQL folder
+Like before, if it is your first instantiation of the database,  please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained/cdb_global_se_data_v1.sql) .
+
+If it is an update, the scripts needed can be find in the ![Script SQL folder](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained)
+
+Once the database is set you can start launching the various ![spiders](Content%20Database/CDB%20content/Scrapper/README.md)
+
+##### 4.2.2 Eurostat glossary
+In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
+
+First the ![modality queries](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql) have to be launch.
+
+Then the ![glossary data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql), in order to do it use the following Jupiter Notebook : ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb)
+
+Finally, you can add the last queries : ![estat13k_stat_and_measurement_unit_data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
+
+##### 4.2.3 Dictionnary and Datasets
+As previously, we did not scrap the following datas, we first downloaded the raw and created SQL queries in order to fill the database.
+
+The first step is to fill the ![mod_dictionnary table](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dictionnary_label_data.sql) and then using ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each ![dictionnary_code_data_batch](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets). 
+
+At these stage, the dictionnary and code are all in the content database, however we found that we have to add somme code to the time dictionnary in order for our work on the datasets to work. You'll find the added elemnts ![here](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dictionnary_code_data_time_addition.sql)
+
+Then you can add some ![datasets](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dataset_label_data.sql) and then using ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each ![dictionnary_code_data_batch](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets) add the links between the datasets and the dictionnaries. 
+
 
 ### 5. Knowledge database
 
