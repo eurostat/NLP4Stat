@@ -4,25 +4,25 @@
 
 ### 1.- The current version of Knowledge Database
 
-- Ontology : version 0.7
+- Ontology : version 0.8 [25/08/2021]
 
 - Resources:
   - Statistics Explained website: StatisticsExplainedWebsite_20210714.pdf
-  
+    
 - Authority lists:
   - NLP4StatRef_ResourceInformation_20210629.rdf
   - NLP4StatRef_ResourceType_20210704.rdf
 
 ### 2.- The current workflow for the Knowledge Database
 
-- Ontology : version 0.8 update for:
+- Ontology : version 0.9 update for:
   - StatisticDataset
-  - Dictionary
-  - Taxonomy
   - Topics
   
 - Resources:
+  - Eurostat Experimental statistics
   - Eurostat Glossary
+  - Eurostat News
   - Datasets
   - Dictionaries associated to Datasets
   - Database navigation tree
@@ -32,7 +32,8 @@
 
 ## Ontology
 
-- Current version: NLP4StatRef-Ontology_0.7_20210705.owl  
+- Current version: NLP4StatRef-Ontolog.owl  
+  - Last update : 25.08.2021
   - This version is not commented at this stage.
   - Ontologies Dublin core and Skos were not imported.
     - This task is done in the Knowledge database.
@@ -55,13 +56,26 @@ A generic mapping is done for external resources and generic objects : NLP4StatR
 
 ### 1.- Eurostat website
 
+- Eurostat News
+  - NLP4StatRef-News-Model.pdf
+  - NLP4StatRef-News-Mapping.xlsx
+  - Last update : 18.08.2021
+  - Next updates:    
+    - Dcat integration
+
+- Eurostat Experimental statistics
+  - NLP4StatRef-ExperimentalStatistics-Model.pdf
+  - NLP4StatRef-SE-Article-Mapping.xlsx
+  - Last update : 18.08.2021
+  - Next updates:    
+    - Dcat integration
+
 - Eurostat Glossary: see 3.- Vocabulary
 	
 - Eurostat Databases: coming soon
 
 - Eurostat reference metadata: coming soon
 
-- Eurostat reference news: coming soon
 
 ### 2.- Statistics Explained website
 
@@ -70,14 +84,14 @@ A generic mapping is done for external resources and generic objects : NLP4StatR
 - Statistics Explained Articles
   - NLP4StatRef-SE-Article-Model.pdf
   - NLP4StatRef-SE-Article-Mapping.xlsx
-  - Last update : 22.07.2021
+  - Last update : 18.08.2021
   - Next updates:    
     - Dcat integration
 
 - Statistics Explained Background Articles
-  - NLP4StatRef-SE-Background-Model.pdf
-  - NLP4StatRef-SE-Background-Mapping.xlsx
-  - Last update : 22.07.2021
+  - NLP4StatRef-SE-BackgroundArticle-Model.pdf
+  - NLP4StatRef-SE-BackgroundArticle-Mapping.xlsx
+  - Last update : 18.08.2021
   - Next updates:   
     - Dcat integration
 	
