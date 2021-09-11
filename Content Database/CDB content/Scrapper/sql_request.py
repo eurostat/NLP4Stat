@@ -199,3 +199,43 @@ def sharedLinkInsert():
 def sharedLinkCheck():
    sharedLinkCheck = "SELECT id FROM dat_article_shared_link WHERE article_id = ? AND link_id = ? AND article_division_id = ?"
    return sharedLinkCheck
+
+############################## News queries ############################
+
+# insert a news
+def newsFullInsert():
+    newsFullInsert = "INSERT INTO dat_estat_news(id, publication_date, euro_indicators) VALUES (?, ?, 0)"
+    return newsFullInsert
+
+def newsInsert():
+    newsInsert = "INSERT INTO dat_estat_news(id, euro_indicators, body) VALUES (?, 0)"
+    return newsInsert
+
+# update a news / add the body
+def newsUpdate():
+    newsUpdate = "UPDATE dat_estat_news SET body = ? WHERE id = ?"
+    return newsUpdate
+
+# insert an euro_indicator
+def euroIndicFullInsert():
+    euroIndicFullInsert = "INSERT INTO dat_estat_news(id, publication_date, euro_indicators) VALUES (?, ?, 1)"
+    return euroIndicFullInsert
+
+def euroIndicInsert():
+    euroIndicInsert = "INSERT INTO dat_estat_news(id, euro_indicators, body) VALUES (?, 1)"
+    return euroIndicInsert
+
+# select a news or an euro_indicator
+def newsSelect():
+    newsSelect = "SELECT id FROM dat_estat_news WHERE id = ?"
+    return newsSelect
+
+# insert news more info link
+def moreInfoInsert():
+    moreInfoInsert = "INSERT INTO dat_estat_news_more_info(news_id, link_id) VALUES (?, ?)"
+    return moreInfoInsert
+
+# check if couple exists in dat_article_shared_link
+def moreInfoCheck():
+   moreInfoCheck = "SELECT id FROM dat_estat_news_more_info WHERE news_id = ? AND link_id = ? "
+   return moreInfoCheck

@@ -9,7 +9,3 @@ INSERT INTO "ESTAT"."V1"."dat_article" (id, context, last_update, background_art
 /*Statistics Explained Background article homepage*/
 INSERT INTO "ESTAT"."V1"."dat_link_info" (title, url, resource_information_id, resource_type_id) VALUES ('Background article', 'https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Background_article', 1, 0);
 INSERT INTO "ESTAT"."V1"."dat_article" (id, context, last_update, background_article, homepage) VALUES (10556, 'The category Background article contains all background articles providing extensive methodological or context information, and thus complementing the statistical articles presenting and analysing data.', '2013-03-27 16:11:00', 1, 1);
-
-
-/*Estat 13k*/
-INSERT INTO "ESTAT"."V1"."dat_link_info" (title, url, resource_information_id, resource_type_id) VALUES ('Eurostat''s Concepts and Definitions Database', 'https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL_GLOSSARY&StrNom=CODED2&StrLanguageCode=EN', 1, 0);

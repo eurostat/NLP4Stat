@@ -85,7 +85,7 @@ class articlesSpider(scrapy.Spider):
             cursor.execute(estatLinkTypeKnownInsert(),
                            article['title'],
                            article['url'],
-                           16)
+                           52)
             c.commit()
             # get id
             cursor.execute(estatLinkSelectId(),
@@ -96,7 +96,7 @@ class articlesSpider(scrapy.Spider):
         else:
             article['id'] = row.id
             cursor.execute(LinkTypeUpdate(),
-                           16,
+                           52,
                            row.id)
 
         # last update
