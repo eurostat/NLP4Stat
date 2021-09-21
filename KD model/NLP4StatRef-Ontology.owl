@@ -10,8 +10,8 @@
      xmlns:resource="https://ec.europa.eu/eurostat/resource/">
     <owl:Ontology rdf:about="https://nlp4statref/knowledge/ontology/">
         <rdfs:comment xml:lang="en">This is the work in progress ontology for the NLP4StatRef KnowledgeDatabase.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">2021-08-25 Version 0.8
-2021-07-05 Version 0.7</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">2021-09-03 Version 0.9
+2021-08-25 Version 0.8</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -62,6 +62,15 @@
     <!-- https://nlp4statref/knowledge/ontology/inCategory -->
 
     <owl:ObjectProperty rdf:about="https://nlp4statref/knowledge/ontology/inCategory">
+        <rdfs:range rdf:resource="https://nlp4statref/knowledge/ontology/Taxonomy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://nlp4statref/knowledge/ontology/inFamily -->
+
+    <owl:ObjectProperty rdf:about="https://nlp4statref/knowledge/ontology/inFamily">
+        <rdfs:domain rdf:resource="https://nlp4statref/knowledge/ontology/CodeList"/>
         <rdfs:range rdf:resource="https://nlp4statref/knowledge/ontology/Taxonomy"/>
     </owl:ObjectProperty>
     
@@ -191,6 +200,14 @@
     <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/BackgroundArticle">
         <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/Article"/>
         <owl:disjointWith rdf:resource="https://nlp4statref/knowledge/ontology/StatisticalArticle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://nlp4statref/knowledge/ontology/CodeList -->
+
+    <owl:Class rdf:about="https://nlp4statref/knowledge/ontology/CodeList">
+        <rdfs:subClassOf rdf:resource="https://nlp4statref/knowledge/ontology/AuthorityList"/>
     </owl:Class>
     
 
