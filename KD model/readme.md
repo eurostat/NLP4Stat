@@ -4,27 +4,28 @@
 
 ### 1.- The current version of Knowledge Database
 
-- Ontology : version 0.8 [25/08/2021]
+- Ontology : version 0.9 [03/09/2021]
 
 - Resources:
   - Statistics Explained website: StatisticsExplainedWebsite_20210714.pdf
-    
+  - Eurostat Glossary
+  - Dictionaries associated to Datasets
+  
 - Authority lists:
   - NLP4StatRef_ResourceInformation_20210629.rdf
   - NLP4StatRef_ResourceType_20210704.rdf
 
 ### 2.- The current workflow for the Knowledge Database
 
-- Ontology : version 0.9 update for:
+- Ontology : version 0.10 update for:
   - StatisticDataset
+  - Annotations
   - Topics
   
 - Resources:
-  - Eurostat Experimental statistics
-  - Eurostat Glossary
+  - Eurostat Experimental statistics 
   - Eurostat News
   - Datasets
-  - Dictionaries associated to Datasets
   - Database navigation tree
   - Thematics & Categories
   
@@ -33,7 +34,7 @@
 ## Ontology
 
 - Current version: NLP4StatRef-Ontolog.owl  
-  - Last update : 25.08.2021
+  - Last update : 03.09.2021
   - This version is not commented at this stage.
   - Ontologies Dublin core and Skos were not imported.
     - This task is done in the Knowledge database.
@@ -43,7 +44,7 @@
 - Modeling diagram of Classes and Properties
   - NLP4StatRef-KD-Model_20210715.pdf
   - Upcoming update:
-    - Database modeling : dataset, dictionaries, reference metadata & navigation tree
+    - Database modeling : dataset, reference metadata & navigation tree
 	- News modeling
 
 ## Implementation
@@ -99,8 +100,13 @@ A generic mapping is done for external resources and generic objects : NLP4StatR
 
 #### Dictionary
 
-- Eurostat dictionaries: coming soon
-
+- Eurostat dictionaries
+  - NLP4StatRef-CodeLists-Model.pdf
+  - NLP4StatRef-CodeLists-Mapping.xlsx
+  - Last update : 01.09.2021
+  - Next updates:    
+    - Dcat integration
+	
 #### Glossary
 
 - Eurostat Glossary
