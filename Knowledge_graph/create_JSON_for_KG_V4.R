@@ -77,8 +77,6 @@ create_node_tables <- function(results_relations, results_types, results_titles,
   node_type_table <- merge(node_type_table, clean_type_label_table, by = "node_type")
   
   # Add the types to the node table 
-  print(str(node_table))
-  print(str(node_type_table))
   node_table <- merge(node_table, node_type_table, by = "node_type")
   node_table$node_title  <- sapply(node_table$node_title, DetectTools::remove_balise)
   node_table <- node_table[which(!is.na(node_table$node_title)),]
