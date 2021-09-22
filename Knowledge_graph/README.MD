@@ -16,10 +16,11 @@ In this folder you will find :
 
 
 Instructions of the whole pipeline : 
-1) Run the notebook to extract data
-2) Run the R script to create the json
-3) Open the json files, copy and replace the json in the lib_kc_test_data.js file. (Notepad++ is a good tool for that). The "NeuralNetwork" part of the file can remain untouched but can be used to set the arguments of the KG.
-4) Save the file and open the html file to see the network. 
+1) Change the SPARQL data extraction limit in the Virtuoso Conductor by going through System Admin/Parameters/SPARQL and set ResultSetMaxRows to 100000 (or more). 
+2) Run the notebook to extract data
+3) Run the R script to create the json
+4) Open the json files, copy and replace the json in the lib_kc_test_data.js file. (Notepad++ is a good tool for that). The "NeuralNetwork" part of the file can remain untouched but can be used to set the arguments of the KG.
+5) Save the file and open the html file to see the network. 
 
 Available parameters of this pipeline : 
 - The chosen relations, in the notebook
