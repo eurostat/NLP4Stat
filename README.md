@@ -93,7 +93,7 @@ A demo notebook is available to select elements contained in the KDB.
 The ESTAT_Populate_KDB notebooks contain the addition of all elements that are currently stored and mapped (i.e. relations are modeled).
 As the process does not include a verification step of the presence of a triplet before adding it, the notebook should be launched once. Do not hesitate to delete and add anew the ontology before populating it again using the notebook. 
 
-#### 5.2 Knowledge graph
+#### 5.3 Knowledge graph
 
 A knowledge graph can be created using the elements of the Knowledge_graph folder. A dedicated readme file is there. 
 
