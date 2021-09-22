@@ -224,7 +224,7 @@ pattern_material_selection_for_KG <- function(data_for_network.nodes = data_for_
                       "links" = data_to_list_for_json_conversion(data_for_network.edges.pattern.min))
   list_network.json <-  RJSONIO::toJSON(list_network)
   writeLines(list_network.json,
-             paste0("O:/00_KAP_CODE/08_IT_App/Projets_internes/Librairie D3/Datavisualisations/Tests/temp/", file_name))
+             paste0(file_name))
 }
 
 
