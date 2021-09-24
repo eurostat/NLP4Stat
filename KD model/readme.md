@@ -15,7 +15,7 @@
   - NLP4StatRef_ResourceInformation_20210629.rdf
   - NLP4StatRef_ResourceType_20210704.rdf
 
-### 2.- The current workflow for the Knowledge Database
+### 2.- The current "work-in-progress" workflow for the Knowledge Database
 
 - Ontology : version 0.10 update for:
   - StatisticDataset
