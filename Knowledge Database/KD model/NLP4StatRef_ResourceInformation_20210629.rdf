@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:estat="https://nlp4statref/knowledge/ontology/ontology#" xmlns:estatri="https://nlp4statref/knowledge/resource/authority/resource-information/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#" xmlns:srm="https://www.luaplab.com/resource/srm/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <skos:ConceptScheme rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-30</dct:created>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-30</dct:modified>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-30</dct:issued>
+    <dct:title>Resource information</dct:title>
+    <dct:creator>Margot Avella</dct:creator>
+    <dct:contributor>Eve Paul</dct:contributor>
+    <dct:description>Information about the origin of the resource</dct:description>
+    <dct:type>Controlled vocabulary</dct:type>
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#eurostat" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-agency-for-safety-and-health-at-work" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-asylum-support-office" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-central-bank" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-centre-for-the-development-of-vocational-training" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-council-and-council-of-the-european-union" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-court-of-auditors" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-environment-agency" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-environment-information-and-observation-network" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-foundation-for-the-improvement-of-living-and-working-conditions" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-institute-for-gender-equality" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-monitoring-centre-for-drugs-and-drug-addiction" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-parliament" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-union-agency-for-fundamental-rights" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-union-agency-for-railways" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-union" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-patent-convention" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-investment-bank" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-free-trade-association" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-household-survey-network" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-input-output-organization" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-monetary-fund" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-statistics-institute" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#organisation-for-economic-co-operation-and-development" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#paris21" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#the-world-bank" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#world-health-organization" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-economic-commission-for-europe" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-educational-scientific-and-cultural-organization" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-development-program" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#food-and-agriculture-organization-of-the-united-nations" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-framework-convention-on-climate-change" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-office-on-drugs-and-crime" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-statistics-division" />
+    <skos:hasTopConcept rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#wikipedia" />
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#eurostat">
+    <skos:prefLabel xml:lang="fr">Eurostat</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Eurostat</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Done" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>eurostat</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:abbreviationAllowed>estat</srm:abbreviationAllowed>
+    <srm:pattern srm:label="info11">url contains "eurostat"</srm:pattern>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+    <skos:definition>Eurostat resource.</skos:definition>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-agency-for-safety-and-health-at-work">
+    <skos:prefLabel xml:lang="en">European Agency for Safety and Health at Work</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european agency for safety and health at work</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info101">url contains "osha.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-asylum-support-office">
+    <skos:prefLabel xml:lang="en">European Asylum Support Office</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european asylum support office</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info111">url contains "easo.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-central-bank">
+    <skos:prefLabel xml:lang="en">European Central Bank</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european central bank</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info121">url contains "ecb.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-centre-for-the-development-of-vocational-training">
+    <skos:prefLabel xml:lang="en">European Centre for the Development of Vocational Training</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european centre for the development of vocational training</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info131">url contains "cedefop.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-council-and-council-of-the-european-union">
+    <skos:prefLabel xml:lang="fr">Conseil européen et Conseil de l'Union européenne</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">European Council and Council of the European Union</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european council and council of the european union</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info141">url contains "consilium.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-court-of-auditors">
+    <skos:prefLabel xml:lang="en">European Court of Auditors</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european court of auditors</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info151">url contains "eca.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-environment-agency">
+    <skos:prefLabel xml:lang="en">European Environment Agency</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european environment agency</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info161">url contains "eea.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-environment-information-and-observation-network">
+    <skos:prefLabel xml:lang="en">European Environment Information and Observation Network</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european environment information and observation network</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info171">url contains "eionet.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-foundation-for-the-improvement-of-living-and-working-conditions">
+    <skos:prefLabel xml:lang="en">European Foundation for the Improvement of Living and Working Conditions</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european foundation for the improvement of living and working conditions</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info181">url contains "eurofound.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-institute-for-gender-equality">
+    <skos:prefLabel xml:lang="en">European Institute for Gender Equality</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european institute for gender equality</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info191">url contains "eige.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-monitoring-centre-for-drugs-and-drug-addiction">
+    <skos:prefLabel xml:lang="en">European Monitoring Centre for Drugs and Drug Addiction</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european monitoring centre for drugs and drug addiction</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info201">url contains "emcdda.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-parliament">
+    <skos:prefLabel xml:lang="fr">Parlement européen</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">European Parliament</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european parliament</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info211">url contains "europarl.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>01/06/2021 - Creation</skos:changeNote>
+    <skos:definition>European Parliament resource.</skos:definition>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-union-agency-for-fundamental-rights">
+    <skos:prefLabel xml:lang="en">European Union Agency For Fundamental Rights</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european union agency for fundamental rights</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info221">url contains "fra.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-union-agency-for-railways">
+    <skos:prefLabel xml:lang="en">European Union Agency for Railways</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european union agency for railways</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info231">url contains "era.europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-union">
+    <skos:prefLabel xml:lang="fr">Union euopéenne</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">European union</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european union</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:abbreviationAllowed>europa</srm:abbreviationAllowed>
+    <srm:pattern srm:label="Info241">url contains "europa.eu"</srm:pattern>
+    <skos:editorialNote>ToDo : Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>01/06/2021 - Creation</skos:changeNote>
+    <skos:definition>European union resource.</skos:definition>
+    <skos:scopeNote>Information only used for EU resource which could not be assigned to a coporate body of the EU.</skos:scopeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-patent-convention">
+    <skos:prefLabel xml:lang="en">European Patent Convention</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european patent convention</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info1001">url contains "epo.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, @lang, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-investment-bank">
+    <skos:prefLabel xml:lang="en">European Investment Bank</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european investment bank</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info1011">url contains "eib.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, @lang, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#european-free-trade-association">
+    <skos:prefLabel xml:lang="en">European Free Trade Association</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>european free trade association</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info1021">url contains "efta.int"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, @lang, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#international-household-survey-network">
+    <skos:prefLabel xml:lang="en">International Household survey network</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>international household survey network</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info2011">url contains "ihsn.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#international-input-output-organization">
+    <skos:prefLabel xml:lang="en">International input output organization</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>international input output organization</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info2021">url contains "iioa.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#international-monetary-fund">
+    <skos:prefLabel xml:lang="en">International Monetary Fund</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>international monetary fund</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:acronymAllowed>FMI</srm:acronymAllowed>
+    <srm:acronymAllowed>IMF</srm:acronymAllowed>
+    <srm:pattern srm:label="Info2031">url contains "imf.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#international-statistics-institute">
+    <skos:prefLabel xml:lang="en">International Statistics Institute</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>international statistics institute</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info2041">url contains "isi-web.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#organisation-for-economic-co-operation-and-development">
+    <skos:prefLabel xml:lang="en">Organisation for Economic Co-operation and Development</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>organisation for economic co-operation and development</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:acronymAllowed>OCDE</srm:acronymAllowed>
+    <srm:acronymAllowed>OECD</srm:acronymAllowed>
+    <srm:pattern srm:label="Info2051">url contains "oecd.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#paris21">
+    <skos:prefLabel xml:lang="en">Paris21</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>paris21</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info2061">url contains "paris21.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#the-world-bank">
+    <skos:prefLabel xml:lang="en">The World Bank</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>the worl bank</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info2071">url contains "worldbank.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#world-health-organization">
+    <skos:prefLabel xml:lang="en">World Health Organization</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>world health organization</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info2081">url contains "who.int"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-economic-commission-for-europe">
+    <skos:prefLabel xml:lang="en">United Nations - Economic Commission for Europe</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>united nations economic commission for europe</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info3011">url contains "unece.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-educational-scientific-and-cultural-organization">
+    <skos:prefLabel xml:lang="en">United Nations - Educational, Scientific and Cultural Organization</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>united nations educational, scientific and cultural organization</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:acronymAllowed>UNESCO</srm:acronymAllowed>
+    <srm:pattern srm:label="Info3021">url contains "unesco.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-development-program">
+    <skos:prefLabel xml:lang="en">United Nations - Development Program</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>united nations development program</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info3031">url contains "undp.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#food-and-agriculture-organization-of-the-united-nations">
+    <skos:prefLabel xml:lang="en">Food and Agriculture Organization of the United Nations</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>food and agriculture organization of the united nations</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info3041">url contains "fao.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-framework-convention-on-climate-change">
+    <skos:prefLabel xml:lang="en">United Nations - Framework Convention on Climate Change</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>united nations framework convention on climate change</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info3051">url contains unfccc.int"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-office-on-drugs-and-crime">
+    <skos:prefLabel xml:lang="en">United Nations - Office on drugs and crime</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-05-18</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>united nations office on drugs and crime</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info3061">url contains "unodc.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-statistics-division">
+    <skos:prefLabel xml:lang="en">United Nations - Statistics Division</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>united nations statistics division</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info3071">url contains "unstats.un.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#wikipedia">
+    <skos:prefLabel xml:lang="en">Wikipedia</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <srm:workStatus rdf:resource="https://www.luaplab.com/resource/srm/authority-list#InProgress" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-29</dct:created>
+    <srm:status rdf:resource="https://www.luaplab.com/resource/srm/authority-list#Current" />
+    <srm:lexicalUnitMain>wikipedia</srm:lexicalUnitMain>
+    <srm:syntacticCategory>Noun</srm:syntacticCategory>
+    <srm:pattern srm:label="Info5011">url contains "wikipedia.org"</srm:pattern>
+    <skos:editorialNote>ToDo : Notes, prefLabel @fr, Acronyms, Abbreviations, SyntacticVariants</skos:editorialNote>
+    <skos:changeNote>29/06/2021 - Creation</skos:changeNote>
+  </skos:Concept>
+  <skos:Collection rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#collection-eurostat-resources">
+    <skos:prefLabel xml:lang="en">Collection Eurostat resources</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Collection Ressources Eurostat</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <dct:creator />
+    <srm:workstatus rdf:resource="Done" />
+    <srm:status rdf:resource="Current" />
+    <skos:definition>Resources coming from Eurostat.</skos:definition>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#eurostat" />
+  </skos:Collection>
+  <skos:Collection rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#collection-europa-resources">
+    <skos:prefLabel xml:lang="en">Collection Europa resources</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Collection Ressources Europa</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <dct:creator />
+    <srm:workstatus rdf:resource="Done" />
+    <srm:status rdf:resource="Current" />
+    <skos:definition>Resources coming from the European Union with the exception of Eurostat's resources.</skos:definition>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-agency-for-safety-and-health-at-work" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-asylum-support-office" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-central-bank" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-centre-for-the-development-of-vocational-training" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-council-and-council-of-the-european-union" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-court-of-auditors" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-environment-agency" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-environment-information-and-observation-network" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-foundation-for-the-improvement-of-living-and-working-conditions" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-institute-for-gender-equality" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-monitoring-centre-for-drugs-and-drug-addiction" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-parliament" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-union-agency-for-fundamental-rights" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-union-agency-for-railways" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-union" />
+  </skos:Collection>
+  <skos:Collection rdf:about="https://nlp4statref/knowledge/resource/authority/resource-information#collection-external-resources">
+    <skos:prefLabel xml:lang="en">Collection External resources</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Collection Ressources externes</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information" />
+    <dct:creator />
+    <srm:workstatus rdf:resource="Done" />
+    <srm:status rdf:resource="Current" />
+    <skos:definition>Resources coming from a Eurostat's partner or an external website.</skos:definition>
+    <skos:changeNote>18/05/2021 - Creation</skos:changeNote>
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-patent-convention" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-investment-bank" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#european-free-trade-association" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-household-survey-network" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-input-output-organization" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-monetary-fund" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#international-statistics-institute" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#organisation-for-economic-co-operation-and-development" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#paris21" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#the-world-bank" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#world-health-organization" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-economic-commission-for-europe" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-educational-scientific-and-cultural-organization" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-development-program" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#food-and-agriculture-organization-of-the-united-nations" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-framework-convention-on-climate-change" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-office-on-drugs-and-crime" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#united-nations-statistics-division" />
+    <skos:member rdf:resource="https://nlp4statref/knowledge/resource/authority/resource-information#wikipedia" />
+  </skos:Collection>
+</rdf:RDF>
+<!-- Terminology generated by the LuapLab tool "Semantic Resources Management". Export RDF, version 2.0 -->
