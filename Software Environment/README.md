@@ -17,7 +17,20 @@
 
 * Create the docker image using the `docker-compose up docker-compose.yml`. The [docker-compose.yml](Docker%20Images/docker-compose.yml) is in the `Docker Images` folder. 
 
+# 2. Conmect to the Virtuoso server
+In a browser go to http://localhost:8890 and on the Virtuoso frontend/GUI click on Conductor login using the username `dba` and the password defined in the [docker-compose.yml](Docker%20Images/docker-compose.yml) file (the default password is `dba`).
 
+![Virtuoso conductor](Illustrations/virtuoso_conductor_homepage.PNG)
+
+# 3. Virtuoso user parameters
+
+Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit the user account for the 'dba' user as such :
+
+![Virtuoso User account edit](Illustrations/virtuoso_conductor_user_account_edit.png)
+
+![Virtuoso User account page](Illustrations/virtuoso_conductor_user_accounts.PNG)
+
+# 3. Create ODBC connection to the Virtuoso server on Windows
 
 * Open the ODBC Data Sources (64-bit) tool in control panel, go to Tab System DSN and create a new data source selecting the Virtuoso (Open Source) driver. Press Finish to start the configuration.
 
@@ -27,7 +40,7 @@
 
 <img src="Virtuoso_setup4.JPG" alt="Virtuoso setup4" width="600"/>
 
-* In the next screen, fill-in your user name and password and press Next:
+* In the next screen, fill-in your user name and password (the default is user:dba, password:dba) and press Next:
 
 <img src="Virtuoso_setup5.JPG" alt="Virtuoso setup5" width="600"/>
 
@@ -44,20 +57,9 @@
 
 
 
-# Conmect to the Virtuoso docker image
 
-In a browser go to http://localhost:8890
-and on the Virtuoso frontend/GUI click on Conductor login using the username `dba` and the password defined in the [docker-compose.yml](Docker%20Images/docker-compose.yml) file.
 
-### 3. Virtuoso user parameters
-
-![Virtuoso conductor](/Illustrations/virtuoso_conductor_homepage.PNG)
-
-Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit the user account for the 'dba' user as such :
-
-![Virtuoso User account edit](/Illustrations/virtuoso_conductor_user_account_edit.png)
-
-![Virtuoso User account page](/Illustrations/virtuoso_conductor_user_accounts.PNG)
+##
 
 ### 4. Content database
 
