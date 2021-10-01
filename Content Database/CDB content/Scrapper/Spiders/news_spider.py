@@ -24,10 +24,10 @@ from Items.LinkInfo import LinkInfo
 from Items.News import News
 from sql_request import *
 
-c = pyodbc.connect('DSN=Virtuoso All;' +
+c = pyodbc.connect('DSN=nlp4stat;' +
                    'DBA=ESTAT;' +
                    'UID=dba;' +
-                   'PWD=30gFcpQzj7sPtRu5bkes')
+                   'PWD=dba')
 cursor = c.cursor()
 
 class newsSpider(scrapy.Spider):
