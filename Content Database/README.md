@@ -46,11 +46,16 @@ Once the database is set you can start launching the [article spiders](Content%2
 ## 5. Load Eurostat glossary data
 In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
 
-First the ![modality queries](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql) have to be launch.
+First the [modality queries](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql) have to be launch. 
+??????? do we need this and where in Virtuoso Interactive SQl query
 
-Then the ![glossary data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql), in order to do it use the following Jupiter Notebook : ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb)
 
-Finally, you can add the last queries : ![estat13k_stat_and_measurement_unit_data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
+Then the [glossary data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql), in order to do it use the following [Jupyter Notebook](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) or the [python code](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.py)
+
+Finally, you can add the last queries : [estat13k_stat_and_measurement_unit_data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
+
+??????? do we need this and where in Virtuoso Interactive SQl query
+
 
 # to be continue...
 
