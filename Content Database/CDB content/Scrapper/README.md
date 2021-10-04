@@ -1,5 +1,6 @@
 # Scrapper
 
+Scrape or load the gloassary data?
 ### Go to launch.py
 1. run the Glossary Spider
 2. run the Glossary redirection Spider
