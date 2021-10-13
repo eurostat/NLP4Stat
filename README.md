@@ -9,5 +9,5 @@
     - [Use Case A Faceted search](Use%20Case%20A/Use%20Case%20A%20Faceted%20search): Faceted search, with inputs from the database (SE articles) except from one file (scraped categories per article - these are in the process of being transferred to the knowledge database). Among others, the code assigns the majority of the SE articles to (possibly more than one) themes, sub-themes and categories.
     - [Use Case A Graphical exploration](Use%20Case%20A/Use%20Case%20A%20Graphical%20exploration). Two applications for graphical exploration, one in R Shiny and another in MS Power BI. See separate description in this link. The description includes links to short documentations for the two applications.
 
-
-
+- Use Case B:
+     - Query_Builder_Use_Case_B_v6.ipynb. Query builder using content from the SE Glossary articles, the SE articles and [OECD's Glossary of Statistical Terms](https://stats.oecd.org/glossary/). OECD's content is read from file 'OECD_final_results_2.xlsx'.
