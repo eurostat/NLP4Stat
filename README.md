@@ -10,4 +10,4 @@
     - [Use Case A Graphical exploration](Use%20Case%20A/Use%20Case%20A%20Graphical%20exploration). Two applications for graphical exploration, one in R Shiny and another in MS Power BI. See separate description in this link. The description includes links to short documentations for the two applications.
 
 - Use Case B:
-     - [Query_Builder_Use_Case_B_v6.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Query_Builder_Use_Case_B_v6.ipynb). Query builder using content from the SE Glossary articles, the SE articles and [OECD's Glossary of Statistical Terms](https://stats.oecd.org/glossary/). OECD's content is read from file 'OECD_final_results_2.xlsx'.
+     - [Query_Builder_Use_Case_B_v6.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Query_Builder_Use_Case_B_v6.ipynb). Query builder using content from the SE Glossary articles, the SE articles and [OECD's Glossary of Statistical Terms](https://stats.oecd.org/glossary/). OECD's content is read from file [OECD_final_results_2.xlsx](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/OECD_final_results_2.xlsx).
