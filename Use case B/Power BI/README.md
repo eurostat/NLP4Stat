@@ -57,16 +57,16 @@ Figure 6 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes
 
 Figure 7 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes, OECD's statistical terms and OECD's statistical terms source publications (2).
 
-xxxxxxxxxxxxxxxxxxxx
+The fourth screen ("Common_Noun_Phrases" - Figure 8) shows a search tool (attribute slicer) through which the user can search for noun phrases. The closest ones are displayed as options in the form of tags (the options are from the "OECD_matches" column in file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_). Next to the tags, there is a bar that shows how many Statistics Explained articles or OECD's statistical terms it has found (the turquoise color represents the Statistics Explained articles and the pink represents the OECD's statistical terms). Τhe user can select as many tags as he/she wants by clicking on them. **After the user clicks on some part of the bar, the corresponding noun phrase becomes active and is added to the query**.
 
-The **fourth screen** ("Topic modelling" - Figure 8) is produced from the data with the topic modeling results. Recall that these data include the distribution of articles into topics, that is, the probabilities of each article belonging to a topic (which sum up to one for each article).
-
-The main visual in this screen is a treemap with the 20 topics. When a user selects a topic, the list in the lower right side displays the articles which have a probability ≥ 0.5 of appearing in this topic, in descending order of probability. Strictly speaking, we use as measure in the list, the sum of probabilities, so that when all topics are selected, all articles are displayed with probability one. When one topic is selected, these sums are the actual probabilities. An example is shown in Figure 7 with the topic "Water resources and sustainable development" and the display of relevant articles. On the other hand, the size of the topics in the treemap is proportional to the average probability. This average probability is also used in the bar chart in the top right side, which dislays the themes and sub-themes in a hierarchical way. Selection of a topic makes this bar chart show the closeness of the topic with the themes or sub-themes. Conversely, one can select a theme or sub-theme and get an idea of the distribution into topics, together with the most relevant articles.
+Below the selection part, there are two tables, which display the results, based on the user's query.The first table shows the Statistics Explained articles with their URLs and the relevant Eurostat themes and sub-themes.The second table displays the corresponding OECD's results. For example, if the user enters the "quality life" noun phrase, then the "quality life" tag is added and the tables are changed automatically to reflect this choice. Figures 8 and 9 show these results before (initial results) and after clicking on the bar (filtered results).
 
 <img src="image8.PNG" width="800">
 
+Figure 8 -- Graphical exploration in MS Power BI: Uses of Noun-Phrases – before clicking on the bar.
 
+<img src="image9.PNG" width="800">
 
-Figure 8 -- Graphical exploration in MS Power BI: Topic modeling.
+Figure 9 -- Graphical exploration in MS Power BI: Uses of Noun-Phrases – after clicking on the bar.
 
 [^1]: See: <https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md>
