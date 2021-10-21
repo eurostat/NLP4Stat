@@ -1,25 +1,19 @@
 ### MS Power BI application
 
-### In progress: The content below is from Use Case A - to be adjusted
-
 The MS Power BI application works with the free desktop version and is portable. It can also be published to MS Azure cloud, with any Office 365 license. To install the application, it suffices to define the path where the required files are located from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
 
 <img src="image1.PNG" width="800">
 
 Figure 1 -- Setting the data path in the MS Power BI application.  
 
-
-
-
-
 The required files and the codes producing them are shown in Figure 2 below. They are all included in the current folder.
 
--    The main data are in two Excel files: OECD_content_for_PowerBI.xlsx  and SE_df_for_PowerBI.xlsx . These are produced by the Python code PowerBI_inputs_v1.ipynb . 
--    This last notebook requires a) the same file with the scraped content from OECD's Glossary of Statistical Terms (OECD_final_results_2.xlsx) which is used in the Query Builder and the Faceted Search, and b) file themes_eurostat_oecd_v2.xlsx, used also in the Faceted Search, which was created manually and contains, for each Eurostat theme and subtheme, the related OECD’s themes. 
--    These data create the internal tables “OECD” and “OECD_repeated rows” (see Figure 3). The first one comes from the original data while the second is created from the first by splitting themes, subthemes and OECD themes into unique values (in repeated rows).
--    Another input file is the Excel file SE_vs_OECD_Glossary_Noun_Phrases.xlsx  produced by the Jupyter notebook SE_OECD_Glossary_Common_NPs.ipynb , described in xxxx. This Excel file creates the table “Noun_Phrases” in Figure 3. This notebook requires file Termino V2.xlsx  which has a manual filtering of the noun phrases found in the SE articles, keeping the most "useful" ones.
--    Other tables and values shown in Figure 3 (“Themes”, “Official_colors”) are auxiliary.
--    Example reference: R Shiny application[^1]. 
+-    The main data are in two Excel files: _OECD_content_for_PowerBI.xlsx_  and _SE_df_for_PowerBI.xlsx_. These are produced by the Python code _PowerBI_inputs_v1.ipynb_. 
+-    This last notebook requires a) the same file with the scraped content from OECD's Glossary of Statistical Terms (_OECD_final_results_2.xlsx_) which is used in the Query Builder and the Faceted Search, and b) file _themes_eurostat_oecd_v2.xlsx_, used also in the Faceted Search, which was created manually and contains, for each Eurostat theme and subtheme, the related OECD's themes. 
+-    These data create the internal tables "OECD" and "OECD_repeated rows" (see Figure 3). The first one comes from the original data while the second is created from the first by splitting themes, subthemes and OECD themes into unique values (in repeated rows).
+-    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook _SE_OECD_Glossary_Common_NPs.ipynb_, described in **xxxx**. This Excel file creates the table "Noun_Phrases" in Figure 3. This notebook requires file _Termino V2.xlsx_  which has a manual filtering of the noun phrases found in the SE articles, keeping the most "useful" ones.
+-    Other tables and values shown in Figure 3 ("Themes", "Official_colors") are auxiliary.
+-    **Example reference: R Shiny application[^1]**. 
 
   <img src="image2.PNG" width="800">
 
@@ -29,7 +23,7 @@ Figure 2 -- Feeding of the MS Power BI application.
 
 Figure 3 -- Tables and relationships in the MS Power BI application.
 
-The application consists of four screens. The **first screen** ("Themes, sub-themes and OECD-Themes")(see Figure 4) contains a sunburst plot and a Matrix visual with the Eurostat themes, the Eurostat subthemes and the OECD themes, in which the sizes are proportional to the number of the corresponding OECD’s statistical terms. Selecting any of these filters all other lists and also updates the word cloud at the top right part. The latter is based on words collected from the definitions of the OECD’s statistical terms. There are also information cards at the top left part of the screen and a last update year filter to the right of the word cloud. There are also inverse interactions, i.e. the interactions with the word cloud are all 2-way. 
+The application consists of four screens. The **first screen** ("Themes, sub-themes and OECD-Themes")(see Figure 4) contains a sunburst plot and a matrix visual with the Eurostat themes, the Eurostat subthemes and the OECD themes, in which the sizes are proportional to the number of the corresponding OECD's statistical terms. Selecting any of these filters all other lists and also updates the word cloud at the top right part. The latter is based on words collected from the definitions of the OECD's statistical terms. There are also information cards at the top left part of the screen and a last update year filter to the right of the word cloud. There are also inverse interactions, i.e. the interactions with the word cloud are all 2-way. 
 
 A weakness of the word cloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be entered manually. The alternative, of producing a word cloud with R via libraries tm and ggplot2 does not allow interaction through selection of words. 
 
@@ -46,7 +40,7 @@ In the bar chart, the user can select Eurostat subthemes within Eurostat themes 
 
 Figure 5 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes and OECD's statistical terms (2).
 
-The **third screen** ("Themes, sub-themes and OECD-Themes (3)") (see Figure 6) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as the first and second screens. It contains a selector with the Eurostat themes and subthemes and the OECD themes in the upper left part.There is a last update year filter too below this selector.The table at the bottom shows the OECD's statistical terms with their URLs and when the user clicks on a statistical term then the table above shows the source publication  for this statistical term (see Figure 6). When the user clicks the button, 'Related OECD's statistical terms' then the table changes and displays the related statistical terms along with their URLs (see Figure 7).
+The **third screen** ("Themes, sub-themes and OECD-Themes (3)") (see Figure 6) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as the first and second screens. It contains a selector with the Eurostat themes and subthemes and the OECD themes in the upper left part.There is a last update year filter too below this selector.The table at the bottom shows the OECD's statistical terms with their URLs and when the user clicks on a statistical term then the table above shows the source publication  for this statistical term (see Figure 6). When the user clicks the button, "Related OECD's statistical terms" then the table changes and displays the related statistical terms along with their URLs (see Figure 7).
 
 <img src="image6.PNG" width="200">
 
