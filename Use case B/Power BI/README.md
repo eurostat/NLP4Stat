@@ -35,7 +35,7 @@ A weakness of the word cloud plot is the display of many common words. This is b
 
 <img src="image4.PNG" width="800">
 
-Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (1).
+Figure 4 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes and OECD's statistical terms (1).
 
 The **second screen** ("Themes, sub-themes and OECD-Themes (2)") (see Figure 5) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as the first screen. The filters in the middle of the screen allow the selection of any number of Eurostat themes / subthemes and OECD's themes and the network graph in the top right side is adjusted to reflect these selections. Conversely, one can click on a node in the network graph to select a Eurostat theme,Eurostat subtheme or OECD theme. Clicking the *same node* again clears the selection. 
 
@@ -44,29 +44,20 @@ In the bar chart, the user can select Eurostat subthemes within Eurostat themes 
 
 <img src="image5.PNG" width="800">
 
-
-
 Figure 5 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes and OECD's statistical terms (2).
 
-
-
-The **third screen** ("DB topics and datasets") (see Figure 7) is based on the standalone table "Crumbs", mentioned earlier. It contains a treemap with the structure of Eurostat's database at the top three levels. The records correspond to leaf nodes only. As with every visual created from hierarchical data, the user can select a segment or navigate to the next level in the hierarchy (double down arrow) or expand all levels (see "Expand down" in the icons below). The right part has a list with the corresponding datasets and their download links (in zipped TSV format). Clicking on a link downloads the selected dataset.
-
-
+The **third screen** ("Themes, sub-themes and OECD-Themes (3)") (see Figure 6) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as the first and second screens. It contains a selector with the Eurostat themes and subthemes and the OECD themes in the upper left part.There is a last update year filter too below this selector.The table at the bottom shows the OECD's statistical terms with their URLs and when the user clicks on a statistical term then the table above shows the source publication  for this statistical term (see Figure 6). When the user clicks the button, 'Related OECD's statistical terms' then the table changes and displays the related statistical terms along with their URLs (see Figure 7).
 
 <img src="image6.PNG" width="200">
 
-
-
-Figure 6 -- Icons for navigation in hierarchical data in MS Power BI.
-
+Figure 6 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes, OECD's statistical terms and OECD's statistical terms source publications (1).
 
 
 <img src="image7.PNG" width="800">
 
+Figure 7 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes, OECD's statistical terms and OECD's statistical terms source publications (2).
 
-
-Figure 7 -- Graphical exploration in MS Power BI: DB topics and datasets.
+xxxxxxxxxxxxxxxxxxxx
 
 The **fourth screen** ("Topic modelling" - Figure 8) is produced from the data with the topic modeling results. Recall that these data include the distribution of articles into topics, that is, the probabilities of each article belonging to a topic (which sum up to one for each article).
 
