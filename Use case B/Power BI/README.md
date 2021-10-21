@@ -12,9 +12,7 @@ Figure 1 -- Setting the data path in the MS Power BI application.
 
 
 
-The required files and the codes producing them are shown in Figure 2 below. They are all included in the GitHub at:
-
-<https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/Power_BI>
+The required files and the codes producing them are shown in Figure 2 below. They are all included in the current folder.
 
 -    The main data are in two Excel files: OECD_content_for_PowerBI.xlsx  and SE_df_for_PowerBI.xlsx . These are produced by the Python code PowerBI_inputs_v1.ipynb . 
 -    This last notebook requires a) the same file with the scraped content from OECD's Glossary of Statistical Terms (OECD_final_results_2.xlsx) which is used in the Query Builder and the Faceted Search, and b) file themes_eurostat_oecd_v2.xlsx, used in the Faceted Search in section 3.2 which was created manually and contains, for each Eurostat theme and subtheme, the related OECD’s themes. 
