@@ -27,7 +27,7 @@ The required files and the codes producing them are shown in Figure 2 below. The
 
 Figure 2 -- Feeding of the MS Power BI application.
 
-<img src="tables.JPG" width="800">
+<img src="tables.jpg" width="800">
 
 Figure 3 -- Tables and relationships in the MS Power BI application.
 
