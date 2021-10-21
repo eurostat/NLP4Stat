@@ -29,15 +29,11 @@ Figure 2 -- Feeding of the MS Power BI application.
 
 Figure 3 -- Tables and relationships in the MS Power BI application.
 
+The application consists of four screens. The **first screen** ("Themes, sub-themes and OECD-Themes")(see Figure 4) contains a sunburst plot and a Matrix visual with the Eurostat themes, the Eurostat subthemes and the OECD themes, in which the sizes are proportional to the number of the corresponding OECD’s statistical terms. Selecting any of these filters all other lists and also updates the word cloud at the top right part. The latter is based on words collected from the definitions of the OECD’s statistical terms. There are also information cards at the top left part of the screen and a last update year filter to the right of the word cloud. There are also inverse interactions, i.e. the interactions with the word cloud are all 2-way. 
 
+A weakness of the word cloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be entered manually. The alternative, of producing a word cloud with R via libraries tm and ggplot2 does not allow interaction through selection of words. 
 
-The application consists of four screens. The **first screen** ("Themes, sub-themes and categories (1)") contains a sunburst plot with the themes, subthemes and categories, in which the sizes are proportional to the number of articles. Selecting any of these, filters the list of articles by category at the bottom right part ot the screen and also updates the word cloud at the top right part. The latter is based on words collected from the abstracts of the articles. There are also information cards at the top left part of the screen and a last update year filter to the right of the word cloud. There are also inverse interactions, i.e. the interactions between the sunbust plot, the word cloud and the categories are all 2-way.
-
-To see the categories together with the individual articles for the current selections, one can click the "expand all down one level" icon in the list of categories and articles.
-
-A weakness of the wordcloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be ented manually. The alternative, of producing a wordcloud with R via libraries _tm_ and _ggplot2_ does not allow interaction through selection of words. We are currently looking for a better solution. 
-
-<img src="screen1.JPG" width="800">
+<img src="image4.PNG" width="800">
 
 Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (1).
 
