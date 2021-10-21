@@ -37,19 +37,16 @@ A weakness of the word cloud plot is the display of many common words. This is b
 
 Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (1).
 
+The **second screen** ("Themes, sub-themes and OECD-Themes (2)") (see Figure 5) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as the first screen. The filters in the middle of the screen allow the selection of any number of Eurostat themes / subthemes and OECD's themes and the network graph in the top right side is adjusted to reflect these selections. Conversely, one can click on a node in the network graph to select a Eurostat theme,Eurostat subtheme or OECD theme. Clicking the *same node* again clears the selection. 
+
+In the bar chart, the user can select Eurostat subthemes within Eurostat themes and his/her selection interacts with the table below, which shows the corresponding OECD's statistical terms together with their URLs. There is also a pie chart showing the distribution into years of last update (again, allowing inverse interaction, i.e. further filtering by selected years).  
 
 
-The **second screen** ("Themes, sub-themes and categories (2)") (see Figure 5) also links themes, sub-themes, categories and articles, with the same data as the first screen. The filters in the middle of the screen allow the selection of any number of themes and sub-themes and the network graph in the top right side is adjusted to reflect these selections. Conversely, one can click on a node in the network graph to select a theme or sub-theme. Clicking the *same node* again clears the selection.
-
-This screen also shows the distribution of the filtered articles per category in the top left side, again allowing the inverse interaction, i.e. the selection of one or more (pressing Ctrl) categories. The relevant articles are displayed at the bottom left part of the screen and there is also a pie chart showing the distribution into years of last update (again, allowing inverse interaction, i.e. further filtering by selected years).
-
-
-
-<img src="screen2.JPG" width="800">
+<img src="image5.PNG" width="800">
 
 
 
-Figure 5 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (2).
+Figure 5 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes and OECD's statistical terms (2).
 
 
 
