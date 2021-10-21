@@ -61,4 +61,6 @@ Figure 8 -- Graphical exploration in MS Power BI: Uses of Noun-Phrases – befor
 
 Figure 9 -- Graphical exploration in MS Power BI: Uses of Noun-Phrases – after clicking on the bar.
 
+A live version of the application can be found [here](https://app.powerbi.com/view?r=eyJrIjoiZDU0NDYwZmMtYTcxOC00NjM2LTgxZDQtN2FlNGEzNDk1YmRkIiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9).
+
 [^1]: See: https://github.com/eurostat/NLP4Stat/tree/testing
