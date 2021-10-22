@@ -40,7 +40,7 @@ Figure 5 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes
 
 The **third screen** ("Themes, sub-themes and OECD-Themes (3)") (see Figure 6) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as the first and second screens. It contains a selector with the Eurostat themes and subthemes and the OECD themes in the upper left part.There is a last update year filter too below this selector.The table at the bottom shows the OECD's statistical terms with their URLs and when the user clicks on a statistical term then the table above shows the source publication  for this statistical term (see Figure 6). When the user clicks the button, "Related OECD's statistical terms" then the table changes and displays the related statistical terms along with their URLs (see Figure 7).
 
-<img src="image6.PNG" width="200">
+<img src="image6.PNG" width="800">
 
 Figure 6 -- Graphical exploration in MS Power BI: themes, subthemes, OECD themes, OECD's statistical terms and OECD's statistical terms source publications (1).
 
