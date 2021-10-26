@@ -99,15 +99,6 @@ A generic mapping is done for external resources and generic objects : NLP4StatR
 	
 ### 3.- Vocabulary
 
-#### Dictionary
-
-- Eurostat dictionaries
-  - NLP4StatRef-CodeLists-Model.pdf
-  - NLP4StatRef-CodeLists-Mapping.xlsx
-  - Last update : 01.09.2021
-  - Next updates:    
-    - Dcat integration
-	
 #### Glossary
 
 - Eurostat Glossary
@@ -150,7 +141,16 @@ Following the modeling and the work on the data enrichment of the KD, this secti
 - Eurostat content, dct:publisher @resource
   - http://publications.europa.eu/resource/authority/corporate-body
 
-### 2.- NLP4StatRef authority lists
+### 2.- Code Lists
+
+- Eurostat dictionaries
+  - NLP4StatRef-CodeLists-Model.pdf
+  - NLP4StatRef-CodeLists-Mapping.xlsx
+  - Last update : 01.09.2021
+  - Next updates:    
+    - Dcat integration
+	
+### 3.- NLP4StatRef authority lists
 
 - ResourceInformation
   - List of the different source of information describe in the KD
