@@ -28,6 +28,7 @@
   - Datasets
   - Database navigation tree
   - Thematics & Categories
+  - OECD Glossary
   
 - Authority lists: updated versions of ResourceInformation & ResourceType
 
@@ -125,9 +126,14 @@ A generic mapping is done for external resources and generic objects : NLP4StatR
     - Relationship with Categories Taxonomy
 	- Dcat integration
 
+- OECD Glossary: coming soon
+
 #### Taxonomy
 
-- Categories Taxonomy: coming soon
+- Categories Taxonomy
+  - NLP4StatRef_Taxonomy-Categories.rdf
+  - Upcomoming update:
+    - Model and mapping
 
 - Thematics Taxonomy: coming soon
 
