@@ -17,6 +17,6 @@ As the process does not include a verification step of the presence of a triplet
 A knowledge graph can be created using the elements of the Knowledge_graph folder. A dedicated readme file is there. 
 
 ### 6. Virtuoso Bundle
-In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Virtuoso Setup](https://github.com/eurostat/NLP4Stat/blob/main/Virtuoso%20Setup/README.md)
+In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Software Environment](https://github.com/eurostat/NLP4Stat/tree/testing/Software%20Environment)
 
 The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the [Scrapper](Scrapper) folder.
