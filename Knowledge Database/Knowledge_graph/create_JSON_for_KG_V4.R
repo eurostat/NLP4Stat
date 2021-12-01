@@ -56,7 +56,15 @@ clean_type_label_table <- data.frame(node_type = c("None",NA,
                                                          "Statistic Table"))
 
 
-###################################################### Define functions 
+###################################################### Define functions
+
+remove_balise = function (txt)
+{
+  txt <- as.character(txt)
+  return(iconv(x = txt, from = "UTF-8", to = "latin1",
+               sub = ""))
+}
+
 create_node_tables <- function(results_relations, results_types, results_titles, clean_type_label_table){
   
   # Create the table containing all nodes and their metadata : 
@@ -78,7 +86,7 @@ create_node_tables <- function(results_relations, results_types, results_titles,
   
   # Add the types to the node table 
   node_table <- merge(node_table, node_type_table, by = "node_type")
-  node_table$node_title  <- sapply(node_table$node_title, DetectTools::remove_balise)
+  node_table$node_title  <- sapply(node_table$node_title, remove_balise)
   node_table <- node_table[which(!is.na(node_table$node_title)),]
   
   # Create clean label for nodes 
