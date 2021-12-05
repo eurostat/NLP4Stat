@@ -3,7 +3,7 @@
 This folder contain elements to create a knowledge graph from data contained in the KDB. Tools involved are Python, R and d3.js.
 
 In this folder you will find :
-
+- Knowledge_graph_2021_12_05.ipynb : this is an **updated version in a single Jupyter notebook**. It will replace the previous version after a final check. Relevant comments will then be added here.
 - Knowledge_graph_2021_09_21.ipynb : the notebook used to connect with the KDB and extract relations and data to create the knowledge graph.
 - create_JSON_for_KG_V4.R : an R script used for formatting the data properly for the dataviz. It creates a json file with two elements : one with the nodes, one with the edges. In this version, three files are outputted, with nodes selected according to string pattern related to three topics : Covid-19, Quality of life and Climate change.
 - data/ : a folder with the data extracted from the KDB. 
