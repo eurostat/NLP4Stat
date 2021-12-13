@@ -19,7 +19,17 @@ The common vocabulary is being used in the [Power BI](https://github.com/eurosta
      - [Scraping_OECD_v9_2911.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Scraping_OECD_v9_2911.ipynb): This is an extension of [Scraping_OECD_v8_0810.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Scraping_OECD_v8_0810.ipynb) for the scraping of OECD's content and the writing of the scraped content in the Content Database. The other codes will be adjusted to read OECD's content directly from the database.
      
 - Use Case C:
-     - [Eurostat_word_vectors_identify_datasets_v3.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20C/Eurostat_word_vectors_identify_datasets_v3.ipynb). Word vectors trained on SE articles and SE Glossary articles. Application for the identification of Eurostat datasets. The processing of SE and SE Glossary articles is for the first run only, to save the vectors model. After this, it suffices to load the model. This is also saved in plain text format for inspection: [SE_GL_wordvectors.txt](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20C/SE_GL_wordvectors.txt). Requires table_of_contents.xml in the same folder as the notebook.
+     - [Eurostat_word_vectors_identify_datasets_v3.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20C/Eurostat_word_vectors_identify_datasets_v3.ipynb). Word vectors trained on SE articles and SE Glossary articles. Application for the identification of Eurostat datasets. The processing of SE and SE Glossary articles is for the first run only, to save the vectors model. After this, it suffices to load the model. This is also saved in plain text format for inspection: [SE_GL_wordvectors.txt](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20C/SE_GL_wordvectors.txt). Requires the file _table_of_contents.xml_ in the same folder as the notebook.
+    - [Topic Modelling_and_Word_embeddings.ipynb](). Combination of topic modelling and word embeddings for the identification of statistical datasets. Requires the file _table_of_contents.xml_ in the same folder as the notebook. Also, the saved LDA model (_lda_model.pl_, also in the same folder) if this model is not re-created (see comments in code).
+        - Carry-out topic modelling with a large enough corpus (Statistics Explained articles and Statistics Explained Glossary articles) and a large number of topics (1000) and extract significant (lemmatized) keywords. The objectives are two:
+            - to cover the whole corpus and thus the "correlated" datasets at a high granularity,
+            - avoid using common ("dominating") words in the matches with the user's query.
+        - Enhance these keywords with their closest terms from the word embeddings created exclusively from Eurostat's content. The total large number of keywords can then differentiate the datasets.
+        - Match the (similarly enhanced) sentence(s) entered in the query with datasets, based on the number of keywords found in the datasets (simple or full descriptions).
+        - Put first priority to the matches with words in the enhanced topic modelling dictionary and second to the matches with any other words, to avoid "dominating" terms.
+        - The union of the topic modelling keywords found in the datasets descriptions (enhanced or not) can also be used as multi-labels in a multi-label classification algorithm such as BERT.
+
+
 
 
 
