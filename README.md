@@ -25,7 +25,7 @@ The common vocabulary is being used in the [Power BI](https://github.com/eurosta
             - to cover the whole corpus and thus the "correlated" datasets at a high granularity,
             - avoid using common ("dominating") words in the matches with the user's query.
         - Enhance these keywords with their closest terms from the word embeddings created exclusively from Eurostat's content. The total large number of keywords can then differentiate the datasets.
-        - Match the (similarly enhanced) sentence(s) entered in the query with datasets, based on the number of keywords found in the datasets (simple or full descriptions).
+        - Match the (similarly enhanced) sentence(s) entered in the query, with datasets, based on the number of keywords found in the datasets (simple or full descriptions).
         - Put first priority to the matches with words in the enhanced topic modelling dictionary and second to the matches with any other words, to avoid "dominating" terms.
         - The union of the topic modelling keywords found in the datasets descriptions (enhanced or not) can also be used as multi-labels in a multi-label classification algorithm such as BERT.
 
