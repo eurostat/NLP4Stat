@@ -1,3 +1,5 @@
+**To be updated**: Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces Use Case A prepare data_v2.ipynb.
+
 ### MS Power BI application
 
 The MS Power BI application works with the free desktop version and is portable. It can also be published to MS Azure cloud, with any Office 365 license. To install the application, it suffices to define the path where the required files are located from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
