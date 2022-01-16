@@ -1,3 +1,7 @@
+
+**To be updated**: Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces Use Case A prepare data_v2.ipynb. 
+
+
 ### R Shiny application
 
 The is a simple interactive R Shiny application which displays a dynamic sunburst plot allowing the user to navigate on themes, sub-themes and available categories below sub-themes and displaying the relevant SE articles. An example is shown in Figure 1 and Figure 2 which follow. 
