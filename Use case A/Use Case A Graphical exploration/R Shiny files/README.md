@@ -1,1 +1,1 @@
-
+**Revision January 2022**: [Use Case A Faceted search_v4_rev_Jan2022.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search/Use%20Case%20A%20Faceted%20search_v4_rev_Jan2022.ipynb). The code below revised to read all data from the database.
