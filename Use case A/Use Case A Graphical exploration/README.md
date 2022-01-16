@@ -1,7 +1,7 @@
 ### Use Case A - Graphical exploration. 
 
 * The **first code** is an R Shiny application allowing the navigation in themes, sub-themes and categories and the display of corresponding articles. There are also some filters for the display of articles, for the year of last update and for keywords in titles and abstracts. Each column in the results (title, URL, year, abstract) has a filter allowing further drill-down, with highlighting of the matched terms. 
-* The source code (app.R) is in folder [Shiny files](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files). A **short documentation** is given [here](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md).
+* The source code (app.R) is in folder [Shiny files](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files). A **short documentation** is given [here](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md).
 * The same folder contains the Python code for the connection with the database and the production of the input file (Use Case A prepare data_v2.ipynb), together with a recently produced file (SE_df_7_15_13_21.xlsx). **Revision January 2022**: Use Case A prepare data_v2_rev_Jan2022.ipynb no more requires an external file.
 * To run the code producing the input file, please replace user_name and password  with your credentials in command:  
 c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
