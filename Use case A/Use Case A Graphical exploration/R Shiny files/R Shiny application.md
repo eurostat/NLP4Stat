@@ -1,5 +1,4 @@
-**To be updated**: Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces Use Case A prepare data_v2.ipynb.
-
+**Note**: The description below was revised on January 2022. File Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces the old code Use Case A prepare data_v2.ipynb.
 
 ### R Shiny application
 
@@ -37,7 +36,7 @@ Figure 4 – Graphical exploration in R Shiny: Drill-down with highlighting in t
 
 The application also includes some filters in the side bar, for the selection of a particular year as the year of last update, for the filtering by keyword in the article titles and for the filtering by keyword in the article abstracts.
 
-The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2.ipynb*, which is actually the one used in the Faceted search[^1], except for a very small change. This small change is shown below in the lines in bold.
+The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2_rev_Jan2022.ipynb* (revised on January 2022), which is actually the one used in the Faceted search[^1], except for a very small change. This small change is shown below in the lines in bold.
 
 ...
 
@@ -65,7 +64,7 @@ The GitHub link at [https://github.com/eurostat/NLP4Stat/tree/‌main/Use%20Case
 
 For the running of the R Shiny code from withing RStudio, it **suffices to have the necessary libraries installed (see end of this document), place the app.R file together with the Excel file in any folder and run the app**. The app will automatically select **the most recent Excel file matching the regex pattern \'\^SE_df.\*xlsx\$**
 
-The following diagram in Figure 5 shows the feeding of the application and the interactions. The production of the input file through *Use Case A prepare data_v2.ipynb* also shows the offline file which is used to import the categories. This is produced by the scraping codes.
+The following diagram in Figure 5 shows the feeding of the application and the interactions. 
 
 <img src="image4b.png" width="800">
 
