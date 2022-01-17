@@ -1,4 +1,4 @@
-**To be updated**: Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces Use Case A prepare data_v2.ipynb.
+**Note**: The description below was revised on January 2022. File Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces the old code Use Case A prepare data_v2.ipynb.
 
 ### MS Power BI application
 
