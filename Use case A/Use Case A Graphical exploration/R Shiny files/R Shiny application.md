@@ -87,4 +87,4 @@ The following is part of the sessionInfo() output, showing the environment used 
 
 Note that the code will attempt to install automatically any missing libraries.
 
-[^1]: see <https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search>
+[^1]: see <https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search>
