@@ -91,4 +91,4 @@ The main visual in this screen is a treemap with the 20 topics. When a user sele
 
 Figure 8 -- Graphical exploration in MS Power BI: Topic modeling.
 
-[^1]: See: <https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md>
+[^1]: See: <https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md>
