@@ -15,7 +15,7 @@
 
  * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FSpacy_NER%2FGlossary_NamedEntities_V3b.ipynb)
  
-4. [**/Spacy_NER/SE_NamedEntities_V3b.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/SE_NamedEntities_V3b.ipynb): This is the same algorithm as [3] but run on the scraped content from Statistics Explained articles. The input file is the one produced by scraping, with an additional column gathering all sections titles and contents.  
+4. [**/Spacy_NER/SE_NamedEntities_V3b.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/Spacy_NER/SE_NamedEntities_V3b.ipynb): This is the same algorithm as [3] but run on the scraped content from Statistics Explained articles. The input file is the one produced by scraping, with an additional column gathering all sections titles and contents. **Note**: [/Spacy_NER/SE_NamedEntities_V3b_rev_Jan2022.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Content%20Database/Enrichment/Spacy_NER/SE_NamedEntities_V3b_rev_Jan2022.ipynb) is a revised version (January 2022) which loads the data directly from the database. 
 
  * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FSpacy_NER%2FSE_NamedEntities_V3b.ipynb)
  
