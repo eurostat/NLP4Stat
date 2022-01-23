@@ -3,4 +3,4 @@ Use Case A - Query builder. Work in progress, with scraped content only. To be c
 * File [Query_Builder_Senario_A_v6b_both_GL_SE.ipynb](Query_Builder_Senario_A_v6b_both_GL_SE.ipynb): The code receives inputs directly from the database. It accepts content from **both SE articles and SE Glossary articles, with result to very rich 'suggestions'**. The speed is mostly affected by the quality of the connection to the Virtuoso database. Please replace your user name and password in the command  
 c = pyodbc.connect('DSN=Virtuoso All; DBA=ESTAT; UID=user_name; PWD=password'). 
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20Case%20A%20Query%20builder/QB_screenshot.JPG" width="600">
+<img src="./Figs/QB_screenshot.JPG" width="600">
