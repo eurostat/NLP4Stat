@@ -6,14 +6,14 @@ The is a simple interactive R Shiny application which displays a dynamic sunburs
 
 The user selects the theme "Population and social conditions" and the plot drills-down to this theme. He/she then can proceed by selecting sub-theme "Living conditions". At each step, clicking at the center of the plot allows back-steping to the previous (more general) selection. The current selection is also shown in an infobox at the top of the screen.
 
-<img src="image1b.png" width="800">
+<img src="./Figs/image1b.png" width="800">
 
 Figure 1 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot (1).
 
 
 
-<img src="image2b.png" width="800">
+<img src="./Figs/image2b.png" width="800">
 
 Figure 2 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot (2).
@@ -22,14 +22,14 @@ sunburst plot (2).
 
 The next figure shows the display of 20 articles under the theme "Population and social conditions", sub-theme "Living conditions", category "Poverty and social exclusion".
 
-<img src="image3b.png" width="800">
+<img src="./Figs/image3b.png" width="800">
 
 Figure 3 -- Graphical exploration in R Shiny: navigation with the interactive\
 sunburst plot: display of articles under a specific theme, sub-theme and category.
 
 Each column in the results (title, url, year, abstract) has a filter allowing further drill-down, with highlighting of the matched terms. An example is shown in Figure 4 with “SDG” in the URLs of the previous results.
 
-<img src="image3c.png" width="800">
+<img src="./Figs/image3c.png" width="800">
 
 Figure 4 – Graphical exploration in R Shiny: Drill-down with highlighting in the results.
 
@@ -66,7 +66,7 @@ For the running of the R Shiny code from withing RStudio, it **suffices to have 
 
 The following diagram in Figure 5 shows the feeding of the application and the interactions. 
 
-<img src="image4b.png" width="800">
+<img src="./Figs/image4b.png" width="800">
 
 Figure 5 -- Graphical exploration in R Shiny: feeding data and interactions.
 
