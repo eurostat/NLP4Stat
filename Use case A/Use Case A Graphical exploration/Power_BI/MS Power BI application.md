@@ -31,7 +31,7 @@ Figure 2 -- Feeding of the MS Power BI application.
 -   The last files are direct exports of *tables tm_topics* and *tm_articles_to_topics* from the Virtuoso database. They result to the internal tables with the same names which are connected by *topic_id*. *tm_articles_to_topics* is also connected to the "Repeated rows" table by *article_id*.
 -   Other tables and values shown in Figure 3 (“Themes”, “Official_colors”, “LatestFile”, “LatestCrumbsFile”) are auxiliary.
 
-<img src="tables.JPG" width="800">
+<img src=".\Figs\tables.JPG" width="800">
 
 Figure 3 -- Tables and relationships in the MS Power BI application.
 
@@ -43,7 +43,7 @@ To see the categories together with the individual articles for the current sele
 
 A weakness of the wordcloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be ented manually. The alternative, of producing a wordcloud with R via libraries _tm_ and _ggplot2_ does not allow interaction through selection of words. We are currently looking for a better solution. 
 
-<img src="screen1.JPG" width="800">
+<img src=".\Figs\screen1.JPG" width="800">
 
 Figure 4 -- Graphical exploration in MS Power BI: themes, sub-themes, categories and articles (1).
 
@@ -55,7 +55,7 @@ This screen also shows the distribution of the filtered articles per category in
 
 
 
-<img src="screen2.JPG" width="800">
+<img src=".\Figs\screen2.JPG" width="800">
 
 
 
@@ -67,7 +67,7 @@ The **third screen** ("DB topics and datasets") (see Figure 7) is based on the s
 
 
 
-<img src="image6.PNG" width="200">
+<img src=".\Figs\image6.PNG" width="200">
 
 
 
@@ -75,7 +75,7 @@ Figure 6 -- Icons for navigation in hierarchical data in MS Power BI.
 
 
 
-<img src="image7.PNG" width="800">
+<img src=".\Figs\image7.PNG" width="800">
 
 
 
@@ -85,7 +85,7 @@ The **fourth screen** ("Topic modelling" - Figure 8) is produced from the data w
 
 The main visual in this screen is a treemap with the 20 topics. When a user selects a topic, the list in the lower right side displays the articles which have a probability ≥ 0.5 of appearing in this topic, in descending order of probability. Strictly speaking, we use as measure in the list, the sum of probabilities, so that when all topics are selected, all articles are displayed with probability one. When one topic is selected, these sums are the actual probabilities. An example is shown in Figure 7 with the topic "Water resources and sustainable development" and the display of relevant articles. On the other hand, the size of the topics in the treemap is proportional to the average probability. This average probability is also used in the bar chart in the top right side, which dislays the themes and sub-themes in a hierarchical way. Selection of a topic makes this bar chart show the closeness of the topic with the themes or sub-themes. Conversely, one can select a theme or sub-theme and get an idea of the distribution into topics, together with the most relevant articles.
 
-<img src="image8.PNG" width="800">
+<img src=".\Figs\image8.PNG" width="800">
 
 
 
