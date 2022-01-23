@@ -7,9 +7,9 @@
 c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 * The current functionalities can be seen in the **online version** [here](https://quantos-stat.shinyapps.io/Graphical_exploration_v2/). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
-<img src="R_Shiny_2.png" width="600">
+<img src="/Figs/R_Shiny_2.png" width="600">
 
-<img src="screenshot6.JPG" width="600">
+<img src="/Figs/screenshot6.JPG" width="600">
 
 * The **second** code is an MS Power BI report allowing again the navigation in themes, sub-themes and categories and the display of corresponding articles. There is also an interactive wordcloud graphical element and a network element connecting themes with sub-themes. Another page displays the database structure in a treemap, together with the dataset names and download links for the selected section. A fourth page links the topic modeling results with themes, sub-themes, categories and articles.
 * A **short documentation** is given [here](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/Power_BI/MS%20Power%20BI%20application.md). The following data requirements are explained in the documentation but also mentioned here:
@@ -23,8 +23,8 @@ c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 c = pyodbc.connect('DSN=Virtuoso All;DBA=ESTAT;UID=user_name;PWD=password').
 * The current functionalities can be seen in the **online** version [here](https://app.powerbi.com/view?r=eyJrIjoiMzczMTNlZTUtYTI2OC00Yzc3LThiNTUtYmE5NjNmMTM4ZmUwIiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9&pageName=ReportSection0134a3f3c4be88106abb). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
-<img src="screen1.JPG" width="600">
-<img src="screen2.JPG" width="600">
-<img src="screenshot3.JPG" width="600">
-<img src="screenshot4.JPG" width="600">
+<img src="/Figs/screen1.JPG" width="600">
+<img src="/Figs/screen2.JPG" width="600">
+<img src="/Figs/screenshot3.JPG" width="600">
+<img src="/Figs/screenshot4.JPG" width="600">
 
