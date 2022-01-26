@@ -5,7 +5,7 @@
 
 The MS Power BI application works with the free desktop version and is portable. It can also be published to MS Azure cloud, with any Office 365 license. To install the application, it suffices to load the .pbix file ([Use_Case_B_graphical_expl_v14.pbix](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Use_Case_B_graphical_expl_v14.pbix) from any folder, and define the path where the required files are located from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
 
-<img src="image1.PNG" width="800">
+<img src=".\Figs\image1.PNG" width="800">
 
 Figure 1 -- Setting the data path in the MS Power BI application.  
 
