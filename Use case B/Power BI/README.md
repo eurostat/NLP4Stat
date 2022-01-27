@@ -1,5 +1,5 @@
 
-**To be updated:** The Jupyter notebook which produces the two files - inputs to Power BI has been revised. The new version [PowerBI_inputs_v1_rev_Jan2022.ipynb](PowerBI_inputs_v1_rev_Jan2022.ipynb) loads all data from the database and does not require the external files mentioned below.
+**Note:** Ths is the revised description after the adjustment of the two Python notebooks used, to read data from the database and not from external files. 
 
 ### MS Power BI application
 
