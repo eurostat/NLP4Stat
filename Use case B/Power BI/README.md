@@ -16,7 +16,7 @@ The required files and the codes producing them are shown in Figure 2 below. The
 -    These data create the internal tables "OECD", "OECD_repeated rows" and "SE_articles" (see Figure 3). The first one comes from the original data while the second is created from the first by splitting themes, subthemes and OECD themes into unique values (in repeated rows). The third table contains data from the SE articles. 
 -    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook _SE_OECD_Glossary_Common_NPs.ipynb_ ([^1]). This notebook requires file _Termino V2.xlsx_  which has a manual filtering of the noun phrases found in the SE articles, keeping the most "useful" ones. The produced Excel file creates the table "Noun_Phrases" in Figure 3. 
 -    Other tables and values shown in Figure 3 ("Themes", "Official_colors") are auxiliary.
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image2.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image2b.png" width="800">
 
 Figure 2 -- Feeding of the MS Power BI application.
 
