@@ -12,7 +12,6 @@ Figure 1 -- Setting the data path in the MS Power BI application.
 The required files and the codes producing them are shown in Figure 2 below. They are all included in the current folder.
 
 -    The main data are in two Excel files: _OECD_content_for_PowerBI.xlsx_  and _SE_df_for_PowerBI.xlsx_. These are produced by the Python code _PowerBI_inputs_v1_rev_Jan2022.ipynb_. 
--    This last notebook requires i) the same file with the scraped content from OECD's Glossary of Statistical Terms (_OECD_final_results_2.xlsx_) which is used in the Query Builder and the Faceted Search, and ii) file _themes_eurostat_oecd_v2.xlsx_, used also in the Faceted Search, which was created manually and contains, for each Eurostat theme and subtheme, the related OECD's themes. 
 -    These data create the internal tables "OECD", "OECD_repeated rows" and "SE_articles" (see Figure 3). The first one comes from the original data while the second is created from the first by splitting themes, subthemes and OECD themes into unique values (in repeated rows). The third table contains data from the SE articles. 
 -    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook _SE_OECD_Glossary_Common_NPs.ipynb_ ([^1]). This notebook requires file _Termino V2.xlsx_  which has a manual filtering of the noun phrases found in the SE articles, keeping the most "useful" ones. The produced Excel file creates the table "Noun_Phrases" in Figure 3. 
 -    Other tables and values shown in Figure 3 ("Themes", "Official_colors") are auxiliary.
