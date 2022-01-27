@@ -13,7 +13,7 @@ The required files and the codes producing them are shown in Figure 2 below. The
 
 -    The main data are in two Excel files: _OECD_content_for_PowerBI.xlsx_  and _SE_df_for_PowerBI.xlsx_. These are produced by the Python code _PowerBI_inputs_v1_rev_Jan2022.ipynb_. 
 -    These data create the internal tables "OECD", "OECD_repeated rows" and "SE_articles" (see Figure 3). The first one comes from the original data while the second is created from the first by splitting themes, subthemes and OECD themes into unique values (in repeated rows). The third table contains data from the SE articles. 
--    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook _SE_OECD_Glossary_Common_NPs_rev_Jan2022_ ([^1]). The produced Excel file creates the table "Noun_Phrases" in Figure 3. 
+-    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook _SE_OECD_Glossary_Common_NPs_rev_Jan2022_. The produced Excel file creates the table "Noun_Phrases" in Figure 3. 
 -    Other tables and values shown in Figure 3 ("Themes", "Official_colors") are auxiliary.
 <img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image2b.png" width="800">
 
@@ -67,4 +67,3 @@ Figure 9 -- Graphical exploration in MS Power BI: Page "Common_Noun_Phrases" –
 
 A live version of the application can be found [here](https://app.powerbi.com/view?r=eyJrIjoiZDU0NDYwZmMtYTcxOC00NjM2LTgxZDQtN2FlNGEzNDk1YmRkIiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9).
 
-[^1]: See: https://github.com/eurostat/NLP4Stat/tree/testing
