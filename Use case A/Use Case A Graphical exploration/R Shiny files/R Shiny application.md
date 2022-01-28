@@ -36,29 +36,7 @@ Figure 4 – Graphical exploration in R Shiny: Drill-down with highlighting in t
 
 The application also includes some filters in the side bar, for the selection of a particular year as the year of last update, for the filtering by keyword in the article titles and for the filtering by keyword in the article abstracts.
 
-The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2_rev_Jan2022.ipynb* (revised on January 2022), which is actually the one used in the Faceted search[^1], except for a very small change. This small change is shown below in the lines in bold.
-
-...
-
-`SE_df['themes'] = SE_df['themes'].apply(lambda x: ';'.join(x))`  
-
-`SE_df['sub_themes'] = SE_df['sub_themes'].apply(lambda x: ';'.join(x))`  
-
-**`## de-comment to produce the input file for R Shiny and Power BI,`** 
-
-**`## i.e. categories not in list but separated by semicolon`**  
-
-**`## SE_df['categories']= SE_df['categories'].apply(lambda x: ';'.join(x))`** 
-
- `print(SE_df.isnull().sum(),'\n')`
-
-`print('No info in themes: ',sum(SE_df['themes']==''))`
-
-`print('No info in sub_themes: ',sum(SE_df['sub_themes']==''))`
-
-...
-
-
+The input to the application is the data with the SE articles information, produced by a Python notebook currently named *Use Case A prepare data_v2_rev_Jan2022.ipynb* (revised on January 2022).
 
 The GitHub link at [https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files) contains a recent output of this code (at the time of the writing of the current document, named *SE_df_7\_15_13_21.xlsx*).
 
@@ -86,5 +64,3 @@ The following is part of the sessionInfo() output, showing the environment used 
      * shiny_1.5.0    
 
 Note that the code will attempt to install automatically any missing libraries.
-
-[^1]: see <https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search>
