@@ -22,23 +22,23 @@ Error ![global SE script](se_global_error.jpg)
 
 * Open the ODBC Data Sources (64-bit) tool in control panel, go to Tab System DSN and create a new data source selecting the Virtuoso (Open Source) driver. Press Finish to start the configuration.
 
-<img src="Virtuoso_setup3.JPG" alt="Virtuoso setup3" width="600"/>
+<img src="./Figs/Virtuoso_setup3.JPG" alt="Virtuoso setup3" width="600"/>
  
 * Fill the first configuration screen as follows. Do NOT put http:// or https:// in front of the server address.
 
-<img src="Virtuoso_setup4.JPG" alt="Virtuoso setup4" width="600"/>
+<img src="./Figs/Virtuoso_setup4.JPG" alt="Virtuoso setup4" width="600"/>
 
 * In the next screen, fill-in your user name and password (the default is user:dba, password:dba) and press Next:
 
-<img src="Virtuoso_setup5.JPG" alt="Virtuoso setup5" width="600"/>
+<img src="./Figs/Virtuoso_setup5.JPG" alt="Virtuoso setup5" width="600"/>
 
 * A connection should be established. Change the default database to ESTAT and press Finish.
 
-<img src="Virtuoso_setup6.JPG" alt="Virtuoso setup6" width="600"/>
+<img src="./Figs/Virtuoso_setup6.JPG" alt="Virtuoso setup6" width="600"/>
 
 * Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials, all within the connection string.
 
-<img src="Virtuoso_setup8.JPG" alt="Virtuoso setup8" width="600"/> 
+<img src="./Figs/Virtuoso_setup8.JPG" alt="Virtuoso setup8" width="600"/> 
 
 Once the database is set you can start launching the [article spiders](Content%20Database/CDB%20content/Scrapper/README.md)
 
