@@ -1,7 +1,7 @@
 # Setup the Content Database
 
 For the setup of the database structure you have to use SQL scripts in the Datatbase/Interactive SQL tab.
-![Virtuoso interactive SQL](virtuoso_conductor_interactive_SQL.PNG)
+![Virtuoso interactive SQL](./Figs/virtuoso_conductor_interactive_SQL.PNG)
 ## 1. Setup the structure
 
 If it is the first instantiation, please use the [global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_v1.sql) to create the database structure.
@@ -16,7 +16,7 @@ Some tables have to be filled in order for the project to work, such as:
 
 For Statistics Explained data for the first instantiation of the database,  please use the [global SE script](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained/cdb_global_se_data_v1.sql).
 
-Error ![global SE script](se_global_error.jpg)
+Error ![global SE script](./Figs/se_global_error.jpg)
 
 ## 4. Create ODBC connection to the Virtuoso server on Windows
 
