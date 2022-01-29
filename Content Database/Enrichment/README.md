@@ -1,6 +1,6 @@
 ## Algorithms in folder NLP4Stat/Enrichment
 
-1. [**topic-modeling-lda-vem-v1.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/LDA_2/topic-modeling-lda-vem-v1.ipynb): R Jupyter notebook implementing the Latent Dirichlet Allocation (LDA) algorithm for topic modeling (Variational Expectation-Maximization -VEM also called Variational Bayes - VB) version. The texts are the contents of the Statistics Explained (SE) Glossary articles, as stored in the Knowledge Database (KD).
+1. [**/LDA_2/topic-modeling-lda-vem-v1.ipynb**](https://github.com/eurostat/NLP4Stat/blob/main/Enrichment/LDA_2/topic-modeling-lda-vem-v1.ipynb): R Jupyter notebook implementing the Latent Dirichlet Allocation (LDA) algorithm for topic modeling (Variational Expectation-Maximization -VEM also called Variational Bayes - VB) version. The texts are the contents of the Statistics Explained (SE) Glossary articles, as stored in the Knowledge Database (KD).
 
  * **Interactive notebook**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FLDA_2%2Ftopic-modeling-lda-vem-v1.ipynb)
  
