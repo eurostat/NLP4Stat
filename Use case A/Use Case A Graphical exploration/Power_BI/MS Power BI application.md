@@ -1,12 +1,16 @@
 **Note**: The description below was revised on January 2022. File Use Case A prepare data_v2_rev_Jan2022.ipynb no more needs an external file with the categories and replaces the old code Use Case A prepare data_v2.ipynb.
 
+
 ### MS Power BI application
 
+* The current functionalities can be seen in the **online** version [here](https://app.powerbi.com/view?r=eyJrIjoiMzczMTNlZTUtYTI2OC00Yzc3LThiNTUtYmE5NjNmMTM4ZmUwIiwidCI6ImM1MmVlYWMzLWUwNzctNDMyYy04MWUzLTRiY2JhZjZiOTM1ZSIsImMiOjl9&pageName=ReportSection0134a3f3c4be88106abb). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
+ 
 The MS Power BI application works with the free desktop version and is portable. It can also be published to MS Azure cloud, with any Office 365 license. To install the application, it suffices to define the path where the required files are located from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
 
 <img src=".\Figs\image1.PNG" width="800">
 
 Figure 1 -- Setting the data path in the MS Power BI application.  
+
 
 
 
