@@ -3,6 +3,7 @@
 ### R Shiny application
 
 The is a simple interactive R Shiny application which displays a dynamic sunburst plot allowing the user to navigate on themes, sub-themes and available categories below sub-themes and displaying the relevant SE articles. An example is shown in Figure 1 and Figure 2 which follow. 
+* The current functionalities can be seen in the **online version** [here](https://quantos-stat.shinyapps.io/Graphical_exploration_v2/). Because of frequent changes, please press **Reload** in your browser if you have visited this link already.
 
 The user selects the theme "Population and social conditions" and the plot drills-down to this theme. He/she then can proceed by selecting sub-theme "Living conditions". At each step, clicking at the center of the plot allows back-steping to the previous (more general) selection. The current selection is also shown in an infobox at the top of the screen.
 
