@@ -14,7 +14,7 @@
 3. [**/Spacy_NER/Glossary_NamedEntities_V3b_rev_2022.ipynb**](https://github.com/eurostat/NLP4Stat/blob/testing/Content%20Database/Enrichment/Spacy_NER/Glossary_NamedEntities_V3b_rev_Jan2022.ipynb): Python Jupyter notebook with test of the Spacy NER engine on the SE Glossary articles as stored in the KD. **Note**: the code was revised (January 2022) to load the data directly from the database and not from external files. 
 
  * **Interactive notebook** (**old version - no access to the database**):[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FSpacy_NER%2FGlossary_NamedEntities_V3b.ipynb). 
- 
+  
 4. [**/Spacy_NER/SE_NamedEntities_V3b_rev_Jan2022.ipynb**](https://github.com/eurostat/NLP4Stat/blob/testing/Content%20Database/Enrichment/Spacy_NER/SE_NamedEntities_V3b_rev_Jan2022.ipynb): This is the same algorithm as [3] but run on the scraped content from Statistics Explained articles. The input file is the one produced by scraping, with an additional column gathering all sections titles and contents. **Note**: the code was revised (January 2022) to load the data directly from the database and not from external files. 
 
  * **Interactive notebook** (**old version - no access to the database**): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eurostat/NLP4Stat/0b8622e08e14d3d5716ae3f4e928849644010052?filepath=Enrichment%2FSpacy_NER%2FSE_NamedEntities_V3b.ipynb)
@@ -30,5 +30,6 @@
  7. [**/SVOs/SVOs_extraction_v3_rev_Jan2022.ipynb**](https://github.com/eurostat/NLP4Stat/blob/testing/Content%20Database/Enrichment/SVOs/SVOs_extraction_v3_rev_Jan2022.ipynb): A code which produces candidate Subject-Verb-Object triplets for the feeding of the KD. These involve a) Named Entities of many useful selected classes and b) the intersection of Categories related to SE articles and SE Glossary articles. The inputs are from both SE articles (titles, URLs, abstracts, context sections, full contents and related categories) and from SE Glossary entries (titles, URLs, definitions and related categories). Most of the information is used for debugging, but some elements such as URLs can also be used in Use Cases. Note that the code **takes a rather long time to run** (around 30' on a x64-i7-2.80GHz with 12GB RAM). **Note**: the code was revised (January 2022) to load the data directly from the database and not from external files.
 
 * **Interactive notebook** (**old version - no access to the database**): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KSpiliop/SVOs/main?filepath=SVOs_extraction_v3.ipynb)
+* [Test with Google Colab](https://colab.research.google.com/drive/12C3RpfOEaaJb3D5Q2t5WJPi1FPlP1glq?usp=sharing)
 
 
