@@ -16,4 +16,5 @@ dependencies:
   - ipywidgets
   - spacy
   - openpyxl
+  - pyodbc
 #  - gdal
