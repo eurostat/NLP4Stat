@@ -1,2 +1,3 @@
 libgsl0-dev
 virtuoso-opensource
+libssl-dev
