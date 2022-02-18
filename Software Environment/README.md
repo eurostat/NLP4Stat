@@ -29,6 +29,8 @@
 
 * Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials, all within the connection string.
 
+<img src="./Figs/Virtuoso_setup7.JPG" alt="Virtuoso setup7" width="600"/>
+
 # 1.b Installation of a docker image of Virtuoso
 
 * Create the docker image using the `docker-compose up docker-compose.yml`. The [docker-compose.yml](Docker%20Images/docker-compose.yml) is in the `Docker Images` folder. 
