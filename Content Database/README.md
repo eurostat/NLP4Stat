@@ -7,6 +7,13 @@ You will find in the Script SQL folder various file that help build the content 
 If it is your first instantiation, please use the [global script cdb_global_v2.sql](
 ./CDB%20content/Script%20SQL/cdb_global_v2.sql)
 
+If you are updating an existing database the needed scripts can be find in each specific folder.
+
+## 2. Static data
+Some tables have to be filled in order for the project to work, such as:
+- Named entities
+-	Modality
+
 
 ## 2. Load static data
 
