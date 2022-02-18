@@ -38,9 +38,9 @@ Regarding the structure, if you used the cdb_global_v2.sql file you can go to th
 
 In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
 
-First the modality queries (estat13k_modalities_data.sql) have to be launch.
+First the modality queries ([estat13k_modalities_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql)) have to be launched.
 
-Then the estat13k_glossary_data.sql , in order to do it use the following Jupiter Notebook : cdb_insert.ipynb
+Then the [estat13k_glossary_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql) , in order to do it use the following Jupiter Notebook : cdb_insert.ipynb
 
 Finally, you can add the last queries : estat13k_stat_and_measurement_unit_data.sql
 
