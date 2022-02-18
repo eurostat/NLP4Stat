@@ -40,9 +40,9 @@ In order to gather the glossary instead of scrapping the data we used the bulkdo
 
 First the modality queries ([estat13k_modalities_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql)) have to be launched.
 
-Then the [estat13k_glossary_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql) , in order to do it use the following Jupiter Notebook : cdb_insert.ipynb
+Then the [estat13k_glossary_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql). In order to do it use the following Jupyter Notebook : [cdb_insert.ipynb](./CDB%20content/Script%20SQL/cdb_insert.ipynb)
 
-Finally, you can add the last queries : estat13k_stat_and_measurement_unit_data.sql
+Finally, you can add the last queries : [estat13k_stat_and_measurement_unit_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
 
 
 ## 5. Load Eurostat glossary data
