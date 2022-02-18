@@ -27,6 +27,7 @@
 
 * A connection should be established. Change the default database to ESTAT and press Finish.
 
+* Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials, all within the connection string.
 
 # 1.b Installation of a docker image of Virtuoso
 
