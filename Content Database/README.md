@@ -19,10 +19,10 @@ Like before, if it is your first instantiation of the database, please use the g
 ./CDB%20content/Script%20SQL/cdb_global_v2.sql)
 If it is an update, the scripts needed can be find in the [Statistics Explained folder](./CDB%20content/Script%20SQL/Statistics%20Explained). Launch the scripts in the following order : 
 
--	[cdb_link_info_v1.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_link_info_v1.sql)
--	[cdb_glossary_v2.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_glossary_v2.sql)
--	[cdb_articles_v1.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_articles_v1.sql)
--	[estat_new_exp_stat.sql](./CDB%20content/Script%20SQL/Statistics Explained/estat_new_exp_stat.sql)
+-	[cdb_link_info_v1.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/cdb_link_info_v1.sql)
+-	[cdb_glossary_v2.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/cdb_glossary_v2.sql)
+-	[cdb_articles_v1.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/cdb_articles_v1.sql)
+-	[estat_new_exp_stat.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/estat_new_exp_stat.sql)
 
 
 ## 3. Load Statistics Explained Data
