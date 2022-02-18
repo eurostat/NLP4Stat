@@ -21,14 +21,10 @@ If it is an update, the scripts needed can be find in the Statistics Explained f
 
 D:\Kimon\Documents\Quantos-new\NLP4StatRef\Lea_latest\Estat_scriptSQL (3)\Estat_scriptSQL\Statistics Explained\cdb_link_info_v1.sql
 
--	[cdb_link_info_v1.sql](
-./CDB%20content/Script%20SQL/Statistics Explained/cdb_link_info_v1.sql)
--	[cdb_glossary_v2.sql](
-./CDB%20content/Script%20SQL/Statistics Explained/cdb_glossary_v2.sql)
--	[cdb_articles_v1.sql](
-./CDB%20content/Script%20SQL/Statistics Explained/cdb_articles_v1.sql)
--	[estat_new_exp_stat.sql](
-./CDB%20content/Script%20SQL/Statistics Explained/estat_new_exp_stat.sql)
+-	[cdb_link_info_v1.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_link_info_v1.sql)
+-	[cdb_glossary_v2.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_glossary_v2.sql)
+-	[cdb_articles_v1.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_articles_v1.sql)
+-	[estat_new_exp_stat.sql](./CDB%20content/Script%20SQL/Statistics Explained/estat_new_exp_stat.sql)
 
 
 ## 3. Load Statistics Explained Data
