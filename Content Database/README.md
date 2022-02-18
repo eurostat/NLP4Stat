@@ -17,7 +17,7 @@ Some tables have to be filled in order for the project to work, such as:
 ## 3. Statistics Explained Data
 Like before, if it is your first instantiation of the database, please use the global script :  [global script cdb_global_v2.sql](
 ./CDB%20content/Script%20SQL/cdb_global_v2.sql)
-If it is an update, the scripts needed can be find in the Statistics Explained folder. Launch the scripts in the following order : 
+If it is an update, the scripts needed can be find in the [Statistics Explained folder](./CDB%20content/Script%20SQL/Statistics Explained/). Launch the scripts in the following order : 
 
 -	[cdb_link_info_v1.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_link_info_v1.sql)
 -	[cdb_glossary_v2.sql](./CDB%20content/Script%20SQL/Statistics Explained/cdb_glossary_v2.sql)
