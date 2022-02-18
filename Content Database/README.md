@@ -53,7 +53,7 @@ As previously, we did not scrape the following data, we first downloaded the raw
 
 The first step is to launch : [estat_codelist_label_data.sql](./CDB%20content/Script%20SQL/CodeList%20and%20datasets/estat_codelist_label_data.sql)  and then using [cdb_insert.ipynb](./CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each  estat_dictionnary_code_batchX.sql.
 
-At these stage, the codelists and code are all in the content database, however we found that we have to add some code to the time dictionnary in order for our work on the datasets to work. You'll find the elements to add in the estat_dictionnary_code_data_time_addition.sql  file
+At these stage, the codelists and code are all in the content database, however we found that we have to add some code to the time dictionnary in order for our work on the datasets to work. You'll find the elements to add in the [estat_dictionnary_code_data_time_addition.sql file](./CDB%20content/Script%20SQL/CodeList%20and%20datasets/estat_dictionnary_code_data_time_addition.sql)
 
 Then you can add some datatsets.  Launch first the estat_dataset_label_data.sql file and then the estat_dataset_code_data.sql in order to create the links between datasets and codelists. If the last file is to heavy , the cdb_insert.ipynb file can be use.
 
