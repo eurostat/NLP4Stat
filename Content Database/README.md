@@ -25,35 +25,12 @@ If it is an update, the scripts needed can be find in the [Statistics Explained 
 -	[estat_news_exp_stat.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/estat_news_exp_stat.sql)
 
 
-## 3. Load Statistics Explained Data
+Once the structure is set you can launch the following files to fill the modality’s tables
+-	[cdb_resources_mod_data.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/cdb_resources_mod_data.sql)
+-	[cdb_global_se_data_v1.sql](./CDB%20content/Script%20SQL/Statistics%20Explained/cdb_global_se_data_v1.sql)
 
-For Statistics Explained data for the first instantiation of the database,  please use the [global SE script](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained/cdb_global_se_data_v1.sql).
+Once the database is set you can start launching the various spiders.
 
-Error ![global SE script](./Figs/se_global_error.jpg)
-
-## 4. Create ODBC connection to the Virtuoso server on Windows
-
-* Open the ODBC Data Sources (64-bit) tool in control panel, go to Tab System DSN and create a new data source selecting the Virtuoso (Open Source) driver. Press Finish to start the configuration.
-
-<img src="./Figs/Virtuoso_setup3.JPG" alt="Virtuoso setup3" width="600"/>
- 
-* Fill the first configuration screen as follows. Do NOT put http:// or https:// in front of the server address.
-
-<img src="./Figs/Virtuoso_setup4.JPG" alt="Virtuoso setup4" width="600"/>
-
-* In the next screen, fill-in your user name and password (the default is user:dba, password:dba) and press Next:
-
-<img src="./Figs/Virtuoso_setup5.JPG" alt="Virtuoso setup5" width="600"/>
-
-* A connection should be established. Change the default database to ESTAT and press Finish.
-
-<img src="./Figs/Virtuoso_setup6.JPG" alt="Virtuoso setup6" width="600"/>
-
-* Restart your system. You should be able to connect to the database using pyodbc. In the call to connect() replace "user name" and "password" with your credentials, all within the connection string.
-
-<img src="./Figs/Virtuoso_setup8.JPG" alt="Virtuoso setup8" width="600"/> 
-
-Once the database is set you can start launching the [article spiders](Content%20Database/CDB%20content/Scrapper/README.md)
 
 
 ## 5. Load Eurostat glossary data
