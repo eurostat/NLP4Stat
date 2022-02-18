@@ -49,11 +49,9 @@ Regarding the structure, if you used the cdb_global_v2.sql file you can go to th
 
 -	[estat_codelist_datasets.sql](./CDB%20content/Script%20SQL/CodeList%20and%20datasets/estat_codelist_datasets.sql)
 
+As previously, we did not scrape the following data, we first downloaded the raw data and created SQL queries in order to fill the database.
 
-CodeList and datasets
-As previously, we did not scrap the following datas, we first downloaded the raw and created SQL queries in order to fill the database.
-
-The first step is to launch : estat_codelist_label_data.sql  and then using cdb_insert.ipynb launch each  estat_dictionnary_code_batchX.sql.
+The first step is to launch : [estat_codelist_label_data.sql](./CDB%20content/Script%20SQL/CodeList%20and%20datasets/estat_codelist_label_data.sql)  and then using [cdb_insert.ipynb](./CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each  estat_dictionnary_code_batchX.sql.
 
 At these stage, the codelists and code are all in the content database, however we found that we have to add some code to the time dictionnary in order for our work on the datasets to work. You'll find the elements to add in the estat_dictionnary_code_data_time_addition.sql  file
 
