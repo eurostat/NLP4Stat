@@ -31,6 +31,18 @@ Once the structure is set you can launch the following files to fill the modalit
 
 Once the database is set you can start launching the various spiders.
 
+## 4. Eurostat glossary
+Regarding the structure, if you used the cdb_global_v2.sql file you can go to the data insertion part, if not you can go to the [Estat13k folder](./CDB%20content/Script%20SQL/Estat13k), and launch the following scripts : 
+-	[estat13k_modalities.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_modalities.sql)
+-	[estat13k_glossary.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_glossary.sql)
+
+In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
+
+First the modality queries (estat13k_modalities_data.sql) have to be launch.
+
+Then the estat13k_glossary_data.sql , in order to do it use the following Jupiter Notebook : cdb_insert.ipynb
+
+Finally, you can add the last queries : estat13k_stat_and_measurement_unit_data.sql
 
 
 ## 5. Load Eurostat glossary data
