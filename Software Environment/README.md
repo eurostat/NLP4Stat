@@ -19,7 +19,7 @@
 
 * Fill the first configuration screen as follows. Do NOT put http:// or https:// in front of the server address.
 
-<img src="./Figs/Virtuoso_setup4.JPG" alt="Virtuoso setup4" width="600"/>
+<img src="./Figs/Virtuoso_new.JPG" alt="Virtuoso setup4" width="600"/>
 
 * In the next screen, fill-in your user name and password and press Next:
 
