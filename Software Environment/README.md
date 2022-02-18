@@ -38,15 +38,15 @@
 # 2. Connect to the Virtuoso server
 In a browser go to http://localhost:8890 and on the Virtuoso frontend/GUI click on Conductor login using the username `dba` and the password defined in the [docker-compose.yml](Docker%20Images/docker-compose.yml) file (the default password is `dba`).
 
-![Virtuoso conductor](virtuoso_conductor_homepage.PNG)
+![Virtuoso conductor](./Figs/virtuoso_conductor_homepage.PNG)
 
 # 3. Virtuoso user parameters
 
 Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit the user account for the 'SPARQL' user as such :
 
-![Virtuoso User account edit](virtuoso_conductor_user_account_edit.png)
+![Virtuoso User account edit](./Figs/virtuoso_conductor_user_account_edit.png)
 
-![Virtuoso User account page](virtuoso_conductor_user_accounts.PNG)
+![Virtuoso User account page](./Figs/virtuoso_conductor_user_accounts.PNG)
 
 Save the changes.
 
