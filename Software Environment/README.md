@@ -7,7 +7,7 @@
 
 *  Run the installer as administrator and accept the defaults. The default installation is shown below:
 
-<img src="Virtuoso_setup2.JPG" alt="Virtuoso setup2" width="600"/>
+<img src="./Figs/Virtuoso_setup2.JPG" alt="Virtuoso setup2" width="600"/>
 
 * With this default installation as example:
     *  Go to the **system** environment variables and add C:\Program Files\OpenLink Software\Virtuoso OpenSource 7.2\bin and C:\Program Files\OpenLink Software\Virtuoso OpenSource 7.2\lib to the system PATH variable.
