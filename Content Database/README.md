@@ -44,46 +44,21 @@ Then the [estat13k_glossary_data.sql](./CDB%20content/Script%20SQL/Estat13k/esta
 
 Finally, you can add the last queries : [estat13k_stat_and_measurement_unit_data.sql](./CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
 
+## 5. CodeList and datasets
+Regarding the structure, if you used the cdb_global_v2.sql file you can go to the data insertion part, if not you can go to the [CodeList and datasets folder](./CDB%20content/Script%20SQL/CodeList%20and%20datasets), and launch the following script : 
 
-## 5. Load Eurostat glossary data
-In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
-
-First the [modality queries](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql) have to be launch. 
-??????? do we need this and where in Virtuoso Interactive SQl query
+-	[estat_codelist_datasets.sql](./CDB%20content/Script%20SQL/CodeList%20and%20datasets/estat_codelist_datasets.sql)
 
 
-Then the [glossary data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql), in order to do it use the following [Jupyter Notebook](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) or the [python code](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.py)
-
-Finally, you can add the last queries : [estat13k_stat_and_measurement_unit_data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
-
-??????? do we need this and where in Virtuoso Interactive SQl query
-
-
-# to be continue...
-
-
-????????If you are updating an existing database the needed scripts can be find in the ![Script SQL folder](Content%20Database/CDB%20content/Script%20SQL) 
-
-
-
-?????????If it is an update, the scripts needed can be find in the ![Script SQL folder](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained)
-
-Once the database is set you can start launching the various ![spiders](Content%20Database/CDB%20content/Scrapper/README.md)
-
-##### 4.2.2 Eurostat glossary
-In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
-
-First the ![modality queries](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql) have to be launch.
-
-Then the ![glossary data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql), in order to do it use the following Jupiter Notebook : ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb)
-
-Finally, you can add the last queries : ![estat13k_stat_and_measurement_unit_data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
-
-##### 4.2.3 Dictionnary and Datasets
+CodeList and datasets
 As previously, we did not scrap the following datas, we first downloaded the raw and created SQL queries in order to fill the database.
 
-The first step is to fill the ![mod_dictionnary table](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dictionnary_label_data.sql) and then using ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each ![dictionnary_code_data_batch](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets). 
+The first step is to launch : estat_codelist_label_data.sql  and then using cdb_insert.ipynb launch each  estat_dictionnary_code_batchX.sql.
 
-At these stage, the dictionnary and code are all in the content database, however we found that we have to add somme code to the time dictionnary in order for our work on the datasets to work. You'll find the added elemnts ![here](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dictionnary_code_data_time_addition.sql)
+At these stage, the codelists and code are all in the content database, however we found that we have to add some code to the time dictionnary in order for our work on the datasets to work. You'll find the elements to add in the estat_dictionnary_code_data_time_addition.sql  file
 
-Then you can add some ![datasets](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dataset_label_data.sql) and then using ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each ![dictionnary_code_data_batch](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets) to add the links between the datasets and the dictionnaries. 
+Then you can add some datatsets.  Launch first the estat_dataset_label_data.sql file and then the estat_dataset_code_data.sql in order to create the links between datasets and codelists. If the last file is to heavy , the cdb_insert.ipynb file can be use.
+
+## 6. Taxonomy, Terminology, Topic Model
+
+In each folder you can find the structure of the needed tables.
