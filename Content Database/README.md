@@ -6,6 +6,10 @@ For the setup of the database structure you have to use SQL scripts in the Datat
 
 If it is the first instantiation, please use the [global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_v1.sql) to create the database structure.
 
+If it is your first instantiation, please use the [global script cdb_global_v2.sql](
+https://github.com/eurostat/NLP4Stat/blob/testing/Content%20Database/CDB%20content/Script%20SQL/cdb_global_v2.sql)
+
+
 ## 2. Load static data
 
 Some tables have to be filled in order for the project to work, such as:
