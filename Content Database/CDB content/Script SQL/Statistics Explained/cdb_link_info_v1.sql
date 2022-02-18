@@ -30,6 +30,8 @@ CREATE TABLE "ESTAT"."V1"."dat_collection" (
   "editorial_note" long varchar,
   "change_note" long varchar,
   "scope_note" long varchar,
+  "example" long varchar,
+  "history_note" long varchar,
   PRIMARY KEY ("id"),
   CONSTRAINT FK_STATUS_COLLECTION FOREIGN KEY ("status_id") REFERENCES "ESTAT"."V1"."mod_status" ("id")
 )
@@ -48,6 +50,8 @@ CREATE TABLE "ESTAT"."V1"."dat_resource" (
   "editorial_note" long varchar,
   "change_note" long varchar,
   "scope_note" long varchar,
+  "example" long varchar,
+  "history_note" long varchar,
   "infotype_id" integer, 
   PRIMARY KEY ("id"),
   CONSTRAINT FK_STATUS_RESOURCE FOREIGN KEY ("status_id") REFERENCES "ESTAT"."V1"."mod_status" ("id"),
