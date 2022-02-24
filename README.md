@@ -3,7 +3,7 @@
 - [Software Environment](Software%20Environment): contains instructions how to install and connect to the Virtuoso server 
 - [Content Database](Content%20Database): contains instructions how to setup, scrape and load the data in the content database 
 - [Knowledge Database](Content%20Database) - **under construction**
-- [Content and Knowledge Database: latest documentation](NLP4StatRef-CD-KD-Documentation.docx)
+- [Content and Knowledge Database latest documentation](NLP4StatRef-CD-KD-Documentation.docx): the latest documentation in a Word file, as of February 2022.
 - Use Case A:
 
     - [Use Case A Widgets Demo](Use%20case%20A/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only, as part of deliverable D3.1. This is **superseded** by the next codes which are part of deliverable D3.2. 
