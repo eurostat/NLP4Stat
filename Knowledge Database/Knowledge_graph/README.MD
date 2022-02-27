@@ -39,7 +39,7 @@ skos:related]
 
     - The function returns these two dataframes, *data\_for\_network\_edges* and *edge\_type\_table*.
 
-6. Next, we define a function **pattern\_material\_selection\_for\_KG()**. This accepts as arguments the dataframes *data\_for\_network\_nodes* and                                      *data\_for\_network\_edges*, a *pattern* to search and a minimum number of links (                                    (*min\_nb\_links*) in order to display a node.
+6. Next, we define a function **pattern\_material\_selection\_for\_KG()**. This accepts as arguments the dataframes *data\_for\_network\_nodes* and                                      *data\_for\_network\_edges*, a *pattern* to search and a minimum number of links (*min\_nb\_links*) in order to display a node.
 
     This function selects all nodes with a label containing the pattern and all edges which have as source or as target these nodes. Edges are de-duplicated and those with blank source or target labels are discarded. Then, the frequencies of target nodes per source node are found and those source nodes which are connected with more than *min\_nb\_links* target nodes are marked.
 
