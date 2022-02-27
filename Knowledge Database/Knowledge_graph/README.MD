@@ -53,5 +53,5 @@ skos:related]
 
 9. In all examples, we carry out the initial processing by calling *create\_node\_tables()* and *create\_edge\_tables()*. Then we call function *create\_graph()* with the *pattern* to be used and the parameter *min\_nb\_links*.
 
-Examples:
-<img src="/Figs/download_climate.png" width="600">
+Examples: 
+<img src="./Figs/download_climate.png" width="600">
