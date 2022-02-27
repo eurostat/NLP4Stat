@@ -53,5 +53,15 @@ skos:related]
 
 9. In all examples, we carry out the initial processing by calling *create\_node\_tables()* and *create\_edge\_tables()*. Then we call function *create\_graph()* with the *pattern* to be used and the parameter *min\_nb\_links*.
 
-Examples: 
-<img src="./Figs/download_climate.png" width="600">
+### Examples: 
+#### pattern = environment OR greenhouse OR climate 
+
+<img src="./Figs/download_climate.png" width="800">
+
+#### pattern = quality of life
+
+<img src="./Figs/download_qol.png" width="800">
+
+#### pattern = Covid
+
+<img src="./Figs/download_covid.png" width="800">
