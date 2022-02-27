@@ -55,4 +55,4 @@ skos:related]
 
 Examples:
 ![Climate]("/Figs/download_climate.png")
-download_climate.png
+
