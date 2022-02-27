@@ -52,3 +52,7 @@ skos:related]
 8. Finally, function **create\_graph()** accepts the dataframes *data\_for\_network\_nodes* and                  *data\_for\_network\_edge*s, the *pattern* to  be used and the parameter *min\_nb\_links*. It calls function *pattern\_material\_selection\_for_KG()* and then the function *draw\_network()*.
 
 9. In all examples, we carry out the initial processing by calling *create\_node\_tables()* and *create\_edge\_tables()*. Then we call function *create\_graph()* with the *pattern* to be used and the parameter *min\_nb\_links*.
+
+Examples:
+![Climate]("/Figs/download_climate.png")
+download_climate.png
