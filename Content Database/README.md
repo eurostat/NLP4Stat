@@ -1,6 +1,6 @@
 # Setup the Content Database
 
-You will find in the [Script SQL folder](/CDB%20content/Script%20SQL) various file that help build the content database. You can go to the Database/Interactive SQL tab.
+You will find in the [Script SQL folder](./CDB%20content/Script%20SQL) various file that help build the content database. You can go to the Database/Interactive SQL tab.
 ![Virtuoso interactive SQL](./Figs/virtuoso_conductor_interactive_SQL.PNG)
 ## 1. Setup the structure
 
