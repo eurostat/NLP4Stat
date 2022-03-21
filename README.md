@@ -3,7 +3,7 @@
 - [Software Environment](Software%20Environment): contains instructions how to install and connect to the Virtuoso server. 
 - [Content Database](Content%20Database): contains instructions how to setup, scrape and load the data in the content database. Also contains sub-folders with enrichment codes: 
     - [/Enrichment](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/Enrichment) and
-
+    - [/Enrichment-Phase II](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/Enrichment-Phase%20II)
 
 - [Knowledge Database](Content%20Database) - see [dedicated section](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database).
 - [Content and Knowledge Database latest documentation](NLP4StatRef-CD-KD-Documentation.docx): the latest documentation in a Word file, as of February 2022.
