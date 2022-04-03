@@ -6,7 +6,7 @@
     - [/Enrichment-Phase II](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/Enrichment-Phase%20II)
 
 - [Knowledge Database](Content%20Database) - see [dedicated section](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database).
-- [Content and Knowledge Database latest documentation](NLP4StatRef-CD-KD-Documentation.docx): the latest documentation in a Word file, as of February 2022. This describes the version of the knowledge database **before the re-organization**.
+- [Content and Knowledge Database documentation](NLP4StatRef-CD-KD-Documentation.docx): the documentation in a Word file, as of February 2022. This describes the version of the knowledge database **before the re-organization**.
 - [Knowledge Database latest documentation](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/KD%20model%20v2/KD_Documentation.docx): the latest documentation of the knowledge database **after the re-organization** in a Word file, as of April 2022. 
 - Use Case A:
 
