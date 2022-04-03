@@ -1,3 +1,5 @@
+## Revision note (April 2002): The new ontologies and the new KD documentation are in folder [KD model v2]()
+
 ### 5. Knowledge database
 
 #### 5.1 Loading and deleting ontologies
