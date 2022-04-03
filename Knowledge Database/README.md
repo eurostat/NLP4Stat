@@ -1,4 +1,4 @@
-## Revision note (April 2002): The new ontologies and the new KD documentation are in folder [KD model v2]()
+### Revision note (April 2002): The new ontologies and the new KD documentation are in folder [KD model v2](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD%20model%20v2).
 
 ### 5. Knowledge database
 
