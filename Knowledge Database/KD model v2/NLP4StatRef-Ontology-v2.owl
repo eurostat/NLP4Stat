@@ -529,7 +529,7 @@ This version does not integrate the standard ontologies, the association being c
     <owl:Class rdf:about="http://nlp4statref/ontology#CODEDTerm">
         <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#GlossaryTerm"/>
         <rdfs:comment xml:lang="en">Glossary is an alphabetical list of terms relating to a specific subject enriched by definitions and related content.</rdfs:comment>
-        <rdfs:label xml:lang="en">CODEDGlossary</rdfs:label>
+        <rdfs:label xml:lang="en">CODEDTerm</rdfs:label>
     </owl:Class>
     
 
