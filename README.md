@@ -7,7 +7,7 @@
 
 - [Knowledge Database](Content%20Database) - see [dedicated section](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database).
 - [Content and Knowledge Database documentation](NLP4StatRef-CD-KD-Documentation.docx): the documentation in a Word file, as of February 2022. This describes the version of the knowledge database **before the re-organization**.
-- [Knowledge Database latest documentation](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/KD%20model%20v2/KD_Documentation.docx): the latest documentation of the knowledge database **after the re-organization** in a Word file, as of April 2022. 
+- [Knowledge Database latest documentation](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/KD%20model%20v2/KD_Documentation_v2.docx): the latest documentation of the knowledge database **after the re-organization** in a Word file, as of April 2022. 
 - Use Case A:
 
     - [Use Case A Widgets Demo](Use%20case%20A/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only, as part of deliverable D3.1. This is **superseded** by the next codes which are part of deliverable D3.2. 
