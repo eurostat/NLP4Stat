@@ -145,6 +145,7 @@ estat:hasReference rdf:type owl:ObjectProperty ;
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/hasSubTheme
 estat:hasSubTheme rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain estat:EurostatTheme ;
                   rdfs:range estat:EurostatTheme .
 
@@ -186,9 +187,11 @@ estat:hasURI rdf:type owl:ObjectProperty ;
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/relatedTerm
 estat:relatedTerm rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain estat:GlossaryTerm ;
                   rdfs:range estat:GlossaryTerm ;
-                  rdfs:comment "A property that relaetes glossary terms to another glossary term" .
+                  rdfs:comment "Relates a term of a glossary to another term."^^xsd:string ;
+                  rdfs:label "relatedTerm"^^xsd:string .
 
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/relatedTheme
@@ -197,7 +200,7 @@ estat:relatedTheme rdf:type owl:ObjectProperty ;
                    rdfs:domain estat:EurostatTheme ;
                    rdfs:range estat:OECDTheme ;
                    rdfs:comment "A property that relates a OECD Entity with the EuroStat Theme(-s)"^^xsd:string ;
-                   rdfs:label "MapsToTheme"^^xsd:string .
+                   rdfs:label "relatedTheme"^^xsd:string .
 
 
 #################################################################
@@ -206,9 +209,13 @@ estat:relatedTheme rdf:type owl:ObjectProperty ;
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/content
 estat:content rdf:type owl:DatatypeProperty ;
-              rdfs:domain estat:Article ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( estat:Article
+                                          estat:Paragraph
+                                        )
+                          ] ;
               rdfs:range xsd:string ;
-              rdfs:comment "This property relates the articles from the editorial content with their Content (i.e., their Abstract or a small Description)"^^xsd:string ;
+              rdfs:comment "This property relates the articles from the editorial content or their nested Paragraphs with their Content (i.e., their Abstract or a small Description)"^^xsd:string ;
               rdfs:label "content"^^xsd:string .
 
 
@@ -325,14 +332,6 @@ estat:linkID rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:integer ;
              rdfs:comment "A property that indicates the ID of the link. The ID is given by EuroStat"^^xsd:string ;
              rdfs:label "linkID"^^xsd:string .
-
-
-###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/paragraph
-estat:paragraph rdf:type owl:DatatypeProperty ;
-                rdfs:domain estat:Paragraph ;
-                rdfs:range xsd:string ;
-                rdfs:comment "A property that relates a paragraph from the paragraph class with its context"^^xsd:string ;
-                rdfs:label "paragraph"^^xsd:string .
 
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/remark
