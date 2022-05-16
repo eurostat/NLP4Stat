@@ -1,5 +1,5 @@
 # Knowledge graph creation
-
+# TO BE REVISED
 
 - [Knowledge_graph_2021_12_05.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/Knowledge_graph/Knowledge_graph_2021_12_05.ipynb) : this is an **updated version in a single Jupyter notebook** and replaces the previous version.
 
