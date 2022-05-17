@@ -54,9 +54,9 @@ skos:related]
 9. In all examples, we carry out the initial processing by calling *create\_node\_tables()* and *create\_edge\_tables()*. Then we call function *create\_graph()* with the *pattern* to be used and the parameter *min\_nb\_links*.
 
 ### Examples: 
-#### pattern = environment OR greenhouse OR climate 
+#### keywords = migrant integration 
 
-<img src="./Figs/download_climate.png" width="800">
+<img src="./Figs/migrant_integration.png" width="800">
 
 #### pattern = quality of life
 
