@@ -63,4 +63,6 @@ skos:related]
 
 <img src="./Figs/electric_vehicle.png" width="800">
 
+#### keywords = mortality statistics 
 
+<img src="./Figs/mortality_statistics.png" width="800">
