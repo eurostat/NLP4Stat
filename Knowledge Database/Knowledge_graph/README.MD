@@ -7,8 +7,7 @@ The steps are as follows:
 
 1.  Connection to the Virtuoso database. 
 
-2.  Extraction of relationships: The start nodes are all SE articles which contain the keywords in at least one paragraph. These articles can refer to other SE articles, SE Glossary articles, Data, News articles, Publications, Legislation, etc. These references define the edges and the end nodes. 
-Keep only the edges with references to other SE articles, SE Glossary articles, Publications and Legislation, for reasons of clarity in the resulting graph. 
+2.  Extraction of relationships: The start nodes are all SE articles which contain the keywords in at least one paragraph. These articles can refer to other SE articles, SE Glossary articles, Data, News articles, Publications, Legislation, etc. These references define the edges and the end nodes. The type of the resource been referenced (related resource) can be found by the pattern in the related URL. Keep only the edges with references to other SE articles, SE Glossary articles, Publications and Legislation, for reasons of clarity in the resulting graph. 
 
 3.  Identify the unique nodes in the graph by finding the unique URIs in the start and end nodes and give them a unique numeric ID. 
 
