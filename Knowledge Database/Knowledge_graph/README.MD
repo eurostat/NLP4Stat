@@ -1,6 +1,6 @@
 # Knowledge graph creation
 
-- [Knowledge_graph_2022_05_16.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/Knowledge_graph/Knowledge_graph_2022_05_16.ipynb) : this is a **updated version in a Google Colab notebook** working with the new knowledge database.
+- [Knowledge_graph_2022_05_16.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/Knowledge_graph/Knowledge_graph_2022_05_16.ipynb) : this is a **updated version in a Google Colab notebook** working with the new knowledge database. Please see instructions at the top of the notebook.
 
 # BELOW TO BE REVISED
 
