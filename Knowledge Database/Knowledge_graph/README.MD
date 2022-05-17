@@ -59,10 +59,8 @@ skos:related]
 
 <img src="./Figs/migrant_integration.png" width="800">
 
-#### pattern = quality of life
+#### keywords = electric vehicle 
 
-<img src="./Figs/download_qol.png" width="800">
+<img src="./Figs/electric_vehicle.png" width="800">
 
-#### pattern = Covid
 
-<img src="./Figs/download_covid.png" width="800">
