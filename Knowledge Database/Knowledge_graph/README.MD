@@ -1,7 +1,8 @@
 # Knowledge graph creation
-# TO BE REVISED
 
-- [Knowledge_graph_2021_12_05.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/Knowledge_graph/Knowledge_graph_2021_12_05.ipynb) : this is an **updated version in a single Jupyter notebook** and replaces the previous version.
+- [Knowledge_graph_2022_05_16.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/Knowledge_graph/Knowledge_graph_2022_05_16.ipynb) : this is a **updated version in a Google Colab notebook** working with the new knowledge database.
+
+# BELOW TO BE REVISED
 
 The steps are as follows: 
 
