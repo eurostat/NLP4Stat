@@ -13,4 +13,3 @@ The code is in a Google Colab notebook. Note that the SPARQL query takes a rathe
 
 <img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search/Figs/FS_screenshot2.jpg" width="600">
 
-**Pending: Upload the notebook**
