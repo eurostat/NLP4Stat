@@ -7,6 +7,6 @@ Use Case A - Faceted search. Receives inputs from the database (SE articles). Am
 
 <img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search/Figs/FS_screenshot.jpg" width="600">
 
-GC_Use_Case_A_Faceted_search_v5_rev_May2022.ipynb is a more recent version which uses the Knowledge Database to return, for each SE article, **all related resources** (and not only the related SE articles).  
+GC_Use_Case_A_Faceted_search_v5_rev_May2022.ipynb is a more recent version which uses the Knowledge Database to return, for each SE article, **all related resources** (and not only the related SE articles). The code is in a Google Colab notebook. 
 
 **Pending: Upload the notebook**
