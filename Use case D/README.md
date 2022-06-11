@@ -10,4 +10,5 @@
       - This is the same code but implemented with the [DeepPavlov](https://deeppavlov.ai/) framework and also with some changes and improvements.    
       - Instructions are included at the top of the notebook.  
       - The requirements (CUDA-enabled GPU) and the targets of the conversation with the databot (either datasets or SE Glossary articles) are the same.
-      
+  - Working_Use_Case_D_DeepPavlov_v2.ipynb:    
+      - This is the same code, under development, adjusted (June 2022) to read all data with SPARQL queries from the Knowledge Database. Also added the terms and definitions from Eurostat's Concepts and Definitions Database in the fine-tuning stage.
