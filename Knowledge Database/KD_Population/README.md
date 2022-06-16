@@ -12,4 +12,4 @@
 -   Folder EuroStat contains two Python scripts, two text files, one Excel file and one .ttl file:
     - EuroStatDataset.py script creates the classes of the datasets, leaf classes and intermediate classes. It reads the Excel file All_Datasets.xlsx which contains the information for the datasets and produces i) file classes.txt, which contains only the names of the classes and ii) file hierarchy.txt which contains the hierarchy between the classes.
     - EuroStatDatasetGround.py also reads the Excel file All_Datasets.xlsx and creates all the additional information that exists for the datasets, such as the file descriptions, the database paths, the codes, and their labels, among others. The final information is stored in the dataset.ttl file.
-    - To obtain the entire populated part of the ontology, please execute EuroStatDataset.py and EuroStatDatasetGround.py. Then, copy-paste the contents of classes.txt and hierarchy.txt into dataset.ttl. 
+    - To obtain, **instead**, the entire populated part of the ontology, please execute EuroStatDataset.py and EuroStatDatasetGround.py. Then, copy-paste the contents of classes.txt and hierarchy.txt into dataset.ttl. 
