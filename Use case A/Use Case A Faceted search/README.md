@@ -11,5 +11,5 @@ Use Case A - Faceted search. Receives inputs from the database (SE articles). Am
 
 The code is in a Google Colab notebook. Note that the SPARQL query takes a rather long time to run.
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search/Figs/FS_screenshot2.jpg" width="600">
+<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Faceted%20search/Figs/FS_screenshot4.jpg" width="600">
 
