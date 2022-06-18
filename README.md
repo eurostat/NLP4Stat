@@ -11,7 +11,7 @@
 - Use Case A:
 
     - [Use Case A Widgets Demo](Use%20case%20A/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only, as part of deliverable D3.1. This is **superseded** by the next codes which are part of deliverable D3.2. 
-    - [Use Case A Query builder](Use%20case%20A/Use%20Case%20A%20Query%20builder): Query builder, with inputs from the database (SE articles and SE Glossary articles). There is a Jupyter notebook version and a Google Colab one. The file name of the latter starts with GC_. The latest addition (June 2022) is another Google Colab notebook demonstrating the reading of all data from the Knowledge Database, with SPARQL queries. The performance improvement is significant.
+    - [Use Case A Query builder](Use%20case%20A/Use%20Case%20A%20Query%20builder): Query builder, with inputs from the database (SE articles and SE Glossary articles). The latest version (June 2022) is a Google Colab notebook demonstrating the reading of all data from the Knowledge Database, with SPARQL queries. The performance improvement is significant.
 
     - [Use Case A Faceted search](Use%20case%20A/Use%20Case%20A%20Faceted%20search): Faceted search, with inputs from the database (SE articles). Among others, the code assigns the majority of the SE articles to (possibly more than one) themes, sub-themes and categories. Revised January 2022.  There is a Jupyter notebook version and a Google Colab one. The file name of the latter starts with GC_. There is also a more recent version (May 2022 - in Google Colab) which uses the Knowledge Database to return, for each SE article in the results, all related resources (and not only the related SE articles).
 
