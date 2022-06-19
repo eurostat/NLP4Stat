@@ -17,7 +17,7 @@ The KD_Population folder contains notebooks used for populating the knowledge da
 
 #### 1.3. Knowledge graph
 
-A knowledge graph can be created using the elements of the Knowledge_graph folder. A dedicated readme file is there. 
+A knowledge graph can be created using the elements of the Knowledge_graph folder. Please see [dedicated readme file](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/Knowledge_graph). 
 
 ### 2. Virtuoso Bundle
 In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Software Environment](https://github.com/eurostat/NLP4Stat/tree/testing/Software%20Environment).
