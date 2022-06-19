@@ -12,7 +12,9 @@ An already added ontology can be deleted by going to Linked Data/Graphs/Graphs a
 
 #### 1.2. Knowledge database population 
 
-The KD_Population folder contains notebooks used for populating the knowledge database with elements stored in the content database, using SPARQL queries. 
+The KD_Population folder contains notebooks used for populating the knowledge database. Please see [instructions]( https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD_Population)
+
+with elements stored in the content database, using SPARQL queries. 
 A demo notebook is available to select elements contained in the KDB.
 The ESTAT_Populate_KDB notebooks contain the addition of all elements that are currently stored and mapped (i.e. relations are modeled).
 As the process does not include a verification step of the presence of a triplet before adding it, the notebook should be launched once. Do not hesitate to delete and add anew the ontology before populating it again using the notebook. 
