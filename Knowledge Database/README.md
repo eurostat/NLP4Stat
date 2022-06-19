@@ -8,11 +8,11 @@ Before populating the KDB, the ontology files must be added to the database. Go 
 
 <img src="./Figs/Fig1.jpg" alt="Loading ontologies" width="600"/>
 
-An already added ontology can be deleted by going to Linked Data/Graphs/Graphs and click on Delete button associated to the ontology you wish to delete. 
+An already added ontology can be deleted by going to Linked Data/Graphs/Graphs and clicking the Delete button associated with the ontology which is going to be deleted. 
 
 #### 1.2. Knowledge database population 
 
-The KD_Population folder contains notebooks used for populating the knowledge database. Please see [relevant instructions]( https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD_Population).
+The KD_Population folder contains notebooks and Python scripts used for the populating the knowledge database. Please see [relevant instructions]( https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD_Population).
 
 #### 1.3. Knowledge database backup 
 
@@ -33,7 +33,7 @@ data_000001.ttl.gz, data_000002.ttl.gz, data_000003.ttl.gz, …
 
 #### 1.5. Knowledge graph
 
-A knowledge graph can be created using the elements of the Knowledge_graph folder. Please see [dedicated readme file](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/Knowledge_graph). 
+A knowledge graph can be created using the notebook in the Knowledge_graph folder. Please see [dedicated readme file](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/Knowledge_graph). 
 
 ### 2. Virtuoso Bundle
 In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Software Environment](https://github.com/eurostat/NLP4Stat/tree/testing/Software%20Environment).
