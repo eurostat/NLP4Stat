@@ -22,7 +22,9 @@ dump_one_graph('https://ec.europa.eu/eurostat/nlp4stat/knowledge/', './data_', 1
 
 The backup files are located in folder C:\virtuoso\db in the Virtual Machine of lod.csd.auth.gr (Windows):   
 data_000001.ttl.graph and   
-data_000001.ttl.gz
+data_000001.ttl.gz  
+
+There may be more files, similarly numbered (data_000002., data_000003., ... ) if the database is large.
 
 
 
