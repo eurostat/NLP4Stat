@@ -26,9 +26,12 @@ data_000001.ttl.gz
 
 There may be more files, similarly numbered (data_000002., data_000003., ... ) if the database is large.
 
+#### 1.4. Knowledge database restore
 
+Go to Conductor / Linked Data / Quad Store Upload (named graph IRI: https://ec.europa.eu/eurostat/nlp4stat/knowledge/) and upload the files  
+data_000001.ttl.gz, data_000002.ttl.gz, data_000003.ttl.gz, …
 
-#### 1.4. Knowledge graph
+#### 1.5. Knowledge graph
 
 A knowledge graph can be created using the elements of the Knowledge_graph folder. Please see [dedicated readme file](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/Knowledge_graph). 
 
