@@ -38,4 +38,4 @@ A knowledge graph can be created using the notebook in the Knowledge_graph folde
 ### 2. Virtuoso Bundle
 In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Software Environment](https://github.com/eurostat/NLP4Stat/tree/testing/Software%20Environment).
 
-The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the [Scrapper](Scrapper) folder.
+The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the [Scrapper](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/CDB%20content/Scrapper) folder.
