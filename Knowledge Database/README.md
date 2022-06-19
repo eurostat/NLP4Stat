@@ -14,8 +14,13 @@ An already added ontology can be deleted by going to Linked Data/Graphs/Graphs a
 
 The KD_Population folder contains notebooks used for populating the knowledge database. Please see [relevant instructions]( https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD_Population).
 
+#### 1.3. Knowledge database backup 
 
-#### 1.3. Knowledge graph
+To take a backup of the whole knowledge graph, go to Conductor / Interactive SQL (ISQL) and paste the code in xxx, then paste below the command:
+dump_one_graph('https://ec.europa.eu/eurostat/nlp4stat/knowledge/', './data_', 1000000000); 
+
+
+#### 1.4. Knowledge graph
 
 A knowledge graph can be created using the elements of the Knowledge_graph folder. Please see [dedicated readme file](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/Knowledge_graph). 
 
