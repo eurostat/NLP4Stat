@@ -12,7 +12,7 @@ An already added ontology can be deleted by going to Linked Data/Graphs/Graphs a
 
 #### 1.2. Knowledge database population 
 
-The KD_Population folder contains notebooks and Python scripts used for the populating the knowledge database. Please see [relevant instructions]( https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD_Population).
+The KD_Population folder contains notebooks and Python scripts used for the populating of the knowledge database. Please see [relevant instructions]( https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD_Population).
 
 #### 1.3. Knowledge database backup 
 
