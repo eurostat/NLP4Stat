@@ -63,5 +63,4 @@ In each folder with the same name in the [Script SQL folder](./CDB%20content/Scr
 
 ## 7. The CDB schema
 
-In each folder with the same name in the [Script SQL folder](./CDB%20content/Script%20SQL) you can find the structure of the needed tables.
-
+Please see [CDB schema](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/CDB%20schema) File CDB_tables.docx briefly describes the main tables in the Content Database, i.e. those that were actually used in the Use Cases. Other tables which were left unused are not included in this description.
