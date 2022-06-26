@@ -1,4 +1,4 @@
-# Revision note: this is outdated content
+# Revision note: this is outdated content - please see [KD model v2](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database/KD%20model%20v2)
 
 # NLP4Stat Knowledge Database
 
