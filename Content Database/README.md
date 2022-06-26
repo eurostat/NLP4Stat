@@ -59,4 +59,9 @@ Then you can add some datatsets.  Launch first the [estat_dataset_label_data.sql
 
 ## 6. Taxonomy, Terminology, Topic Model
 
+In each folder with the same name in the [Script SQL folder](./CDB%20content/Script%20SQL) you can find the structure of the needed tables.  
+
+## 7. The CDB schema
+
 In each folder with the same name in the [Script SQL folder](./CDB%20content/Script%20SQL) you can find the structure of the needed tables.
+
