@@ -1,3 +1,5 @@
+# Revision note: this is outdated content
+
 # NLP4Stat Knowledge Database
 
 ## Content folder
