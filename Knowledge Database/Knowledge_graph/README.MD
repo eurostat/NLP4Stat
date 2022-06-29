@@ -19,11 +19,11 @@ The steps are as follows:
 ### Examples: 
 #### keywords = migrant integration 
 
-<img src="./Figs/migrant_integration.png" width="800">
+<img src="./Figs/migrant_integration_2.png" width="800">
 
 #### keywords = electric vehicle 
 
-<img src="./Figs/electric_vehicle.png" width="800">
+<img src="./Figs/electric_vehicle_2.png" width="800">
 
 #### keywords = mortality statistics 
 
