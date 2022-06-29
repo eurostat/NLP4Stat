@@ -1,6 +1,6 @@
 # Knowledge graph visualization
 
-- [Knowledge_graph_2022_05_16.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/Knowledge_graph/Knowledge_graph_2022_05_16.ipynb) : this is a **updated version in a Google Colab notebook** working with the **new knowledge database**. Please see instructions at the top of the notebook.
+- [Knowledge_graph_2022_06_29.ipynb](Knowledge_graph_2022_06_29.ipynb) : this is a **updated version in a Google Colab notebook** working with the **new knowledge database**. Please see instructions at the top of the notebook.
 
 
 The steps are as follows: 
