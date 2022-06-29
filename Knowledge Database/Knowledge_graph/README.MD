@@ -27,4 +27,4 @@ The steps are as follows:
 
 #### keywords = morbidity statistics 
 
-<img src="./Figs/moridity_statistics.png" width="800">
+<img src="./Figs/morbidity_statistics.png" width="800">
