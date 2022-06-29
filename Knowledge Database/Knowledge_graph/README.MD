@@ -25,6 +25,6 @@ The steps are as follows:
 
 <img src="./Figs/electric_vehicle_2.png" width="800">
 
-#### keywords = mortality statistics 
+#### keywords = morbidity statistics 
 
-<img src="./Figs/mortality_statistics.png" width="800">
+<img src="./Figs/moridity_statistics.png" width="800">
