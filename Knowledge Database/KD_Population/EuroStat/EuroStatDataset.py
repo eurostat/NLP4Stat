@@ -15,12 +15,13 @@ def createClass(listAllClasses):
         helper = ""
         description = str(cl[1]).replace("\"", "").replace("\'", "")
         helper = "estat:" + str(cl[0]) + " rdf:type owl:Class.\n"
-        helper = helper + "estat:" + str(cl[0]) + " rdf:type owl:StatisticalData.\n"
+        helper = helper + "estat:" + str(cl[0]) + " rdf:type estat:StatisticalData.\n"
         helper = helper + "estat:" + str(cl[0]) + " rdfs:label \"" + description[1:] + "\"^^xsd:string.\n"
         helper = helper + "estat:" + str(cl[0]) + " estat:hasCode estatdata:" + str(cl[0]) + ".\n"
         helper = helper + "estatdata:" + str(cl[0]) + " rdf:type estat:Code.\n"
         helper = helper + "estatdata:" + str(cl[0]) + " estat:term \"" + str(cl[0]) + "\"^^xsd:string.\n"
         helper = helper + "estat:" + str(cl[0]) + " estat:databasePath   \"" + str(cl[2][1:]) + "\"^^xsd:string.\n"
+        helper = helper + "estat:" + str(cl[0]) + " estat:level \"" + str(cl[3]) + "\"^^xsd:string.\n"
         f.write(helper)
     f.close()
 
@@ -71,7 +72,8 @@ if __name__=="__main__":
             for name in names:
                 listNames = listNames + re.sub("[^a-zA-Z\d%]", ' ', name).replace("   ", " ").replace("  ", " ").replace("\xa0", "").replace("\' ", "") + "; "
             finalListNames = listNames.replace("   ", " ").replace("  ", " ")[:-2]
-            classes.append((hier[-1], helperDescription.replace("   ", " ").replace("  ", " ").replace("\" ", " "), finalListNames))
+            level = str(df.loc[i, "level"]).replace("\xa0", "")
+            classes.append((hier[-1], helperDescription.replace("   ", " ").replace("  ", " ").replace("\" ", " "), finalListNames, level))
 
     print(len(hierarchyTuple), len(classes))
 
