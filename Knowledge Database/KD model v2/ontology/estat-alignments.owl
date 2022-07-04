@@ -1,0 +1,72 @@
+@prefix : <https://ec.europa.eu/eurostat/NLP4StatRef/ontology/alignments/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix oecd: <https://ec.europa.eu/eurostat/NLP4StatRef/knowledge/oecd/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix estat: <https://ec.europa.eu/eurostat/NLP4StatRef/ontology/> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix estatdata: <https://ec.europa.eu/eurostat/NLP4StatRef/knowledge/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcmi: <http://purl.org/dc/dcmitype/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix sdo: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/spec/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@base <https://ec.europa.eu/eurostat/NLP4StatRef/ontology/alignments> .
+
+<https://ec.europa.eu/eurostat/NLP4StatRef/ontology/alignments> rdf:type owl:Ontology ;
+                                                       rdfs:comment "Alignments"@en .
+
+estat:Classification rdfs:subClassOf skos:Concept .
+estat:MeasurementType rdfs:subClassOf qb:AttributeProperty .
+estat:StatisticalType rdfs:subClassOf qb:AttributeProperty .
+estat:Content rdfs:subClassOf dcat:Resource .
+estat:Article rdfs:subClassOf dcmi:Text .
+estat:Article rdfs:subClassOf foaf:Document .
+estat:Article rdfs:subClassOf sdo:Article .
+estat:StatisticalData rdfs:subClassOf dcat:Dataset .
+estat:StatisticalData rdfs:subClassOf sdo:Dataset .
+estat:StatisticalData rdfs:subClassOf dcmi:Dataset .
+estat:GlossaryTerm rdfs:subClassOf skos:Concept .
+estat:Paragraph rdfs:subClassOf dcmi:Text .
+estat:Reference rdfs:subClassOf dcat:Resource .
+estat:ExternalLink rdfs:subClassOf sdo:WebPage .
+estat:Legislation owl:equivalentClass sdo:Legislation .
+estat:hasClassification a owl:ObjectProperty; rdfs:subPropertyOf skos:related .
+estat:hasCategory a owl:ObjectProperty; rdfs:subPropertyOf dc:subject .
+estat:hasTopic a owl:ObjectProperty; rdfs:subPropertyOf dc:subject .
+estat:hasType a owl:ObjectProperty; owl:equivalentProperty dc:type .
+estat:hasGlossaryTerm a owl:ObjectProperty; rdfs:subPropertyOf dc:subject .
+estat:hasTheme a owl:ObjectProperty; owl:equivalentProperty dcat:theme .
+estat:hasReference a owl:ObjectProperty; owl:equivalentProperty dc:references .
+estat:hasParagraph a owl:ObjectProperty; rdfs:subPropertyOf dc:hasPart .
+estat:content a owl:DatatypeProperty; rdfs:subPropertyOf dc:abstract .
+estat:context a owl:DatatypeProperty; rdfs:subPropertyOf dc:description .
+estat:dateCreated a owl:DatatypeProperty; rdfs:subPropertyOf dc:date .
+estat:dateCreated a owl:DatatypeProperty; owl:equivalentProperty dc:issued .
+estat:dateUpdated a owl:DatatypeProperty; owl:equivalentProperty dc:modified .
+estat:dateUpdated a owl:DatatypeProperty; rdfs:subPropertyOf dc:date .
+estat:definition a owl:DatatypeProperty; owl:equivalentProperty skos:definition .
+estat:fileDescription a owl:DatatypeProperty; rdfs:subPropertyOf dc:description .
+estat:id a owl:DatatypeProperty; rdfs:subPropertyOf dc:identifier .
+estat:id a owl:DatatypeProperty; rdfs:subPropertyOf dcat:identifier .
+estat:keyword a owl:DatatypeProperty; owl:equivalentProperty dcat:keyword .
+estat:remark a owl:DatatypeProperty; rdfs:subPropertyOf skos:note .
+estat:title a owl:DatatypeProperty; owl:equivalentProperty dc:title .
+estat:hasURL a owl:DatatypeProperty; rdfs:subPropertyOf dcat:accessURL .
+estat:hasURL a owl:DatatypeProperty; rdfs:subPropertyOf sdo:url .
+estat:hasURI a owl:ObjectProperty; rdfs:subPropertyOf sdo:sameAs .
+estat:fileLink a owl:DatatypeProperty; rdfs:subPropertyOf dcat:downloadURL .
+estat:dataSource a owl:DatatypeProperty; rdfs:subPropertyOf sdo:backstory .
+estat:sourcePublication a owl:DatatypeProperty; rdfs:subPropertyOf sdo:isBasedOn .
+estat:hasSubTheme a owl:ObjectProperty; rdfs:subPropertyOf skos:narrower .
+estat:relatedTerm a owl:ObjectProperty; rdfs:subPropertyOf dc:relation .
+estat:relatedTerm a owl:ObjectProperty; rdfs:subPropertyOf skos:related .
+estat:relatedTheme a owl:ObjectProperty; rdfs:subPropertyOf dc:relation .
+estat:relatedTheme a owl:ObjectProperty; rdfs:subPropertyOf skos:related .
