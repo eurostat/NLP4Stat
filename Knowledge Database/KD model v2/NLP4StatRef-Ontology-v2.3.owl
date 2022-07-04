@@ -14,6 +14,8 @@
 @base <https://ec.europa.eu/eurostat/NLP4StatRef/ontology/> .
 
 <https://ec.europa.eu/eurostat/NLP4StatRef/ontology/> rdf:type owl:Ontology ;
+                                                       owl:imports <file:/G:/Nick/Projects/Quantos/ontology-KG-files/estat-Database.owl> ,
+                                                                   estat:alignments ;
                                                        rdfs:comment "This is the version 1.0 of the ontology for the NLP4StatRef Knowledge Database."@en ;
                                                        owl:versionInfo """2022.04.20 - This ontology carries all the classes and properties necessary for the description of the knowledge resulting from the processed data. 
 It must be enriched with the description of the enrichments resulting from semantic analyses.
@@ -65,12 +67,12 @@ estat:hasCategoryOfStatisticExplainedArticle rdf:type owl:ObjectProperty ;
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/hasClassification
 estat:hasClassification rdf:type owl:ObjectProperty ;
-                        rdfs:domain estat:Content ;
-                        rdfs:range [ rdf:type owl:Class ;
-                                     owl:unionOf ( estat:Classification
-                                                   estat:GlossaryTerm
-                                                 )
-                                   ] ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( estat:Content
+                                                    estat:GlossaryTerm
+                                                  )
+                                    ] ;
+                        rdfs:range estat:Classification ;
                         rdfs:comment "A property that shows if an article from the Editorial Content has any Classification"^^xsd:string ;
                         rdfs:label "hasClassification"^^xsd:string .
 
@@ -82,6 +84,12 @@ estat:hasCode rdf:type owl:ObjectProperty ;
               rdfs:range estat:Code ;
               rdfs:comment "A property that relates a dataset to its code(-s). Basically is the labels of the Statistical Data"^^xsd:string ;
               rdfs:label "hasCode"^^xsd:string .
+
+
+###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/hasEurostatTheme
+estat:hasEurostatTheme rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf estat:hasTheme ;
+                       rdfs:range estat:EurostatTheme .
 
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/hasFrequentTerm
@@ -121,7 +129,11 @@ estat:hasOECDTerm rdf:type owl:ObjectProperty ;
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/hasOECDTheme
 estat:hasOECDTheme rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf estat:hasTheme ;
-                   rdfs:domain estat:OECDTerm ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( estat:Content
+                                               estat:OECDTerm
+                                             )
+                               ] ;
                    rdfs:range estat:OECDTheme ;
                    rdfs:comment "A property that relates the OECD themes with the OECD terms"^^xsd:string ;
                    rdfs:label "hasOECDTheme"^^xsd:string .
@@ -144,7 +156,7 @@ estat:hasReference rdf:type owl:ObjectProperty ;
                                ] ;
                    rdfs:range estat:Reference ;
                    rdfs:comment "A property that relates an article or a dataset with its resources" ;
-                   rdfs:label "hasResource" .
+                   rdfs:label "hasReference" .
 
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/hasSubTheme
@@ -240,14 +252,6 @@ estat:dataSource rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
                  rdfs:comment "A property that connects the articles from the Editorial Content with their Data Source(-s)"^^xsd:string ;
                  rdfs:label "dataSource"^^xsd:string .
-
-
-###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/databasePath
-estat:databasePath rdf:type owl:DatatypeProperty ;
-                   rdfs:domain estat:StatisticalData ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "A property that relates the datasets with the path of its names" ;
-                   rdfs:label "databasePath" .
 
 
 ###  https://ec.europa.eu/eurostat/NLP4StatRef/ontology/dateCreated
