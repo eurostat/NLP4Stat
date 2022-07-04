@@ -18,7 +18,7 @@ Figure 1 -- Setting the data path in the MS Power BI application.
 
 The required files and the codes producing them are shown in Figure 2 below. They are all included in the GitHub at:
 
-<https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/Power_BI>
+<https://github.com/eurostat/NLP4Stat/tree/main/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/Power_BI>
 
 -   The main data coming from the database through the Python code *Use Case A prepare data_v2_rev_Jan2022.ipynb* (revised on January 2022), is exactly the same as the one used in the R Shiny application[^1]. As shown in Figure 2, the application will automatically recognize the latest files required (one matching the regex "\^SE_df.\*xlsx\$" and another matching "\^Crumbs.\*xlsx$" ) in the folder defined by the parameter *DataPath*. At the time of the writing of the current document, these files were named  SE_df_1_31_17_18.xlsx and Crumbs_1_31_17_18.xlsx.
 
@@ -95,4 +95,4 @@ The main visual in this screen is a treemap with the 20 topics. When a user sele
 
 Figure 8 -- Graphical exploration in MS Power BI: Topic modeling.
 
-[^1]: See: <https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md>
+[^1]: See: <https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/R%20Shiny%20files/R%20Shiny%20application.md>
