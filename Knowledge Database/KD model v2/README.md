@@ -6,6 +6,8 @@ This folder contains:
 
 All the above are finalized, subject to minor changes.
 
+## New documentation (in progress)  
+
 This directory contains all the files related to the Eurostat ontology and the Eurostat Knowledge Graph (or Knowledge DataBase - KDB). Specifically:
 *    Folder “ontology”:  
     -    estat.owl: This is the main Eurostat ontology file (in OWL), that contains the definitions of the main classes and properties. It imports estat-alignments.owl and estat-Database.owl. This file was knowledge engineered manually. 
