@@ -3,25 +3,25 @@
 
 ### MS Power BI application
 
-The MS Power BI application works with the free desktop version and is portable. It can also be published to MS Azure cloud, with any Office 365 license. To install the application, it suffices to load the .pbix file ([Use_Case_B_graphical_expl_v14.pbix](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Use_Case_B_graphical_expl_v14.pbix) from any folder, and define the path where the required files are located from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
+The MS Power BI application works with the free desktop version and is portable. It can also be published to MS Azure cloud, with any Office 365 license. To install the application, it suffices to load the .pbix file ([Use_Case_B_graphical_expl_v14.pbix](https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Use_Case_B_graphical_expl_v14.pbix) from any folder, and define the path where the required files are located from the menu Transform data / Edit parameters. In the textbox, please put this path, ending with a backslash (\\). This parameter is called *DataPath*.
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image1.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image1.png" width="800">
 
 Figure 1 -- Setting the data path in the MS Power BI application.  
 
 The required files and the codes producing them are shown in Figure 2 below. They are all included in the current folder.
 
--    The main data are in two Excel files: _OECD_content_for_PowerBI.xlsx_  and _SE_df_for_PowerBI.xlsx_. These are produced by the Python code [PowerBI_inputs_v1_rev_Jan2022.ipynb](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/PowerBI_inputs_v1_rev_Jan2022.ipynb
+-    The main data are in two Excel files: _OECD_content_for_PowerBI.xlsx_  and _SE_df_for_PowerBI.xlsx_. These are produced by the Python code [PowerBI_inputs_v1_rev_Jan2022.ipynb](https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/PowerBI_inputs_v1_rev_Jan2022.ipynb
 ). 
 -    These data create the internal tables "OECD", "OECD_repeated rows" and "SE_articles" (see Figure 3). The first one comes from the original data while the second is created from the first by splitting themes, subthemes and OECD themes into unique values (in repeated rows). The third table contains data from the SE articles. 
--    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook [SE_OECD_Glossary_Common_NPs_rev_Jan2022](https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/SE_OECD_Glossary_Common_NPs_rev_Jan2022.ipynb
+-    Another input file is the Excel file _SE_vs_OECD_Glossary_Noun_Phrases.xlsx_  produced by the Jupyter notebook [SE_OECD_Glossary_Common_NPs_rev_Jan2022](https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/SE_OECD_Glossary_Common_NPs_rev_Jan2022.ipynb
 ). The produced Excel file creates the table "Noun_Phrases" in Figure 3. 
 -    Other tables and values shown in Figure 3 ("Themes", "Official_colors") are auxiliary.
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image2b.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image2b.png" width="800">
 
 Figure 2 -- Feeding of the MS Power BI application.
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/tables.jpg" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/tables.jpg" width="800">
 
 Figure 3 -- Tables and relationships in the MS Power BI application.
 
@@ -31,7 +31,7 @@ The word cloud is based on words collected from the definitions of the OECD's st
 
 A weakness of the word cloud plot is the display of many common words. This is because the excluded words (other than some common stop-words) have to be entered manually. The alternative, of producing a word cloud with R via libraries tm and ggplot2 does not allow interaction through selection of words. 
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image4.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image4.png" width="800">
 
 Figure 4 -- Graphical exploration in MS Power BI: Page "Themes, sub-themes and OECD-Themes (1)".
 
@@ -40,18 +40,18 @@ The **second screen** ("Themes, sub-themes and OECD-Themes (2)") (see Figure 5) 
 In the bar chart to the left of the page, the user can select Eurostat subthemes within Eurostat themes and his/her selection interacts with the table below, which shows the corresponding OECD's statistical terms together with their URLs. There is also a pie chart at the bottom right of the page, showing the distribution into years of last update (again, allowing inverse interaction, i.e. further filtering by selected years).  
 
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image5.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image5.png" width="800">
 
 Figure 5 -- Graphical exploration in MS Power BI: Page "Themes, sub-themes and OECD-Themes (2)".
 
 The **third screen** ("Themes, sub-themes and OECD-Themes (3)") (see Figure 6) also links Eurostat themes and subthemes, OECD themes and OECD's statistical terms, with the same data as in the first and second screens. It contains a selector with the Eurostat themes and subthemes and the OECD themes in the upper left part.There is a last update year filter too below this selector.The table at the bottom shows the OECD's statistical terms with their URLs and when the user clicks on a statistical term then the table above shows the source publication  for this statistical term (see Figure 6). When the user clicks the button **Related OECD's statistical terms** then the table changes and displays the related statistical terms along with their URLs (see Figure 7).Pressing the **Back** button returns to the previous view of the table with only the OECD's statistical terms with their URLs, i.e. as in Figure 6.
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image6.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image6.png" width="800">
 
 Figure 6 -- Graphical exploration in MS Power BI:  Page "Themes, sub-themes and OECD-Themes".
 
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image7.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image7.png" width="800">
 
 Figure 7 -- Graphical exploration in MS Power BI: Graphical exploration in MS Power BI: Page "Themes, sub-themes and OECD-Themes" after pressing the button "Related OECD's statistical terms".
 
@@ -59,11 +59,11 @@ The fourth screen ("Common_Noun_Phrases" - Figure 8) shows a search tool (attrib
 
 Below the selection part, there are two tables, which display the results, based on the user's query.The first table shows the Statistics Explained articles with their URLs and the relevant Eurostat themes and sub-themes.The second table displays the corresponding OECD's results. For example, if the user enters the "quality life" noun phrase, then the "quality life" tag is added and the tables are changed automatically to reflect this choice. Figures 8 and 9 show these results before (initial results) and after clicking on the bar (filtered results).
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image8.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image8.png" width="800">
 
 Figure 8 -- Graphical exploration in MS Power BI: Page "Common_Noun_Phrases" – before clicking on the bar.
 
-<img src="https://github.com/eurostat/NLP4Stat/blob/testing/Use%20case%20B/Power%20BI/Figs/image9.png" width="800">
+<img src="https://github.com/eurostat/NLP4Stat/blob/main/Use%20case%20B/Power%20BI/Figs/image9.png" width="800">
 
 Figure 9 -- Graphical exploration in MS Power BI: Page "Common_Noun_Phrases" – after clicking on the bar.
 
