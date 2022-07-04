@@ -1,0 +1,18 @@
+version: '3'
+services:
+  virtuoso:
+    container_name: virtuoso
+    restart: unless-stopped
+    image: openlink/virtuoso-opensource-7:latest
+    #stdin_open: true
+    #tty: true
+    #build: .
+    environment:
+     DBA_PASSWORD: dba
+    ports:
+     - "1111:1111"
+     - "8890:8890"
+    volumes:
+     - /srv/docker/data/virtuoso:/data
+       #  - /srv/docker/rserve/home:/home
+       #- /srv/docker/rserve/site-library:/usr/local/lib/R/site-library

@@ -4,3 +4,4 @@ python-Levenshtein
 pyLDAvis
 xlrd
 openpyxl
+-e git+https://github.com/maparent/pyodbc.git@v4-virtuoso#egg=pyodbc

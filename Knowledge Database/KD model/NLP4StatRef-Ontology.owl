@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://nlp4statref/knowledge/ontology#"
+     xml:base="http://nlp4statref/knowledge/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://nlp4statref/ontology">
+        <rdfs:comment xml:lang="en">This is the version 1.0 of the ontology for the NLP4StatRef Knowledge Database.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">2022.02.13 - This ontology carries all the classes and properties necessary for the description of the knowledge resulting from the processed data. 
+It must be enriched with the description of the enrichments resulting from semantic analyses.
+This version does not integrate the standard ontologies, the association being carried by the instantiation of the Knowledge database. An update of the ontology will be done, after the control of the instantiation, integrating then standard ontologies.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nlp4statref/ontology#associatedTerm -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#associatedTerm">
+        <rdfs:comment xml:lang="en">references the term(s) associated to a concept of a lexicalized taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">associated Term</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#codeList -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#codeList">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#CodeList"/>
+        <rdfs:comment xml:lang="en">gives the code list associated with a Dimension Property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube"/>
+        <rdfs:label xml:lang="en">code List</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+        <owl:versionInfo xml:lang="en">The currrent model only describes coded dimensions to respond to the use cases of the project.</owl:versionInfo>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#codeListItem -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#codeListItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">gives the code list item associated with a Dimension Observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">code List item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#dataSet -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#dataSet">
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#DimensionObservation"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#StatisticalDataset"/>
+        <rdfs:comment xml:lang="en">indicates the Statistical Dataset of which this observation is a part.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube#"/>
+        <rdfs:label xml:lang="en">data Set</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#dimensionProperty -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#dimensionProperty">
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#DimensionProperty"/>
+        <rdfs:comment xml:lang="en">indicates a Dimension Property expected on the Statistical Dataset.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube#"/>
+        <rdfs:label xml:lang="en">dimension Property</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#hasForReferenceMetadata -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#hasForReferenceMetadata">
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#StatisticalDataset"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#StatisticalReferenceMetadata"/>
+        <rdfs:comment xml:lang="en">refers to the Statistical Reference metadata description of the Statistical Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">has For Reference Metadata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#inCategrory -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#inCategrory">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#inTaxonomy"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">refers to the concept of the Eurostat Category Taxonomy associated to the article.</rdfs:comment>
+        <rdfs:label xml:lang="en">in Category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#inDatabaseTree -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#inDatabaseTree">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#inTaxonomy"/>
+        <owl:inverseOf rdf:resource="http://nlp4statref/ontology#memberOfDatabaseTree"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#StatisticalDataset"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">refers to the concept of the Eurostat Database Tree Taxonomy associated to the Statistical Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">in Database Tree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#inFamily -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#inFamily">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#inTaxonomy"/>
+        <owl:inverseOf rdf:resource="http://nlp4statref/ontology#memberOfFamily"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#CodeList"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">refers to the concept of the Eurostat Family Taxonomy associated to the Code List.</rdfs:comment>
+        <rdfs:label xml:lang="en">in Family</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#inTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#inTaxonomy">
+        <owl:inverseOf rdf:resource="http://nlp4statref/ontology#memberOfTaxonomy"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">indicates the taxonomy that references a concept and describes it.</rdfs:comment>
+        <rdfs:label xml:lang="en">in Taxonomy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#inTermExtension -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#inTermExtension">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#inTaxonomy"/>
+        <owl:inverseOf rdf:resource="http://nlp4statref/ontology#memberOfTermExtension"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">refers to the concept of the Eurostat Term Extension Taxonomy associated to the Eurostat Glossary</rdfs:comment>
+        <rdfs:label xml:lang="en">in Term Extension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#inTheme -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#inTheme">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#inTaxonomy"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">refers to the concept of the Eurostat Theme Taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">in Theme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#memberOfCategory -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#memberOfCategory">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#memberOfTaxonomy"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">indicates an individual that reference the concept of the Eurostat Category taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">member Of Category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#memberOfDatabaseTree -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#memberOfDatabaseTree">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#memberOfTaxonomy"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#StatisticalDataset"/>
+        <rdfs:comment xml:lang="en">indicates the Statistical Dataset associated to the concept of the Eurostat Database Tree Taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">member Of Database Tree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#memberOfFamily -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#memberOfFamily">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#memberOfTaxonomy"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">indicates the Code List associated to the concept of the Eurostat Family Taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">member Of Family</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#memberOfTaxonomy -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#memberOfTaxonomy">
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">indicates a concept that reference the concept of the taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">member Of Taxonomy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#memberOfTermExtension -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#memberOfTermExtension">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#memberOfTaxonomy"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">indicates Terms associated to the concept of the Eurostat Term Extension Taxonomy.</rdfs:comment>
+        <rdfs:label xml:lang="en">member Of Term Extension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#referenceMetadataOf -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#referenceMetadataOf">
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#StatisticalReferenceMetadata"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#StatisticalDataset"/>
+        <rdfs:comment xml:lang="en">indicates the Statistical Dataset described by the Statistical Reference Metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">reference Metadata Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#relatedContent -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#relatedContent">
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#Content"/>
+        <rdfs:comment xml:lang="en">indicates a content that references a content or a concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">related Content</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#relatedEditorialContent -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#relatedEditorialContent">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#relatedContent"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:comment xml:lang="en">indicates an editorial content that references a content or a concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">related Editorial Content</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#relatedLegalData -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#relatedLegalData">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#relatedContent"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#LegalData"/>
+        <rdfs:comment xml:lang="en">indicates a legal data that references a content or a concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">related Legal Data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#relatedStatisticalData -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#relatedStatisticalData">
+        <rdfs:subPropertyOf rdf:resource="http://nlp4statref/ontology#relatedContent"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#StatisticalData"/>
+        <rdfs:comment xml:lang="en">indicates a statistical data that references a content or a concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">related Statistical Data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#reportData -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#reportData">
+        <owl:inverseOf rdf:resource="http://nlp4statref/ontology#reportSource"/>
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#StatisticalDataReport"/>
+        <rdfs:comment xml:lang="en">gives the URI of the Statistical Data reportreport subject of a Statistical article or a BackgroundArticle.</rdfs:comment>
+        <rdfs:label xml:lang="en">report Data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#reportSource -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#reportSource">
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#StatisticalDataReport"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:comment xml:lang="en">indicates the Editorial Content which comments the Statistical Data Report.</rdfs:comment>
+        <rdfs:label xml:lang="en">report Source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#resourceInformation -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#resourceInformation">
+        <rdfs:comment xml:lang="en">refers to the source of information. The controlled vocabulary is https://nlp4statref/resource/authority/resource-information.</rdfs:comment>
+        <rdfs:label xml:lang="en">resource Information</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#sourceOfInformation -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#sourceOfInformation">
+        <rdfs:comment xml:lang="en">gives the references of the original source of information.</rdfs:comment>
+        <rdfs:label xml:lang="en">source Of Information</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://nlp4statref/ontology#structure -->
+
+    <owl:ObjectProperty rdf:about="http://nlp4statref/ontology#structure">
+        <rdfs:domain rdf:resource="http://nlp4statref/ontology#StatisticalDataset"/>
+        <rdfs:range rdf:resource="http://nlp4statref/ontology#DataStructureDefinition"/>
+        <rdfs:comment xml:lang="en">indicates the structure to which the statistical Dataset conforms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube"/>
+        <rdfs:label xml:lang="en">structure</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nlp4statref/ontology#deprecated -->
+
+    <owl:DatatypeProperty rdf:about="http://nlp4statref/ontology#deprecated">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://nlp4statref/ontology#Annotation -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Annotation">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Enrichment"/>
+        <rdfs:label xml:lang="en">Annotation</rdfs:label>
+        <owl:versionInfo xml:lang="en">Placeholder to describe with development team</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Article -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Article">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:comment xml:lang="en">A written content, from a news to an analysis on a topic of particular interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#AuthorityList -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#AuthorityList">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Resource"/>
+        <owl:disjointWith rdf:resource="http://nlp4statref/ontology#Vocabulary"/>
+        <rdfs:comment xml:lang="en">Authority list is a controlled vocabulary used to name particular entities consistently. It is structured in separate files dedicated to different types of entity. Types are codes, proper names, metadata or terms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Authority list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#CodeList -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#CodeList">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#AuthorityList"/>
+        <rdfs:comment xml:lang="en">Code lists are predefined, organized sets of items that describe one or more statistical concepts. They are the building blocks for defining statistical indicators. Code lists are used to build multi-dimensional tables.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Code List</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Content -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Content">
+        <owl:disjointWith rdf:resource="http://nlp4statref/ontology#Resource"/>
+        <rdfs:comment xml:lang="en">All types of described and annotated content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#DataStructureDefinition -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#DataStructureDefinition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The structure of a dataset.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube#"/>
+        <rdfs:label xml:lang="en">Data Structure Definition</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+        <owl:versionInfo xml:lang="en">The currrent model only describes dimensions to respond to the use cases of the project.</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#DimensionObservation -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#DimensionObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Deduplicated dimension values associated to observations of the DataSet.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dimension Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#DimensionProperty -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#DimensionProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Dimensions define what the observations apply to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube#"/>
+        <rdfs:label xml:lang="en">Dimension Property</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#EditorialContent -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#EditorialContent">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Content"/>
+        <rdfs:comment xml:lang="en">All the information written and published around the statistical data, to comment on them, explain them, ...</rdfs:comment>
+        <rdfs:label xml:lang="en">Editorial Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Enrichment -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Enrichment">
+        <rdfs:comment xml:lang="en">All enrichments from semantic analyses.</rdfs:comment>
+        <rdfs:label xml:lang="en">Enrichment</rdfs:label>
+        <owl:versionInfo xml:lang="en">Placeholder to describe with development team.</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Glossary -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Glossary">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Vocabulary"/>
+        <owl:disjointWith rdf:resource="http://nlp4statref/ontology#Taxonomy"/>
+        <rdfs:comment xml:lang="en">Glossary is an alphabetical list of terms relating to a specific subject enriched by definitions, related content….</rdfs:comment>
+        <rdfs:label xml:lang="en">Glossary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Infography -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Infography">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:comment xml:lang="en">A content that presents a subject in a visual way: images, diagrams and short texts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Infography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#LegalData -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#LegalData">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Content"/>
+        <rdfs:comment xml:lang="en">A legal document which can be legal act, case law, international agreements, and so on</rdfs:comment>
+        <rdfs:label xml:lang="en">Legal Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Publication -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Publication">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#EditorialContent"/>
+        <rdfs:comment xml:lang="en">A standalone and structured content published, periodically or not, like a leaflet, a book, ...</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Resource -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Resource">
+        <rdfs:comment xml:lang="en">All types of controlled vocabularies, classifications and dictionaries.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#StatisticalData -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#StatisticalData">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Content"/>
+        <rdfs:comment xml:lang="en">Abstract class for statistical content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Statistical Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#StatisticalDataReport -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#StatisticalDataReport">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#StatisticalData"/>
+        <rdfs:comment xml:lang="en">Statistics (table or dataset), assembled in a file, subject of an editorial content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Statistical Data Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#StatisticalDataset -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#StatisticalDataset">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#StatisticalData"/>
+        <owl:disjointWith rdf:resource="http://nlp4statref/ontology#StatisticalReferenceMetadata"/>
+        <rdfs:comment xml:lang="en">Statistical Datasets presented in simple or multi-dimensional tables.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/linked-data/cube#"/>
+        <rdfs:label xml:lang="en">Statistical Dataset</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/vocab-data-cube/"/>
+        <owl:versionInfo xml:lang="en">The currrent model of this content type, which is already standardized, describes the useful information to respond to the use cases of the project.</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#StatisticalReferenceMetadata -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#StatisticalReferenceMetadata">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#StatisticalData"/>
+        <rdfs:comment xml:lang="en">Explanatory texts documenting statistical data and providing summary information useful for assessing data quality and the statistical production process in general.</rdfs:comment>
+        <rdfs:label xml:lang="en">Statistical Reference Metadata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Taxonomy -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Taxonomy">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Vocabulary"/>
+        <rdfs:comment xml:lang="en">Taxonomy is the conception, naming, and classification of concepts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Taxonomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Topic -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Topic">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Enrichment"/>
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+        <owl:versionInfo xml:lang="en">Placeholder to describe with development team.</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://nlp4statref/ontology#Vocabulary -->
+
+    <owl:Class rdf:about="http://nlp4statref/ontology#Vocabulary">
+        <rdfs:subClassOf rdf:resource="http://nlp4statref/ontology#Resource"/>
+        <rdfs:comment xml:lang="en">All sets of terms listed in a lexicon, structured in a taxonomy, described in a dictionary or a glossary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vocabulary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://nlp4statref/ontology#DataStructureDefinition"/>
+            <rdf:Description rdf:about="http://nlp4statref/ontology#DimensionObservation"/>
+            <rdf:Description rdf:about="http://nlp4statref/ontology#DimensionProperty"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://nlp4statref/ontology#EditorialContent"/>
+            <rdf:Description rdf:about="http://nlp4statref/ontology#LegalData"/>
+            <rdf:Description rdf:about="http://nlp4statref/ontology#StatisticalData"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,1 +1,6 @@
 /Content Database/CDB content/Script SQL/.ipynb_checkpoints
+*_error.log
+.vs
+.vscode
+*.pyc
+Thumbs.db

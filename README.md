@@ -1,104 +1,48 @@
 # NLP4Stat
 ## Project organisation
-- Docker images
-- [Enrichement](https://github.com/eurostat/NLP4Stat/tree/main/Enrichment)
-- [Enrichement-Phase II](https://github.com/eurostat/NLP4Stat/tree/main/Enrichment-Phase%20II) - **under construction**
-- Illustrations
-- KD model
-- Scrapper : Python project where the various spiders are implemented
-- Script SQL : Script to build the content database
+- [Software Environment](Software%20Environment): contains instructions how to install and connect to the Virtuoso server. 
+- [Content Database](Content%20Database): contains instructions how to setup, scrape and load the data in the content database. Also contains sub-folders with enrichment codes: 
+    - [/Enrichment](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/Enrichment) and
+    - [/Enrichment-Phase II](https://github.com/eurostat/NLP4Stat/tree/testing/Content%20Database/Enrichment-Phase%20II)
+
+- [Knowledge Database](Content%20Database) - see [dedicated section](https://github.com/eurostat/NLP4Stat/tree/testing/Knowledge%20Database).
+- [Content and Knowledge Database documentation](NLP4StatRef-CD-KD-Documentation.docx): the documentation in a Word file, as of February 2022. This describes the version of the knowledge database **before the re-organization**. It is only valid for the **content database**.
+- [Knowledge Database latest documentation](https://github.com/eurostat/NLP4Stat/blob/testing/Knowledge%20Database/KD%20model%20v2/KD_Documentation_v2.3.docx): the latest documentation of the knowledge database **after the re-organization** in a Word file, as of June 2022. It includes the description of the two ontologies used and the alignment with external Linked Open Data (LOD) vocabularies.
 - Use Case A:
-    - [Use Case A Widgets Demo](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only, as part of deliverable D3.1. This is **superseded** by the next codes which are part of deliverable D3.2. 
-    - [Use Case A Query builder](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Query%20builder): Script towards a query builder, still based only on scraped content (the latest version from both Glossary articles and Statistics Explained articles). 
-    - [Use Case A Faceted search](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Faceted%20search): Faceted search, with inputs from the database (SE articles) except from one file (scraped categories per article - these are in the process of being transferred to the knowledge database). Among others, the code assigns the majority of the SE articles to (possibly more than one) themes, sub-themes and categories.
-    - [Use Case A Graphical exploration](https://github.com/eurostat/NLP4Stat/tree/main/Use%20Case%20A%20Graphical%20exploration). Two applications for graphical exploration, one in R Shiny and another in MS Power BI. See separate description in this link. The description includes links to short documentations for the two applications.
+
+    - [Use Case A Widgets Demo](Use%20case%20A/Use%20Case%20A%20Widgets%20Demo) : for demonstration of ipywidgets only, as part of deliverable D3.1. This is **superseded** by the next codes which are part of deliverable D3.2. 
+    - [Use Case A Query builder](Use%20case%20A/Use%20Case%20A%20Query%20builder): Query builder, with inputs from the database (SE articles and SE Glossary articles). The latest version (June 2022) is a Google Colab notebook demonstrating the reading of all data from the Knowledge Database, with SPARQL queries. The performance improvement is significant.
+
+    - [Use Case A Faceted search](Use%20case%20A/Use%20Case%20A%20Faceted%20search): Faceted search, with inputs from the database (SE articles). Among others, the code assigns the majority of the SE articles to (possibly more than one) themes, sub-themes and categories. Revised January 2022 to read all inputs from the database. The more recent version (May 2022 - in Google Colab) uses the Knowledge Database to return, for each SE article in the results, all related resources (and not only the related SE articles as in previous versions).
+
+    - [Use Case A Graphical exploration](Use%20case%20A/Use%20Case%20A%20Graphical%20exploration). Two applications for graphical exploration, one in R Shiny and another in MS Power BI. See separate description in this link. The description includes links to short documentations for the two applications.  Revised January 2022.
+
+- Use Case B:
+     - [Use Case B Query builder](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Use%20Case%20B%20Query%20builder) : Query builder using content from the SE Glossary articles, the SE articles and [OECD's Glossary of Statistical Terms](https://stats.oecd.org/glossary/). Revised January 2022 to eliminate external files. The latest version (June 2022) is a Google Colab notebook demonstrating the reading of all data from the Knowledge Database, with SPARQL queries. The performance improvement is significant.
+     - [Use Case B Faceted search](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Use%20Case%20B%20Faceted%20search). Using Eurostat themes and sub-themes to search articles from the OECD's Glossary of Statistical Terms. Among others, the code uses a correspondence between a) Eurostat's themes and sub-themes and b) OECD's Glossary themes. Revised January 2022 to eliminate external files. The latest version (May 2022 - in Google Colab notebook) uses the Knowledge Database to return OECD themes, both for the displayed articles and for their related ones.
+     - [Use Case B Graphical exploration - Power BI](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Power%20BI). An MS Power BI application. See separate documentation in this folder. Revised January 2022.
+     - [Use Case B SE OECD Common NPs](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Use%20Case%20B%20SE%20OECD%20Common%20NPs). This code finds common noun-phrases in Statistics Explained articles and OECD's Glossary articles. The objective was to create a common vocabulary for the labelling of both sources. This code reads from the database a manual filtering of the noun phrases found in the SE articles, keeping the most "useful" ones. 
+The common vocabulary is being used in the [Power BI](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Power%20BI) application in Use Case B. The folder contains also the output file (SE_vs_OECD_Glossary_Noun_Phrases.xlsx). Revised January 2022.
+     - [Use Case B Topic Modelling](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Use%20Case%20B%20Topic%20modelling): This is a demonstration code showing the application of topic modelling results based on Eurostat's content to OECD Glossary articles. See also note in this folder. Revised January 2022.
+     - [Use Case Β Scraping OECD](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20B/Use%20Case%20B%20Scraping%20OECD): Code for the scraping of OECD's Glossary articles and the writing of the scraped content in the Content Database. Revised January 2022.
+     
+- Use Case C:
+
+    - [Use Case C Word embeddings](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20C/Use%20Case%20C%20Word%20embeddings). Word vectors trained on SE articles and SE Glossary articles. Application for the identification of Eurostat datasets. The processing of SE and SE Glossary articles is for the first run only, to save the vectors model. After this, it suffices to load the model. This is also saved in plain text format for inspection (see file SE_GL_wordvectors.txt in folder). Revised (February 2022), no more requires the external file _table_of_contents.xml_. There is a Jupyter notebook version and a Google Colab one. The file name of the latter starts with GC_.
+     - [Use Case C Topic modelling and Word embeddings](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20C/Use%20Case%20C%20Topic%20modelling%20and%20Word%20embeddings). Combination of topic modelling and word embeddings for the identification of statistical datasets. Revised (February 2022), no more requires the external file _table_of_contents.xml_. One can either re-create the LDA model or load the saved one from the previous code, from file _lda_model.pl_ contained in compressed file lda_model.rar. A copy is included in the Use Case C/Data folder. The latest version is in a Google Colab notebook, adjusted (June 2022) to enrich the user's query with related terms and synonyms from an external ontology, ConceptNet, using two methods for access to such terms.
+        - Main features:  
+        - Carry-out topic modelling with a large enough corpus (Statistics Explained articles and Statistics Explained Glossary articles) and a large number of topics (1000) and extract significant (lemmatized) keywords. The objectives are two:
+            - to cover the whole corpus and thus the "correlated" datasets at a high granularity,
+            - avoid using common ("dominating") words in the matches with the user's query.
+         - Enhance these keywords with their closest terms from the word embeddings created exclusively from Eurostat's content. The total large number of keywords can then differentiate the datasets.
+         - Match the (similarly enhanced and enriched from ConceptNet) sentence(s) entered in the query, with datasets, based on the number of keywords found in the datasets (simple or full descriptions).
+         - Put first priority to the matches with words in the enhanced topic modelling dictionary and second to the matches with any other words, to avoid "dominating" terms.
+     
+     - [Use Case C BERT model](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20C/Use%20Case%20C%20BERT%20model). A BERT model, based on the SentenceTransformers Python framework  which uses the BERT algorithm to compute sentence embeddings. The strategy employed is to use a pre-trained BERT model, fine-tune it to the available corpus, and then use the “retrieve & re-rank pipeline” approach for the ranking of the matches, as is suggested for complex semantic search scenarios. This is a  Google Colab notebook and requires GPU for proper running. It also requires setting-up a Google drive to store the model and retrieve it in re-runs, avoiding the long computation time it requires. Revised (February 2022), no more requires the external file _table_of_contents.xml_. Adjusted (June 2022) to replace all SQL queries by SPARQL queries to the Knowledge Database and also to add the entries from Eurostat's Concepts and Definitions Database as inputs to the fine-tuning of the model.
+
+- Use Case D:
+    - [Use Case D using BERT](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20D). A demonstration code showing the logic of the databot. The notebook is in Google Colab notebook Use_Case_D_Using_BERT_v1.ipynb and requires a CUDA-enabled GPU. It can be used in bot conversations for the identification of either datasets or SE Glossary articles. The component for the identification of similar datasets or SE Glossary articles is based on the same S-BERT model used in Use Case C. The most time-consuming part is fine-tuning. This can be skipped if already run once.
+    - [Use Case D DeepPavlov](https://github.com/eurostat/NLP4Stat/tree/testing/Use%20case%20D).This is a code with the same logic, but implemented with the [DeepPavlov](https://deeppavlov.ai/) framework and also with some changes and improvements. Instructions are included at the top of the notebook, Use_Case_D_DeepPavlov_v2_rev_June2022.ipynb. The requirements (CUDA-enabled GPU) and the targets of the conversation with the databot (either datasets or SE Glossary articles) are the same. This code was adjusted (June 2022) to read all data with SPARQL queries from the Knowledge Database and also to include the terms and definitions from Eurostat's Concepts and Definitions Database as additional inputs in the fine-tuning stage.
 
 
 
-## Project instantiation
-
-### 1. Docker image
-Create the docker image using the `docker-compose up docker-compose.yml`. The [docker-compose.yml](Docker%20Images/docker-compose.yml) is in the `Docker Images` folder. 
-
-### 2. Conmect to the Virtuoso docker image
-
-In a browser go to http://localhost:8890
-and on the Virtuoso frontend/GUI click on Conductor login using the username `dba` and the password defined in the [docker-compose.yml](Docker%20Images/docker-compose.yml) file.
-
-### 3. Virtuoso user parameters
-
-![Virtuoso conductor](/Illustrations/virtuoso_conductor_homepage.PNG)
-
-Go to System Admin/User accounts , to be able to launch SPARQL queries, please edit the user account for the 'dba' user as such :
-
-![Virtuoso User account edit](/Illustrations/virtuoso_conductor_user_account_edit.png)
-
-![Virtuoso User account page](/Illustrations/virtuoso_conductor_user_accounts.PNG)
-
-### 4. Content database
-
-You will find in the Script SQL folder various file that help buil the content database. You can go to the  Datatbase/Interactive SQL tab.
-![Virtuoso interactive SQL](/Illustrations/virtuoso_conductor_interactive_SQL.PNG)
-
-#### 4.1 Structure
-
-If it is your first instantiation, please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/cdb_global_v1.sql)
-
-If you are updating an existing database the needed scripts can be find in the ![Script SQL folder](Content%20Database/CDB%20content/Script%20SQL) 
-
-
-#### 4.2 Static data
-
-Some tables have to be filled in order for the project to work, such as:
-- Named entities
-- Modality
-
-##### 4.2.1 Statistics Explained Data
-
-Like before, if it is your first instantiation of the database,  please use the ![global script](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained/cdb_global_se_data_v1.sql) .
-
-If it is an update, the scripts needed can be find in the ![Script SQL folder](Content%20Database/CDB%20content/Script%20SQL/Statistics%20Explained)
-
-Once the database is set you can start launching the various ![spiders](Content%20Database/CDB%20content/Scrapper/README.md)
-
-##### 4.2.2 Eurostat glossary
-In order to gather the glossary instead of scrapping the data we used the bulkdownload option and created SQL queries from it.
-
-First the ![modality queries](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_modalities_data.sql) have to be launch.
-
-Then the ![glossary data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_glossary_data.sql), in order to do it use the following Jupiter Notebook : ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb)
-
-Finally, you can add the last queries : ![estat13k_stat_and_measurement_unit_data](Content%20Database/CDB%20content/Script%20SQL/Estat13k/estat13k_stat_and_measurement_unit_data.sql)
-
-##### 4.2.3 Dictionnary and Datasets
-As previously, we did not scrap the following datas, we first downloaded the raw and created SQL queries in order to fill the database.
-
-The first step is to fill the ![mod_dictionnary table](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dictionnary_label_data.sql) and then using ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each ![dictionnary_code_data_batch](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets). 
-
-At these stage, the dictionnary and code are all in the content database, however we found that we have to add somme code to the time dictionnary in order for our work on the datasets to work. You'll find the added elemnts ![here](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dictionnary_code_data_time_addition.sql)
-
-Then you can add some ![datasets](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets/estat_dataset_label_data.sql) and then using ![cdb_insert.ipynb](Content%20Database/CDB%20content/Script%20SQL/cdb_insert.ipynb) launch each ![dictionnary_code_data_batch](Content%20Database/CDB%20content/Script%20SQL/Dictionnary%20and%20datasets) to add the links between the datasets and the dictionnaries. 
-
-
-### 5. Knowledge database
-
-#### 5.1 Loading and deleting ontologies
-
-Before populating the KDB, the ontology file must be added to the database. Go to Virtuoso Conductor/Linked Data/Quad Store Upload and load the NLP4Stat ontology by uploading the .owl file in https://github.com/eurostat/NLP4Stat/tree/main/KD%20model/. In the "Named Graph IRI*" field, write https://nlp4statref/knowledge/ontology/. This IRI will be used in the process of populating the KDB.
-A already added ontology can be deleted by going to Linked Data/Graphs/Graphs and click on Delete button associated to the ontology you wish to delete. 
-
-#### 5.2 Knowledge database population 
-
-The KD_Population folder contains notebooks used for populating the knowledge database with elements stored in the content database, using SPARQL queries. 
-A demo notebook is available to select elements contained in the KDB.
-The ESTAT_Populate_KDB notebooks contain the addition of all elements that are currently stored and mapped (i.e. relations are modeled).
-As the process does not include a verification step of the presence of a triplet before adding it, the notebook should be launched once. Do not hesitate to delete and add anew the ontology before populating it again using the notebook. 
-
-#### 5.3 Knowledge graph
-
-A knowledge graph can be created using the elements of the Knowledge_graph folder. A dedicated readme file is there. 
-
-### 6. Virtuoso Bundle
-In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Virtuoso Setup](https://github.com/eurostat/NLP4Stat/blob/main/Virtuoso%20Setup/README.md)
-
-The Virtuoso database is now set up. The first step is now to fill the content database with scrapped content. Please refer to the [Scrapper](Scrapper) folder.

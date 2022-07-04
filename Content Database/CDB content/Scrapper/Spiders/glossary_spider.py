@@ -26,7 +26,7 @@ from sql_request import *
 c = pyodbc.connect('DSN=Virtuoso All;' +
                    'DBA=ESTAT;' +
                    'UID=dba;' +
-                   'PWD=30gFcpQzj7sPtRu5bkes')
+                   'PWD=dba')
 cursor = c.cursor()
 
 class glossarySpider(scrapy.Spider):

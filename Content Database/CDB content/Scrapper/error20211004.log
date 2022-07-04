@@ -1,0 +1,948 @@
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Transportation_and_storage_statistics_-_NACE_Rev._2> (referer: 
+https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Ukraine-EU_-_international_trade_in_goods_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Turkey-EU_-_international_trade_in_goods_statistics> (referer: 
+https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Unemployment_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:38 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Unemployment_statistics_and_beyond> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Unemployment_statistics_at_regional_level> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:43 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=United_Kingdom-EU_-_international_trade_in_goods_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:45 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=USA-EU_-_international_trade_in_goods_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:47 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Unmet_health_care_needs_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Value_added_content_in_EU_exports_-_an_analysis_with_FIGARO_data> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Vietnam-EU_-_international_trade_in_goods_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Vineyards_in_the_EU_-_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Vocational_education_and_training_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Wages_and_labour_costs> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:20:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Waste_management_indicators> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Waste_shipment_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Waste_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:05 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Waste_statistics_-_electrical_and_electronic_equipment> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Waste_statistics_-_recycling_of_batteries_and_accumulators> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Water_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:11 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Water_supply,_sewerage,_waste_management_and_remediation_statistics_-_NACE_Rev._2> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Weekly_death_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Western_Balkans-EU_-_international_trade_in_goods_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Wood_products_-_production_and_trade> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=World_direct_investment_patterns> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=World_trade_in_goods> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=World_trade_in_services> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=World_trade_in_goods_and_services_-_an_overview> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Young_people_on_the_labour_market_-_statistics> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Young_people_-_housing_conditions> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Young_people_-_social_inclusion> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')
+2021-10-04 08:21:16 [scrapy.core.scraper] ERROR: Spider error processing <GET https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Youth_unemployment> (referer: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Category:Statistical_article&pagefrom=Transport+equipment+statistics%0ATransport+equipment+statistics)
+Traceback (most recent call last):
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\mmeszaros.ECDATAPLATFORM\AppData\Roaming\Python\Python39\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "z:\github\NLP4Stat\Content Database\CDB content\Scrapper\Spiders\article_spider.py", line 85, in parse_article
+    cursor.execute(estatLinkTypeKnownInsert(),
+pyodbc.Error: ('S1000', '[S1000] [OpenLink][Virtuoso ODBC Driver][Virtuoso Server]SR306: INSERT statement conflicted with FOREIGN KEY constraint referencing table "ESTAT.V1.mod_resource_type" (-1) (SQLExecDirectW)')

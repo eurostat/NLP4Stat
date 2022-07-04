@@ -14,6 +14,7 @@ dependencies:
   - seaborn
   - jupyter_contrib_nbextensions
   - ipywidgets
+  - spacy
+  - openpyxl
+  - pyodbc
 #  - gdal
-  - pip:
-    - -r file:requirements.txt
