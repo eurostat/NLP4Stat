@@ -17,4 +17,4 @@ This directory contains all the files related to the Eurostat ontology and the E
     -    GlossaryExplainedArticles.ttl, GlossaryLink.ttl, OECD.ttl, TermTopicNamedRelation.ttl: These files (in Turtle syntax, namely a syntax for RDF graphs), contain all the instances ,their property values and relationships for all the classes of the Eurostat ontology (estat.owl). These files are automatically constructed by executing the Eurostat_Populate_Glossary_Explained_Articles.ipynb, Eurostat_Populate_Glossary_LinkInfo.ipynb, Eurostat_Populate_OECD.ipynb, and Eurostat_Populate_Term_Topic_Type.ipynb codes, respectively.  
     -    Folder “derivations”: contains the files hasEurostatTheme.nt, hasEurostatTheme-completion.nt, hasOECDTheme.nt, in N-Triples format (another syntax variation for RDF graphs) that enrich the knowledge graph with derivations through the following 3 SPARQL CONSTRUCT queries, respectively, that link articles to Eurostat and OECD themes:
 
-<img src="./Figs/Figure.JPG" width="600">
+<img src="./Figures/Figure.JPG" width="600">
