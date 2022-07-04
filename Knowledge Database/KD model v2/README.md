@@ -5,7 +5,7 @@ This folder contains:
 *    The alignments between the classes and properties of the Eurostat ontology and several external ontologies: NLP4StatRef-Ontology-alignment-v2.3.owl
 *    The latest documentation of the knowledge database: KD_Documentation_v2.3.docx. It includes the description of the two ontologies and the alignment with external Linked Open Data (LOD) vocabularies.
 
-## New documentation (in progress)  
+## New description (in progress)  
 
 This directory contains all the files related to the Eurostat ontology and the Eurostat Knowledge Graph (or Knowledge DataBase - KDB). Specifically:
 *    Folder “ontology”:  
