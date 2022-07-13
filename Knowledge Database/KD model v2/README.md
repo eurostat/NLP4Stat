@@ -9,7 +9,7 @@ This folder contains:
 
 This directory contains all the files related to the Eurostat ontology and the Eurostat Knowledge Graph (or Knowledge DataBase - KDB). Specifically:
 *    Folder “ontology”:  
-   - estat.owl: This is the main Eurostat ontology file (in OWL), that contains the definitions of the main classes and properties. It imports estat-alignments.owl and estat-Database.owl. This file was knowledge engineered manually.   
+    * estat.owl: This is the main Eurostat ontology file (in OWL), that contains the definitions of the main classes and properties. It imports estat-alignments.owl and estat-Database.owl. This file was knowledge engineered manually.   
     -    estat-alignments.owl: This file (in OWL) contains the alignments between the classes and properties of the Eurostat ontology and several popular external ontologies, such as DC, DCMI, DCAT, SKOS, Schema.org, etc. It is imported by estat.owl. This file was knowledge engineered manually.    
     -    estat-Database.owl: This file (in OWL) contains the ontology hierarchy beneath class estat:StatisticalData that represents the navigation tree of Eurostat’s Database. It contains both classes and instances. It is imported by estat.owl. This file is automatically constructed by executing the EuroStatDataset.py and EurostatDatasetGround.py codes.  
 *    Folder “knowledge graph”:  
