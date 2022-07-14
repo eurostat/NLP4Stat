@@ -17,7 +17,7 @@ It also contains all the files related to the Eurostat ontology and the Eurostat
 -    Folder “knowledge graph/derivations”:
      - contains the files **hasEurostatTheme.nt**, **hasEurostatTheme-completion.nt**, **hasOECDTheme.nt**, in N-Triples format (another syntax variation for RDF graphs) that enrich the knowledge graph with derivations through the following 3 SPARQL CONSTRUCT queries, respectively, that link articles to Eurostat and OECD themes:
 
-<img src="./Figures/Figure.JPG" width="600">
+<img src="./Figures/Figure2.JPG" width="600">
 
 ### Note:
 
