@@ -21,7 +21,7 @@ It also contains all the files related to the Eurostat ontology and the Eurostat
 
 ### Note:
 
-The following OWL files are the same with the ones mentioned above. They are kept here for reasons of compatibility with earlier descriptions, but **they not includes the imports** mentioned above. For example, they will **not** be loaded correctly in Protégé. Specifically:
+The following OWL files are the same with the ones mentioned above. They are kept here for reasons of compatibility with earlier descriptions, but **they not include the imports** mentioned above. For example, they will **not** be loaded correctly in Protégé. Specifically:
 
 - **NLP4StatRef-Ontology-v2.3.owl** is the same as **estat.owl**.
 - **NLP4StatRef-Ontology-datasets-v2.3.owl** is the same as **estat-Database.owl**.  
