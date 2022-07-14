@@ -16,7 +16,6 @@ It also contains all the files related to the Eurostat ontology and the Eurostat
      - These files are automatically constructed by executing the **Eurostat\_Populate\_Glossary\_Explained\_Articles.ipynb**, **Eurostat\_Populate\_Glossary\_LinkInfo.ipynb**, **Eurostat\_Populate\_OECD.ipynb**, and **Eurostat\_Populate\_Term\_Topic_Type.ipynb** codes, respectively.  
 -    Folder “knowledge graph/derivations”:
      - contains the files **hasEurostatTheme.nt**, **hasEurostatTheme-completion.nt**, **hasOECDTheme.nt**, in N-Triples format (another syntax variation for RDF graphs) that enrich the knowledge graph with derivations through the following 3 SPARQL CONSTRUCT queries, respectively, that link articles to Eurostat and OECD themes:
-
 <img src="./Figures/Figure2.JPG" width="600">
 
 ### Note:
