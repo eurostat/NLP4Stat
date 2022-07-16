@@ -13,7 +13,7 @@ It also contains all the files related to the Eurostat ontology and the Eurostat
 -    Folder “knowledge graph”:  
      - **GlossaryExplainedArticles.ttl**, **GlossaryLink.ttl**, **OECD.ttl**, **TermTopicNamedRelation.ttl**: 
      - These files (in Turtle syntax, namely a syntax for RDF graphs), contain all the instances ,their property values and relationships for all the classes of the Eurostat ontology (**estat.owl**). 
-     - These files are automatically constructed by executing the **Eurostat\_Populate\_Glossary\_Explained\_Articles.ipynb**, **Eurostat\_Populate\_Glossary\_LinkInfo.ipynb**, **Eurostat\_Populate\_OECD.ipynb**, and **Eurostat\_Populate\_Term\_Topic_Type.ipynb** codes, respectively.  
+     - These files are automatically constructed by executing the codes in [https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD_Population](https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD_Population) **Eurostat\_Populate\_Glossary\_Explained\_Articles.ipynb**, **Eurostat\_Populate\_Glossary\_LinkInfo.ipynb**, **Eurostat\_Populate\_OECD.ipynb**, and **Eurostat\_Populate\_Term\_Topic_Type.ipynb** codes, respectively.  
 -    Folder “knowledge graph/derivations”:
      - contains the files **hasEurostatTheme.nt**, **hasEurostatTheme-completion.nt**, **hasOECDTheme.nt**, in N-Triples format (another syntax variation for RDF graphs) that enrich the knowledge graph with derivations through the following 3 SPARQL CONSTRUCT queries, respectively, that link articles to Eurostat and OECD themes:
 <img src="./Figures/Figure2.JPG" width="600">
