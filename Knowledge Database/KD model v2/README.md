@@ -16,6 +16,7 @@ It also contains all the files related to the Eurostat ontology and the Eurostat
      - These files are automatically constructed by executing the codes in [https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD_Population](https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD_Population) **Eurostat\_Populate\_Glossary\_Explained\_Articles.ipynb**, **Eurostat\_Populate\_Glossary\_LinkInfo.ipynb**, **Eurostat\_Populate\_OECD.ipynb**, and **Eurostat\_Populate\_Term\_Topic_Type.ipynb**, respectively.  
 -    Folder “knowledge graph/derivations”:
      - contains the files **hasEurostatTheme.nt**, **hasEurostatTheme-completion.nt**, **hasOECDTheme.nt**, in N-Triples format (another syntax variation for RDF graphs) that enrich the knowledge graph with derivations through the following three SPARQL CONSTRUCT queries, respectively, that link articles to Eurostat and OECD themes:  
+
 **hasEurostatTheme.nt**
 ```
 define input:inference "http://www.w3.org/2002/07/owl#" 
