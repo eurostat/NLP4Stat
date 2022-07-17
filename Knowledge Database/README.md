@@ -8,7 +8,7 @@ Before populating the KDB, the ontology files must be added to the database. Go 
 
 <img src="./Figs/Fig1.jpg" alt="Loading ontologies" width="600"/>
 
-The prefered order of loading the files is as follows:  
+The preferred order of loading the files is as follows:  
 
 From the https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD%20model%20v2 folder, get the *ontology* and *knowledge graph* subfolders, and then upload the files in the following order:
 - A.	Folder “ontology”:
