@@ -40,6 +40,8 @@ To take a backup of the whole knowledge graph, go to Conductor / Interactive SQL
 
 dump_one_graph('https://ec.europa.eu/eurostat/nlp4stat/knowledge/', './data_', 1000000000);  
 
+Then press Execute.  
+
 The backup files are located in folder C:\virtuoso\db in the Virtual Machine of lod.csd.auth.gr (Windows):   
 data_000001.ttl.graph and   
 data_000001.ttl.gz  
