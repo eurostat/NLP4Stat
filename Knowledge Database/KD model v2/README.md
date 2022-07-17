@@ -56,9 +56,6 @@ where {
 	?ESTheme estat:relatedTheme ?OECDTheme .
 }
 ```
-
-<img src="./Figures/Figure2.JPG" width="600">
-
 ### Note:
 
 The following OWL files are the same with the ones mentioned above. They are kept here for reasons of compatibility with earlier descriptions, but **they not include the imports** mentioned above. For example, they will **not** be loaded correctly in Protégé. Specifically:
