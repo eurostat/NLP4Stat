@@ -42,7 +42,7 @@ To take a backup of the whole knowledge graph, go to Conductor / Interactive SQL
 
 `dump_one_graph('https://ec.europa.eu/eurostat/nlp4stat/knowledge/', './data_', 1000000000);`  
 
-Then press Execute.  
+then press Execute.  
 
 The backup files are located in folder C:\virtuoso\db in the Virtual Machine of lod.csd.auth.gr (Windows):   
 data_000001.ttl.graph and   
@@ -58,6 +58,16 @@ data_000001.ttl.gz, data_000002.ttl.gz, data_000003.ttl.gz, …
 #### 1.5. Knowledge graph
 
 A knowledge graph can be created using the notebook in the Knowledge_graph folder. Please see [dedicated readme file](https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/Knowledge_graph). 
+
+#### 1.6. Inference
+
+At the Conductor go to Interactive SQL (ISQL) and paste the following code:
+
+`RDFS_RULE_SET('http://www.w3.org/2002/07/owl#', 'https://ec.europa.eu/eurostat/NLP4StatRef/knowledge/');`
+
+then press Execute.
+
+
 
 ### 2. Virtuoso Bundle
 In order to launch the various part of the project from a Windows environment, please follow the procedure described in [Software Environment](https://github.com/eurostat/NLP4Stat/tree/main/Software%20Environment).
