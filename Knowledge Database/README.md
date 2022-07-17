@@ -4,7 +4,7 @@
 
 #### 1.1. Loading and deleting ontologies
 
-Before populating the KDB, the ontology files must be added to the database. Go to Virtuoso Conductor/Linked Data/Quad Store Upload and load the NLP4Stat files, starting with the .owl files. In the "Named Graph IRI*" field, write https://nlp4statref/knowledge/ontology/. This IRI will be used in the process of populating the KDB.  
+Before populating the KDB, the ontology files must be added to the database. Go to Virtuoso Conductor/Linked Data/Quad Store Upload and load the NLP4Stat files, starting with the .owl files. In the "Named Graph IRI*" field, write `https://nlp4statref/knowledge/ontology/`. This IRI will be used in the process of populating the KDB.  
 
 <img src="./Figs/Fig1.jpg" alt="Loading ontologies" width="600"/>
 
@@ -52,7 +52,7 @@ There may be more files, similarly numbered (data_000002., data_000003., ... ) i
 
 #### 1.4. Knowledge database restore
 
-Go to Conductor / Linked Data / Quad Store Upload (named graph IRI: https://ec.europa.eu/eurostat/nlp4stat/knowledge/) and upload the files  
+Go to Conductor / Linked Data / Quad Store Upload (named graph IRI: `https://ec.europa.eu/eurostat/nlp4stat/knowledge/`) and upload the files  
 data_000001.ttl.gz, data_000002.ttl.gz, data_000003.ttl.gz, …
 
 #### 1.5. Knowledge graph
