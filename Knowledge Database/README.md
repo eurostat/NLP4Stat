@@ -40,7 +40,7 @@ The KD_Population folder contains notebooks and Python scripts used for the popu
 
 To take a backup of the whole knowledge graph, go to Conductor / Interactive SQL (ISQL) and paste the code in [backup_script.txt](backup_script.txt), then paste below the command: 
 
-dump_one_graph('https://ec.europa.eu/eurostat/nlp4stat/knowledge/', './data_', 1000000000);  
+`dump_one_graph('https://ec.europa.eu/eurostat/nlp4stat/knowledge/', './data_', 1000000000);`  
 
 Then press Execute.  
 
