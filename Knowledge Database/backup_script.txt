@@ -53,6 +53,7 @@ CREATE PROCEDURE dump_one_graph
                                            file_idx), 
                                  -2
                                );
+
                  env := VECTOR (dict_new (16000), 0, '', '', '', 0, 0, 0, 0, 0);
               }
             ELSE
