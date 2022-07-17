@@ -4,7 +4,25 @@
 
 #### 1.1. Loading and deleting ontologies
 
-Before populating the KDB, the ontology files must be added to the database. Go to Virtuoso Conductor/Linked Data/Quad Store Upload and load the NLP4Stat ontology by uploading the .owl files in https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD%20model%20v2/ontology. In the "Named Graph IRI*" field, write https://nlp4statref/knowledge/ontology/. This IRI will be used in the process of populating the KDB.
+Before populating the KDB, the ontology files must be added to the database. Go to Virtuoso Conductor/Linked Data/Quad Store Upload and load the NLP4Stat files, starting with the .owl files. In the "Named Graph IRI*" field, write https://nlp4statref/knowledge/ontology/. This IRI will be used in the process of populating the KDB.
+
+The prefered order of loading the files is as follows:  
+
+From the https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD%20model%20v2 folder, get the *ontology* and *knowledge graph* subfolders, and then upload the files in the following order:
+- A.	Folder “ontology”:
+  - A.1.	estat.owl: main Eurostat ontology file.
+  - A.2.	estat-alignments.owl: alignment between Eurostat ontology and external ontologies.
+  - A.3.	estat-Database.owl: ontology hierarchy beneath class estat:StatisticalData.
+- B.	Folder “knowledge graph”: instances of the Eurostat ontology classes
+  - B.1.	GlossaryExplainedArticles.ttl
+  - B.2.	GlossaryLink.ttl
+  - B.3.	OECD.ttl
+  - B.4.	TermTopicNamedRelation.ttl
+- C.	Folder “knowledge graph/derivations”: derived knowledge graph enrichments 
+  - C.1.	hasEurostatTheme.nt
+  - C.2.	hasEurostatTheme-completion.nt
+  - C.3.	hasOECDTheme.nt
+
 
 <img src="./Figs/Fig1.jpg" alt="Loading ontologies" width="600"/>
 
