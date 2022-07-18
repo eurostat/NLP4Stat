@@ -54,6 +54,8 @@ There may be more files, similarly numbered (data_000002., data_000003., ... ) i
 
 Go to Conductor / Linked Data / Quad Store Upload (named graph IRI: `https://ec.europa.eu/eurostat/nlp4stat/knowledge/`) and upload the files  
 data_000001.ttl.gz, data_000002.ttl.gz, data_000003.ttl.gz, …
+  
+There are alternative methods as well (e.g. see [http://vos.openlinksw.com/owiki/wiki/VOS/VirtBulkRDFLoader](http://vos.openlinksw.com/owiki/wiki/VOS/VirtBulkRDFLoader)  
 
 #### 1.5. Knowledge graph
 
