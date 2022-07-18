@@ -30,7 +30,7 @@ From the https://github.com/eurostat/NLP4Stat/tree/main/Knowledge%20Database/KD%
 
 
 
-An already added ontology can be deleted by going to Linked Data/Graphs/Graphs and clicking the Delete button associated with the ontology which is going to be deleted. 
+An already added ontology can be deleted by going to Linked Data/Graphs/Graphs and clicking the Delete button associated with the ontology which is going to be deleted. To clear everything, one can delete the named graph `https://ec.europa.eu/eurostat/NLP4StatRef/knowledge/`.  
 
 #### 1.2. Knowledge database population 
 
