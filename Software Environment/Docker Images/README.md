@@ -1,6 +1,6 @@
 # Docker images
 
-In this folder you will find the two files:  
+In this folder you will find the two files: (**pending**) 
 - docker-compose.yml file helps to create new containers from the official Virtuoso image.   
 - virtuoso.tar is the exported container we were working on, it contains accounts for each team member and the password of the dba account has been changed. If necessary, it can be transferred.
 
