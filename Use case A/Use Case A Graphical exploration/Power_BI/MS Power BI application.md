@@ -20,7 +20,7 @@ The required files and the codes producing them are shown in Figure 2 below. The
 
 <https://github.com/eurostat/NLP4Stat/tree/main/Use%20case%20A/Use%20Case%20A%20Graphical%20exploration/Power_BI>
 
--   The main data coming from the database through the Python code *Use Case A prepare data_v2_rev_Jan2022.ipynb* (revised on January 2022), is exactly the same as the one used in the R Shiny application[^1]. As shown in Figure 2, the application will automatically recognize the latest files required (one matching the regex `"\^SE_df.\*xlsx\$"` and another matching `"\^Crumbs.\*xlsx$"` ) in the folder defined by the parameter *DataPath*. At the time of the writing of the current document, these files were named  SE_df_1_31_17_18.xlsx and Crumbs_1_31_17_18.xlsx.
+-   The main data coming from the database through the Python code *Use Case A prepare data_v2_rev_Jan2022.ipynb* (revised on January 2022), is exactly the same as the one used in the R Shiny application[^1]. As shown in Figure 2, the application will automatically recognize the latest files required (one matching the regex `^SE_df.*xlsx$` and another matching `^Crumbs.*xlsx$` ) in the folder defined by the parameter *DataPath*. At the time of the writing of the current document, these files were named  SE_df_1_31_17_18.xlsx and Crumbs_1_31_17_18.xlsx.
 
 -   The first file contains SE articles data and creates the internal tables "Original" and "Repeated rows" (see Figure 3). The first comes from the original data while the second is created from the first by splitting themes, sub-themes and categories into unique values (in repeated rows).
 
